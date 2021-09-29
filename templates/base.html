@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename= 'img/favicon2.png')}}" type="image/x-icon">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}">
+
+<!-- <title>Главная страница</title> -->
+
+  </head>
+
+  <body>
+    <header class="header">
+    	<div class ="row">
+        <div class="col">
+      <img class="header__name-image" src="../static/img/paint6.png" alt="ES">
+</div>
+ <div class="col">
+       <div class="header_name"><h1>Цифровое собрание сочинений<h1></div>
+     </div>
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li class="header__nav-list-item">
+            <a class="btn" class="header__nav-link" href="/">О проекте</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a class="btn" class="header__nav-link" href="/list_of_texts/">Произведения</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a class="btn" class="header__nav-link" href="/bibl/">Библиотека</a>
+          </li>
+          <li class="header__nav-list-item">
+            <a class="btn" class="header__nav-link" href="/contrib/">Материалы</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+{%block content%}
+ 
+{%endblock%}
+
+ <div class="footer"> <hr>ver. 0. 9. 1<br></br>Центр цифровых гуманитарных исследований НИУ ВШЭ<br></br>
+</div>
+
+<script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+<script src="{{url_for('static', filename='js/main.js')}}"></script>
+<script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,464 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<html lang="ru">
+<head>  <title>Материалы</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+  
+    
+</head>
+<body>
+    <main class="main">
+        <nav class="main__nav">
+        <ul class="main__nav-list">
+                <li class="main__nav-list-item">
+                <a class="main__nav-link" href="/contrib">Фотографии</a>
+                </li>
+                <li class="main__nav-list-item">
+                <a class="main__nav-link" href="/other">Рукописи</a>
+                </li>
+                <li class="main__nav-list-item">
+                <a class="main__nav-link" href="/other">Статьи</a>
+                </li>
+                  <a href="#" title="Вернуться к началу страницы" id="up">&#8679</a>
+            </ul>
+        </nav>
+
+        
+        <section class="photo_container">
+            <h1 id='time_period'>Фотоархив</h1>
+
+            <div class="row">
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/001.jpg">
+                        <img class="img-responsive" src="../static/photo/01.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="../static/photo/002.jpg">
+                        <img class="img-responsive" src="../static/photo/02.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/003.jpg">
+                        <img class="img-responsive" src="../static/photo/03.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/004.jpg">
+                        <img class="img-responsive" src="../static/photo/04.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/005.jpg">
+                        <img class="img-responsive" src="../static/photo/05.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/006.jpg">
+                        <img class="img-responsive" src="../static/photo/06.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/007.jpg">
+                        <img class="img-responsive" src="../static/photo/07.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/008.jpg">
+                        <img class="img-responsive" src="../static/photo/08.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/009.jpg">
+                        <img class="img-responsive" src="../static/photo/09.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/010.jpg">
+                        <img class="img-responsive" src="../static/photo/10.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/011.jpg">
+                        <img class="img-responsive" src="../static/photo/11.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/012.jpg">
+                        <img class="img-responsive" src="../static/photo/12.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/013.jpg">
+                        <img class="img-responsive" src="../static/photo/13.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/014.jpg">
+                        <img class="img-responsive" src="../static/photo/14.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/015.jpg">
+                        <img class="img-responsive" src="../static/photo/15.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/016.jpg">
+                        <img class="img-responsive" src="../static/photo/16.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/017.jpg">
+                        <img class="img-responsive" src="../static/photo/17.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/018.jpg">
+                        <img class="img-responsive" src="../static/photo/18.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/019.jpg">
+                        <img class="img-responsive" src="../static/photo/19.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/020.jpg">
+                        <img class="img-responsive" src="../static/photo/20.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/021.jpg">
+                        <img class="img-responsive" src="../static/photo/21.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/022.jpg">
+                        <img class="img-responsive" src="../static/photo/22.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/023.jpg">
+                        <img class="img-responsive" src="../static/photo/23.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/024.jpg">
+                        <img class="img-responsive" src="../static/photo/24.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/025.jpg">
+                        <img class="img-responsive" src="../static/photo/25.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/026.jpg">
+                        <img class="img-responsive" src="../static/photo/26.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/027.jpg">
+                        <img class="img-responsive" src="../static/photo/27.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/028.jpg">
+                        <img class="img-responsive" src="../static/photo/28.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/029.jpg">
+                        <img class="img-responsive" src="../static/photo/29.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/030.jpg">
+                        <img class="img-responsive" src="../static/photo/30.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/031.jpg">
+                        <img class="img-responsive" src="../static/photo/31.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/032.jpg">
+                        <img class="img-responsive" src="../static/photo/32.jpg" alt="" loading="lazy">
+                        </a>
+                </div>
+                
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/033.jpg">
+                        <img class="img-responsive" src="../static/photo/33.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4  thumb">
+                    <a data-fancybox="gallery" href="../static/photo/034.jpg">
+                        <img class="img-responsive" src="../static/photo/34.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="../static/photo/035.jpg">
+                        <img class="img-responsive" src="../static/photo/35.jpg" alt="" loading="lazy">
+                    </a>
+
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/036.jpg">
+                        <img class="img-responsive" src="../static/photo/36.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                        <a data-fancybox="gallery" href="../static/photo/037.jpg">
+                        <img class="img-responsive" src="../static/photo/37.jpg" alt="" loading="lazy">
+                        </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/038.jpg">
+                        <img class="img-responsive" src="../static/photo/38.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/039.jpg">
+                        <img class="img-responsive" src="../static/photo/39.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/040.jpg">
+                        <img class="img-responsive" src="../static/photo/40.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/041.jpg">
+                        <img class="img-responsive" src="../static/photo/41.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/042.jpg">
+                        <img class="img-responsive" src="../static/photo/42.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/043.jpg">
+                        <img class="img-responsive" src="../static/photo/43.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/044.jpg">
+                        <img class="img-responsive" src="../static/photo/44.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/045.jpg">
+                        <img class="img-responsive" src="../static/photo/45.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/046.jpg">
+                        <img class="img-responsive" src="../static/photo/46.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/047.jpg">
+                        <img class="img-responsive" src="../static/photo/47.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/048.jpg">
+                        <img class="img-responsive" src="../static/photo/48.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/049.jpg">
+                        <img class="img-responsive" src="../static/photo/49.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/050.jpg">
+                        <img class="img-responsive" src="../static/photo/50.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/051.jpg">
+                        <img class="img-responsive" src="../static/photo/51.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/052.jpg">
+                        <img class="img-responsive" src="../static/photo/52.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/053.jpg">
+                        <img class="img-responsive" src="../static/photo/53.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/054.jpg">
+                        <img class="img-responsive" src="../static/photo/54.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/055.jpg">
+                        <img class="img-responsive" src="../static/photo/55.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/056.jpg">
+                        <img class="img-responsive" src="../static/photo/56.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/057.jpg">
+                        <img class="img-responsive" src="../static/photo/57.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/058.jpg">
+                        <img class="img-responsive" src="../static/photo/58.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/059.jpg">
+                        <img class="img-responsive" src="../static/photo/59.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/060.jpg">
+                        <img class="img-responsive" src="../static/photo/60.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/061.jpg">
+                        <img class="img-responsive" src="../static/photo/61.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/062.jpg">
+                        <img class="img-responsive" src="../static/photo/62.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/063.jpg">
+                        <img class="img-responsive" src="../static/photo/63.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/064.jpg">
+                        <img class="img-responsive" src="../static/photo/64.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/065.jpg">
+                        <img class="img-responsive" src="../static/photo/65.jpg" alt="" loading="lazy">
+                        </a>
+                </div>
+                
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/066.jpg">
+                        <img class="img-responsive" src="../static/photo/66.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4  thumb">
+                    <a data-fancybox="gallery" href="../static/photo/067.jpg">
+                        <img class="img-responsive" src="../static/photo/67.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                <a data-fancybox="gallery" href="../static/photo/068.jpg">
+                        <img class="img-responsive" src="../static/photo/68.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/069.jpg">
+                        <img class="img-responsive" src="../static/photo/69.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/070.jpg">
+                        <img class="img-responsive" src="../static/photo/70.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/071.jpg">
+                        <img class="img-responsive" src="../static/photo/71.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/072.jpg">
+                        <img class="img-responsive" src="../static/photo/72.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/073.jpg">
+                        <img class="img-responsive" src="../static/photo/73.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/074.jpg">
+                        <img class="img-responsive" src="../static/photo/74.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/075.jpg">
+                        <img class="img-responsive" src="../static/photo/75.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/076.jpg">
+                        <img class="img-responsive" src="../static/photo/76.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/077.jpg">
+                        <img class="img-responsive" src="../static/photo/77.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                    <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/078.jpg">
+                        <img class="img-responsive" src="../static/photo/78.jpg" alt="" loading="lazy">
+                    </a>
+                </div>
+                        <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/079.jpg">
+                        <img class="img-responsive" src="../static/photo/79.jpg" alt="" loading="lazy">
+                    </a>
+                        </div>
+                        <div class="col-md-3 col-sm-4 col-xs-6 thumb">
+                    <a data-fancybox="gallery" href="../static/photo/080.jpg">
+                        <img class="img-responsive" src="../static/photo/80.jpg" alt="" loading="lazy">
+                    </a>
+                        </div>
+                
+            </div>
+        </section>
+    </main>
+</body>
+</html>             
+      
+<!-- fancyBox CSS -->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+<!-- fancyBox JS -->
+
+{% endblock %}
+
+

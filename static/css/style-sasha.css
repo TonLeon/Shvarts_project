@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/* ПАЛИТРА
+#DABEB8 нежно-розовый
+#8E917E травяной
+#895961 винный
+#f2f1ef топленое молоко 
+*/
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ЦВЕТ, ОТСТУПЫ, ФОН, ШИРИНА */
+body { 
+    width: 1400px;
+    margin: auto;
+    background-color: #f2f1ef;
+}
+
+/* ХЭДЕР ВСЕХ СТРАНИЦ В base.html */
+
+.header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin: 0 0 50px 0;
+}
+
+.header__name-image {
+    object-fit: contain;
+    min-width: 500px;
+}
+
+.header__nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+
+.header__nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+    margin: 16px 0;
+    width: 100%;
+}
+
+.header__nav-list-item {
+    position: relative;
+}
+
+.btn{
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 170%;
+    color:#8E917E;
+    border-color:none;
+    border-style: none;
+    position: relative;
+
+}
+
+.btn:before { 
+    content:''; /* Обязательное свойство псевдоэлемента :before */
+    position: absolute; /* Позиционируем абсолютно */
+    top: 0px; /* Позиция по границам блока */
+    /*left: -30px;*/
+    left: -16px;
+    width: 120%; /* Ширина по границам кнопки */
+    height: 0px; /* Высота 0, поэтому невиден */
+    background: rgba(148,144,143,0.4); /* Фоновый цвет наплывания */
+    opacity: 0.2;
+    color:#DABEB8;
+    border-style: none;
+    text-decoration: none;
+    border-radius: 5px; /* Радиус уголков */
+    transition: all 0.5s ease-out; /* Анимация. Движение. Трансформируются все свойства (all) в течении 0.5 секунды, быстро начинается и к концу замедляется (ease-out) */
+
+}
+
+.btn:hover:before /*кнопка еще без наплывания*/{ 
+    height: 50px; 
+    border-style: none;
+    text-decoration: none;
+}
+
+
+.btn:focus /*кнопка при наведении*/{
+outline: none;
+box-shadow: none;
+}
+
+/* НАВИГАЦИОННАЯ ПАНЕЛЬ СБОКУ */
+.main {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.main__nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main__nav-link {
+    font-family: Montserrat, sans-serif;
+    color:#895961; 
+    font-size: 24px;
+    border-color: #8E917E;
+    border-bottom-style: dashed;
+}
+
+.main__nav-link:hover {
+    color: #6b434a;
+}
+
+/* ПОИСК СБОКУ В НАВИГАЦИОННОЙ ПАНЕЛИ НА titles.html */
+.search-box{
+    margin-top: 35px;
+}
+.search-input {
+    color:#895961; 
+    font-size: 18px;
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 16px 0 0;
+}
+
+.search-input:focus {
+    border: #895961;
+}
+
+.for_search {
+    text-decoration: none !important;
+    font-family: "Montserrat", sans-serif; 
+    font-size: 120%; 
+    color: #895961 !important;
+}
+
+::placeholder {
+  color:#895961;
+  font-size: 110%;
+  padding-right: 200px;
+  outline: none !important; 
+}
+
+#inlineFormInputGroupUsername5{
+  background-color:#f2f1ef ;
+}
+
+#inlineFormInputName2 {
+ color:#895961 ;
+}
+
+#process_input{
+    margin-top: 15px;
+    padding-right: 24px;
+    padding-top: 8px;
+}
+
+.search{
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 120%;
+    color:#895961;
+
+    border-style: none !important;
+    text-decoration: none !important;
+    position: relative;
+}
+
+.bibliography{
+    margin-bottom: 0px; 
+    font-size: 17px;
+    color:#8E917E;
+}
+
+/* СТРАНИЦА СО СТИХОТВОРЕНИЕМ */
+
+.move_over_poems {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.movement{
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+    width: 70%;
+    margin-bottom:30px;
+}
+
+#back{
+    padding-right: 30px;
+}
+
+#forward{
+    padding-right: 30px;
+}
+
+.head{
+    font-family: Montserrat, sans-serif;
+    color: #895961; 
+    font-size: 23px; 
+    font-weight: bold;
+    padding-bottom: 30px;
+}
+
+.dedication{
+    padding-left:170px;
+    font-size: 100%;
+    font-family: Montserrat, sans-serif;
+    color: #8E917E ;  
+    font-style: italic;
+}
+
+.epigraph{
+    padding-left:170px;
+    font-size: 100%;
+    font-family: Montserrat, sans-serif;
+    color: #8E917E ; 
+    font-style: italic;
+}
+
+.text {
+   color: #3F3031; 
+   font-family: Montserrat, sans-serif;
+   font-size:110%;
+}
+
+.meta {
+   color:#8E917E; 
+   font-family: Montserrat, sans-serif;
+   font-size: 110%;
+}
+
+.download_icon {
+    color: #895961; 
+     font-size: 130%; 
+     font-weight: bold;
+     text-decoration: none !important;
+     padding-top: -200px;
+}
+
+.download_icon:hover {
+    outline: none;
+    color: #895961;
+    text-decoration: none;
+}
+
+.comparison{
+    font-family: Montserrat, sans-serif;
+    font-size: 100%;
+    color: #DABEB8;
+    padding-top: 0px;
+    margin-left: 8px;
+    border-style: none;
+    text-decoration: none;
+    position: relative;
+}
+
+.download{
+    margin-top: 30px;
+}
+
+/* ТЕКСТ О ПРОЕКТЕ В index.html */
+.main__content {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.main__title {
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    color: #DABEB8;
+}
+
+.main__text {
+    font-family: Montserrat, sans-serif;
+    color: #895961;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: start;
+}
+
+.main__team {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px;
+    margin: 32px 0;
+    justify-items: center;
+    width: 70%;
+}
+
+.main__team-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__team-picture {
+    max-width: 200px;
+    margin: 0 0 20px 0;
+}
+
+.main__team-name/*Команда: имена*/{
+  font-family: Montserrat, sans-serif;  
+  color:#8E917E;
+  margin-top: 10px;
+}
+
+/* НАЗВАНИЯ СТИХОТВОРЕНИЙ, КНОПКИ В titles.html */
+.titles {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.titles__periods {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    padding: 0;
+    width: 70%;
+    margin-bottom: 30px;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+.titles__poems {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.titles__poem {
+    text-decoration: none !important;
+    font-family: "Montserrat", sans-serif;
+    font-size: 120%;
+    color: #3F3031;
+    font-weight: 300;
+    opacity: 0.7;
+}
+
+
+#time_period{
+    font-family: "Montserrat", sans-serif;
+    opacity:0.9;
+    color: #8E917E;
+    margin-bottom: 30px;
+}
+.year{
+    color: #895961; 
+    opacity:0.9;
+    font-size: 32px;
+    /* padding-top: 32px; */
+    padding-bottom: 32px;
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 500px;
+}
+
+.block_of_poems{
+    margin-bottom: 30px;
+}
+
+.poems{
+    text-decoration: none !important;
+    font-family: "Montserrat", sans-serif; 
+    font-size: 110%; 
+    color:#3F3031 !important;
+    font-weight: 300;
+    opacity: 0.7;
+    margin-bottom:10px;
+}
+
+/* СРАВНЕНИЕ ТЕКСТОВ НА comparisom.html */
+/*Тексты для сравнения*/
+.section_1
+{
+        width: 50%;
+        float: left;
+        padding-bottom: 50px;
+
+    }
+
+
+.section_2
+{
+        width: 50%;
+        float: left;
+        padding-bottom: 50px;
+    }
+
+.select {
+        margin-bottom: 50px;
+        font-family: "Montserrat", sans-serif;
+        position: relative;
+        display: block;
+        height: 40px;
+        width: 500px;  
+        border-color: #DABEB8;
+        color: #DABEB8;
+        font-size: 20px;
+        margin-left: 80px;
+}
+.select:focus
+{
+outline: none;
+box-shadow: none;}
+
+#first_poem{
+    margin-left: 80px;
+}
+
+#first_meta{
+    margin-left: 80px;
+}
+
+#second_poem{
+    margin-left: 80px;
+}
+#second_meta{
+    margin-left: 80px;
+}
+
+/* БИБЛИОТЕКА*/
+
+.books {
+    padding: 0px 0 0 0;
+    margin: auto;
+    width: 250px;
+    height: 380px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+    opacity: 0.8;
+    position: relative;
+}
+
+.books:hover {
+    opacity: 1.0;
+}
+
+
+/*МАТЕРИАЛЫ*/
+/* фото*/
+
+.photo_container{
+    margin-left: 80px;
+}
+
+.compensate-for-scrollbar {/* чтобы не съезжал контейнер при открытии картинки */
+    margin-right: auto !important;
+}
+.img-responsive{
+    width:250px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+
+.thumb img {
+   -webkit-filter: grayscale(0);
+    filter: none;
+    border-radius: 0px;
+    background-color: #f2f1ef;
+    padding: 5px;
+}
+
+.thumb img:hover {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);       
+}
+
+.thumb {
+     padding: 5px;
+}
+
+.fancybox-container {
+  padding: 20px 30px 50px 100px;
+}
+
+/* ДЛЯ НЕЗАПОЛНЕННЫХ СТРАНИЦ*/
+
+.other_text /* ПОКА ЗДЕСЬ ПУСТО */{
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    font-size: 350%;
+    color:#8E917E;
+    margin-bottom: 30px;
+    opacity: 0.7;
+}
+
+.other{
+    width:300px;
+    margin-top:50px;
+    margin-left:50px;
+    opacity:0.5;  
+}
+
+/* FOOTER */
+.footer{      
+    clear: both;
+    height: 50px;
+    font-family:Montserrat, sans-serif;
+    color: #DABEB8;
+    font-weight: 700;
+    font-size: 100%;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+}

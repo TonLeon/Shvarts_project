@@ -1,0 +1,599 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+/* ПАЛИТРА
+#DABEB8 нежно-розовый
+#8E917E травяной
+#895961 винный
+#f2f1ef топленое молоко 
+*/
+
+
+.container{
+    width: 100%;
+    padding-right: 95px;
+    /* padding-left: 15px; */
+    margin-right: auto;
+    /* margin-left: auto; */
+}
+
+header 
+
+{
+     margin: 25px  25px;
+
+}
+.name /* подпись Шварц*/
+
+{
+    margin:150px 0 25px;
+    width:100%;
+    opacity:0.9;
+
+} 
+
+.swarts /* фото Шварц главное*/
+{
+    width:40%;
+    margin-top:50px;
+    margin-left:50px;
+    opacity:0.6;  
+}
+/* box-sizing: border-box; 
+    Свойства width и height включают в себя 
+    значения полей и границ, 
+    но не отступов (margin).*/
+* { 
+    box-sizing: border-box;
+}
+
+.d-inline-block/
+/* это из бутстрепа,
+значит, что у нас строчно-блочные элементы*/
+
+{
+    margin-left:250px;
+    margin-top:20px;
+}
+
+body /* цвет фона, отступы, ширина*/
+
+{
+    
+    width: 1400px;
+    margin: auto;
+    background-color: #f2f1ef;
+    }
+ 
+
+/*ЛЕВОЕ МЕНЮ*/ 
+
+.navbar
+{
+    
+  margin-top: 70px;
+
+}
+
+.decade
+{
+margin-top: 40px;
+
+}
+
+
+a.nav-link.pl-0
+{
+   color:#895961; 
+   font-size: 120%;
+   margin-left: -25px;
+   border-color: #8E917E;
+ 
+   border-bottom-style: dashed ;
+   margin-right: 50px;
+   
+   
+}
+.left-menu
+{
+    list-style: none;
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 120%;
+    color:#DABEB8;
+    border-color:#895961;
+    margin-top: 10px;
+    margin-left: 25px;
+}
+/*МЕНЮ ПОД ХЕДЕРОМ*/
+
+.btn
+
+{
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 170%;
+    color:#8E917E;
+    border-color:none;
+    border-style: none;
+
+}
+
+.btn:before 
+{ 
+    content:''; /* Обязательное свойство псевдоэлемента :before */
+    position: absolute; /* Позиционируем абсолютно */
+    top: 0px; /* Позиция по границам блока */
+    /*left: -30px;*/
+    left: -16px;
+    width: 120%; /* Ширина по границам кнопки */
+    height: 0px; /* Высота 0, поэтому невиден */
+    background: rgba(148,144,143,0.4); /* Фоновый цвет наплывания */
+    opacity: 0.2;
+    color:#DABEB8;
+    border-style: none;
+    text-decoration: none;
+    border-radius: 5px; /* Радиус уголков */
+    transition: all 0.5s ease-out; /* Анимация. Движение. Трансформируются все свойства (all) в течении 0.5 секунды, быстро начинается и к концу замедляется (ease-out) */
+
+}
+
+.btn:hover:before /*кнопка еще без наплывания*/
+ { 
+    height: 50px; 
+    border-style: none;
+    text-decoration: none;
+   
+   }
+
+
+.btn:focus /*кнопка при наведении*/
+
+{
+outline: none;
+box-shadow: none;
+
+}
+
+.menu-row {
+    margin-bottom: 100px
+}
+
+a.dropdown
+{
+    color: #8E917E;
+    font-size: relative;
+    margin-left: -40px;
+
+}
+.dropdown:hover 
+
+{
+    outline: none;
+    color: #3F3031;
+    text-decoration: none;
+}
+
+.dropdown-item
+
+{
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    font-size: 150%;
+    color:#8E917E;
+    border-style: none;
+    outline: none;
+    box-shadow: none;
+    position: relative; 
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    outline: none;
+    transition: background 9999999s;
+   -webkit-tap-highlight-color:  transparent;
+}
+
+.dropdown-item:active /*цвет и фон активной кнопки*/
+{
+
+  background: #f2f1ef;
+  color:#3F3031;
+  transition: background 0s;
+  outline: none !important;
+  user-select: none;
+   
+}
+
+
+/*О ПРОЕКТЕ*/
+
+.scrollspy-example
+
+{
+    margin-top: -250px;
+    margin-left: 300px;
+    margin-right: 200px;
+}
+
+.main /*заголовки на странице О проекте*/
+
+{
+    font-family: Montserrat, sans-serif;
+    font-weight: 300;
+    font-size: 150%;
+    color:#DABEB8;
+
+    padding-bottom: 20px;
+  
+   
+
+}
+
+.mainparagraphs /*параграфы на странице О проекте*/
+
+{
+    font-family: Montserrat, sans-serif;
+    color:#895961;
+    font-size: 130%;
+    font-weight: 300;
+   
+    padding-bottom: 20px;
+
+   
+    
+   
+    text-align:justify;
+}
+
+.pictures /*Команда: фото*/
+{
+    width:200px;
+    height:200px;
+    margin-top: 25px;
+    margin-left: 50px;
+    opacity:0.9;
+}
+.team /*Команда: имена*/
+{
+  font-family: Montserrat, sans-serif;  
+  color:#8E917E;
+  margin-top: 25px;
+  margin-left: 80px;
+
+  
+}
+
+/*ПРОИЗВЕДЕНИЯ*/
+
+.text /*Текст*/
+
+{
+    padding-left:30px;
+    color: #3F3031; 
+    font-family: Montserrat, sans-serif;
+    font-size:110%;
+}
+
+.meta /*Метаданные*/
+
+{
+    padding-left:35px;
+    color:#8E917E; 
+    font-family: Montserrat, sans-serif;
+    font-size: 110%;
+    
+}
+/*Тексты для сравнения*/
+.section_first
+
+{ 
+        width: auto;
+        float: left;
+        padding-left: 32px;
+        padding-bottom: 50px;
+
+    }
+
+.section_second
+
+{
+        width: auto;
+        float: left;
+        padding-left: 32px;
+        padding-bottom: 50px;
+
+    }
+.compare
+{
+        
+
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 150%;
+    color:#DABEB8;
+    padding-top: 0px;
+    
+    margin-bottom: 10px;
+    margin-left: 8px;
+    border-style: none;
+    text-decoration: none;
+    position: relative;
+}
+
+.year
+    { 
+    margin-bottom: -10px;
+    margin-top: 10px;
+    color: #895961; 
+    opacity:0.9;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-left: 25px;
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 500;
+}
+
+
+.duplicates{
+    margin-top: -30px;
+    margin-bottom: -30px;
+    color: #895961;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-left: 25px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    opacity:0.8;
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 500;
+}
+
+.poems{
+    text-decoration: none !important;
+    font-family: "Montserrat", sans-serif; 
+    font-size: 110%; 
+    color:#3F3031; 
+    font-weight: 300;
+    opacity: 0.7;
+    margin-bottom:10px;
+    margin-left: 20px;
+}
+
+.head
+{
+     color: #895961; 
+     font-size: 130%; 
+     font-weight: bold; 
+    } 
+
+.download_icon {
+    color: #895961; 
+     font-size: 130%; 
+     font-weight: bold;
+     text-decoration: none !important;
+     padding-top: -200px;
+    }
+.download_icon:hover 
+
+{
+    outline: none;
+    color: #895961;
+    text-decoration: none;
+}
+
+
+
+/* Comparison.html */
+.section_1
+{
+        width: 50%;
+        float: left;
+        padding-right: 32px;
+        padding-bottom: 50px;
+    }
+
+
+.section_2
+{
+        width: 50%;
+        float: left;
+        padding-left: 32px;
+        padding-bottom: 50px;
+    }
+
+.select 
+{
+        font-family: "Montserrat", sans-serif;
+        position: relative;
+        display: block;
+        height: 40px;
+        min-width: 220px;
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 20px;
+        border-color: #DABEB8;
+        color: #DABEB8;
+        font-size: 20px;
+
+    }
+.select:focus
+{
+outline: none;
+box-shadow: none;}
+
+
+
+/*ПОИСК*/
+
+.for_search {
+
+    text-decoration: none !important;
+    font-family: "Montserrat", sans-serif; 
+    font-size: 110%; 
+    color: #3F3031 !important;
+    list-style-type: none;
+    margin-top: 0px;
+    margin-bottom:0px;
+    margin-right: 200px;
+    padding-top: 0px;
+
+}
+
+ul{
+    padding-inline-start: 20px;
+}
+
+::placeholder 
+
+{
+  color:#895961;
+  font-size: 120%;
+  padding-right: 200px;
+ 
+  outline: none !important;
+
+  
+}
+#inlineFormInputGroupUsername5
+{
+  background-color:#f2f1ef ;
+
+
+}
+
+#inlineFormInputName2 
+{
+ color:#895961 ;
+
+}
+
+.search
+
+{
+    font-family: Montserrat, sans-serif;
+    font-weight: 500;
+    font-size: 100%;
+    color:#895961;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 8px;
+    border-style: none !important;
+    text-decoration: none !important;
+    position: relative;
+}
+
+/* БИБЛИОТЕКА*/
+
+.books {
+padding: 0px 0 0 0;
+margin: auto;
+width: 250px;
+height: 380px;
+margin-top: 15px;
+margin-bottom: 15px;
+margin-right: 10px;
+margin-left: 10px;
+opacity: 0.8;
+position: relative;
+}
+.books:hover {
+    opacity: 1.0;
+        
+}
+
+
+
+
+/*МАТЕРИАЛЫ*/
+/* фото*/
+.compensate-for-scrollbar {
+    /* чтобы не съезжал контейнер при открытии картинки */
+    margin-right: auto !important;
+}
+.img-responsive
+{
+    width:250px;
+   
+    margin-top: 10px;
+    margin-bottom: 15px;
+    margin-right: 10px;
+    margin-left: 10px;
+
+}
+
+
+/*.row
+{
+    padding: 1110
+    margin-bottom: 100px;
+    margin-left: 100px;
+}
+*/
+.thumb img 
+{
+   -webkit-filter: grayscale(0);
+    filter: none;
+    border-radius: 0px;
+    background-color: #f2f1ef;
+    padding: 5px;
+
+
+
+}
+
+.thumb img:hover {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+        
+}
+
+.thumb {
+     padding: 5px;
+
+     }
+
+.fancybox-container 
+{
+  padding: 20px 30px 50px 100px;
+}
+
+
+/* ДЛЯ НЕЗАПОЛНЕННЫХ СТРАНИЦ*/
+
+
+
+.other_text /*заголовки на странице О проекте*/
+
+{
+    font-family: Montserrat, sans-serif;
+    font-weight: 900;
+    font-size: 350%;
+    color:#8E917E;
+    margin-bottom: 10px;
+    margin-left: 25px;
+    opacity: 0.7;
+
+}
+.other
+{
+    width:300px;
+    
+    margin-top:50px;
+    margin-left:50px;
+    opacity:0.5;  
+}
+/* Footer */
+.footer
+
+{   
+    
+    clear: both;
+    height: 50px;
+    font-family:Montserrat, sans-serif;
+    color: #DABEB8;
+    font-weight: 700;
+    font-size: 100%;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    
+}

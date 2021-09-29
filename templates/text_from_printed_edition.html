@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<html>
+
+<head>
+
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="{{ url_for('static', filename='img/header.jpg') }}">
+    <link href="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}">
+
+
+
+
+
+    {% for item in poem_texts %}
+    <title>{{item.title}}</title>
+
+</head>
+
+<body>
+    
+    <main class="main">
+        <div class="edition_name">Стихи из «Зелёной тетради»</div>
+        <nav class="main__nav">
+            
+                    <div class = collection_contents>
+                        <ul class=" main__nav-list_content">
+                            {% for title in titles %}
+                                {% if title.ID == item.ID %}
+                                    <li class="main__nav-list-item">
+                                    <a class="main__nav-link_content" style='background:#895961; color: #f2f1ef;' href="/{{title.path}}{{title.ID}}">{{title.title}}</a>
+                                    </li>
+                                {% else %}
+                                    <li class="main__nav-list-item">
+                                        <a class="main__nav-link_content" href="/{{title.path}}{{title.ID}}">{{title.title}}</a>
+                                    </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>  
+                    </div> 
+                <a href="#" title="Вернуться к началу страницы" id="up_content">&#8679</a>               
+        </nav> 
+                  
+        <section class="move_over_poems">
+
+            <ul class="movement">
+              <li class="main__nav-list-item">
+                {% if item.ID != 0 %}
+                <a class="poems" href='/texts_ZT_{{item.ID - 1}}/'>
+                    <button class="other_buttons" id="back">
+                     &lt;&lt; 
+                    </button>
+                </a>
+                {% endif %}
+              </li>
+
+              <li class="main__nav-list-item">
+                <a class="main__nav-link" id="content" href="/printed_edition">К описанию сборника</a>
+              </li>
+
+              <li class="main__nav-list-item">
+                {% if item.ID != count - 1 %} <!-- вот тут костыль, который надо исправить в базе данных-->
+                  <a class="poems" href='/texts_ZT_{{item.ID + 1}}/'>
+                      <button class="other_buttons" id="forward">
+                          &gt;&gt;
+                      </button>
+                  </a>
+                {% endif %}
+              </li>
+ 
+            </ul>
+
+
+            <p class ="head">{{item.head}}</p>
+            
+            {% if item.epigraph is not none %}
+                <pre class="epigraph">{{item.epigraph}}</pre>
+                <pre class="text">{{item.poem_text}}</pre>
+            {% elif item.dedication is not none %}
+                <pre class="dedication">{{item.dedication}}</pre>
+                <pre class="text">{{item.poem_text}}</pre>
+            {% else %}
+                <pre class="text">{{item.poem_text}}</pre>
+            {% endif %}
+
+            <div class ="meta"> 
+        
+        
+                {% if item.children|length > 0 %}
+                <p><span class="text">Год написания: </span>{{item.meta.date_written}}</p>
+                <p><span class="text">Опубликовано в:</span></p>
+                <p style="margin-bottom: 0px;">{{item.meta.edition}}</p>
+                    {% for element in item.children %}
+                        {% for poem in duplicates %}
+                            {% if element == poem._id %}
+                            <div>
+                                <p style="margin-bottom: 0px;">{{ poem.meta.edition }}</p>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                      
+                    {% endfor %}
+        
+
+                {% else %}
+                <p><span class="text">Год написания: </span>{{item.meta.date_written}}</p>
+                <p><span class="text">Опубликовано в: </span>{{item.meta.edition}}</p>
+                {% endif %}
+                <div class="download">
+                <a class = 'download_icon' href="../static/data/ZT/{{item.file}}" download>
+                <img src="{{ url_for('static', filename= 'img/download_icon.png')}}" width = "60" height = "60">  Скачать TEI </a></div>
+            </div>
+                
+                {% endfor %}
+     </section>
+     </main>
+            
+</body>
+
+{% endblock %}
