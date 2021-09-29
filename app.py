@@ -2,9 +2,16 @@ from flask import Flask, render_template, request, jsonify
 import pymongo
 import json
 
+from urllib.parse import quote_plus
+user = 'admin'
+password = 'solaerice'
+host='142.93.242.162'
+uri = "mongodb://%s:%s@%s" % (
+    quote_plus(user), quote_plus(password), host)
+
 app = Flask(__name__)
 def get_poems_titles(name_of_db):
-    client = pymongo.MongoClient('mongodb://localhost:27017')
+    client = pymongo.MongoClient(uri)
     db = client['admin']
     collection= db[name_of_db]
     titles = [title for title in collection.find({"root": []})]
@@ -15,7 +22,7 @@ def get_poems_titles(name_of_db):
 
 
 def get_poems_texts(ID, name_of_db):
-    client = pymongo.MongoClient('mongodb://localhost:27017')
+    client = pymongo.MongoClient(uri)
     db = client['admin']
     collection = db[name_of_db]
     count = collection.count_documents({})
@@ -24,7 +31,7 @@ def get_poems_texts(ID, name_of_db):
     return poem_texts, duplicates, count 
 
 def search_result(word):
-    client = pymongo.MongoClient('mongodb://localhost:27017')
+    client = pymongo.MongoClient(uri)
     db = client['admin']
     all_collections = db.list_collection_names()
     
@@ -51,7 +58,7 @@ def search_result(word):
     return sorted(poems, key=lambda x: x[1])
 
 def filter_poems_by_year(name_of_db, start_year, end_year):
-    client = pymongo.MongoClient('mongodb://localhost:27017')
+    client = pymongo.MongoClient(uri)
     db = client['admin']
     collection = db[name_of_db]
     texts_of_exact_period = []
