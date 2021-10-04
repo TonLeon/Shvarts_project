@@ -5,7 +5,7 @@ import json
 from urllib.parse import quote_plus
 user = 'admin'
 password = 'solaerice'
-host='142.93.242.162'
+host='www.eshvarts.com'
 uri = "mongodb://%s:%s@%s" % (
     quote_plus(user), quote_plus(password), host)
 
