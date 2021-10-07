@@ -5,18 +5,26 @@
 #8E917E травяной RGB (142, 145, 126)
 #895961 винный RGB(137, 89, 97)
 #f2f1ef топленое молоко RGB(242, 241, 239)
+
 */
 
 html {
     scroll-behavior: smooth;
+    height:100%;
 }
 
 /* ЦВЕТ, ОТСТУПЫ, ФОН, ШИРИНА */
 body { 
-    width: 1400px;
+    width: 1100px;
+    min-height: 100%;
     margin: auto;
     background-color: #f2f1ef;
 }
+
+html{
+    background-color: #dbd8d3;
+}
+
 
 /* ОБЩЕЕ */
 
@@ -37,14 +45,12 @@ body {
     margin-top:15px;
     align-content: right;
     font-size: 110%;
-    margin-top:60px;
-     margin-left:-330px;
+    margin-top:55px;
 }
 .header__name-image {
     object-fit: contain;
-    min-width: 500px;
+    min-width: 550px;
     align-content: right;
-    margin-left:-80px;
 }
 
 .header__nav {
@@ -61,7 +67,7 @@ body {
     justify-content: space-between;
     padding: 0;
     margin: 16px 0;
-    width: 100%;
+    width: 75%;
 }
 
 .header__nav-list-item {
@@ -73,6 +79,7 @@ body {
     font-weight: 500;
     font-size: 170%;
     color:#8E917E;
+    background-color: #dbd8d3;
     border-color:none;
     border-style: none;
     position: relative;
@@ -84,8 +91,8 @@ body {
     position: absolute; /* Позиционируем абсолютно */
     top: 0px; /* Позиция по границам блока */
     /*left: -30px;*/
-    left: -16px;
-    width: 120%; /* Ширина по границам кнопки */
+    left: 0px;
+    width: 100%; /* Ширина по границам кнопки */
     height: 0px; /* Высота 0, поэтому невиден */
     background: rgba(148,144,143,0.4); /* Фоновый цвет наплывания */
     opacity: 0.2;
@@ -122,9 +129,10 @@ box-shadow: none;
     font-size: 17px;
 }
 .main {
+    min-height: 370px;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    margin: 20px;
     justify-content: space-between;
 
 }
@@ -180,7 +188,7 @@ a{
 }
 /* ссылки зеленые */
 .links{
-    text-decoration: none;
+    text-decoration: none !important;
     color: #8E917E;
     font-weight: 500;
 }
@@ -217,6 +225,7 @@ a{
 .search-box{
     margin-top: 35px;
 }
+
 .search-input {
     color:#895961; 
     font-size: 18px;
@@ -252,9 +261,9 @@ a{
 
 #inlineFormInputName2 {
     color:#895961;
-  background-color:#f2f1ef 
-  border-color:#895961;
-  border-style: ridge ;
+    background-color:#f2f1ef; 
+    border-color: #895961;
+    border-style: ridge ;
 }
 
 #process_input{
@@ -262,19 +271,23 @@ a{
 
 }
 
+.search_result{
+    margin-top: 30px;
+}
 
 
 .bibliography{
     margin-bottom: 0px; 
-    font-size: 17px;
-    color:#8E917E;
+    font-size: 14px;
+    color:#895961;
+    opacity: 0.6;
 }
 
 /* ТЕКСТ О ПРОЕКТЕ В index.html */
 .main__content {
     display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 73%;
 }
 
 .main__title {
@@ -282,6 +295,7 @@ a{
     font-weight: 300;
     font-size: 36px;
     color: #DABEB8;
+    width: 100%;
 }
 
 .main__text {
@@ -290,6 +304,7 @@ a{
     font-size: 18px;
     font-weight: 300;
     text-align: start;
+    width: 100%;
 }
 
 .main__team {
@@ -371,7 +386,7 @@ a{
 .text {
    color: #3F3031; 
    font-family: Montserrat, sans-serif;
-   font-size:110%;
+   font-size:18px;
 }
 
 .meta {
@@ -413,19 +428,13 @@ a{
 
 
 /* НАЗВАНИЯ СТИХОТВОРЕНИЙ, КНОПКИ В titles.html */
-.titles {
-    display: flex;
-    flex-direction: column;
-    width: 75%;
-}
 
 .titles__periods {
     display: flex;
     list-style: none;
     justify-content: space-between;
     padding: 0;
-    width: 70%;
-    margin-bottom: 30px;
+    width: 100%;
 }
 
 
@@ -440,34 +449,13 @@ a{
 .titles__poem {
     text-decoration: none !important;
     font-family: "Montserrat", sans-serif;
-    font-size: 120%;
-    color: #3F3031;
+    font-size: 22px;
+    color: #3F3031 !important;
     font-weight: 300;
-    opacity: 0.7;
+    opacity: 0.5;
 }
 
-
-#time_period{
-    font-family: "Montserrat", sans-serif;
-    opacity:0.9;
-    color: #8E917E;
-    margin-bottom: 30px;
-}
-.year{
-    color: #895961; 
-    opacity:0.9;
-    font-size: 32px;
-    /* padding-top: 32px; */
-    padding-bottom: 32px;
-    font-family: "Montserrat", sans-serif; 
-    font-weight: 500px;
-}
-
-.block_of_poems{
-    margin-bottom: 30px;
-}
-
-.poems{
+/* .poems{
     text-decoration: none !important;
     font-family: "Montserrat", sans-serif; 
     font-size: 110%; 
@@ -475,10 +463,36 @@ a{
     font-weight: 300;
     opacity: 0.7;
     margin-bottom:10px;
+} */
+
+
+#time_period{
+    font-family: "Montserrat", sans-serif;
+    opacity:0.9;
+    color: #DABEB8;
+    margin-bottom: 30px;
+}
+.year{
+    color: #895961; 
+    opacity:0.9;
+    font-size: 32px;
+    margin-top: 30px;
+    /* padding-top: 32px; */
+    /* padding-bottom: 32px; */
+    font-family: "Montserrat", sans-serif; 
+    font-weight: 500px;
 }
 
+/* .block_of_poems{
+    margin-bottom: 30px;
+} */
+
+
+
 p.head{
-    width:500px;
+    width:100%;
+    color: #3F3031;
+    opacity: 0.5;
 }
 
 
@@ -503,7 +517,6 @@ p.head{
 {
         width: 50%;
         padding-bottom: 50px;
-        margin-right: 44px;
 
     }
 
@@ -520,7 +533,7 @@ p.head{
         position: relative;
         display: block;
         height: 40px;
-        width: 500px;  
+        width: 95%;  
         border-color: #DABEB8;
         color: #DABEB8;
         font-size: 20px;
@@ -577,19 +590,24 @@ option.select{
 .edition_name{
     font-family:Montserrat, sans-serif;
     color:#895961;
-    font-size: 130%;
+    font-size: 17px;
     font-weight:700;
     position:fixed;
     margin-top:10px;
 
 }
+
+.img_books{
+    width:247px;
+}
+
 .collection_contents{
 margin-top:80px !important;
 margin-bottom:80px !important;
 padding: 10px !important;
 font-size: 20%;
-width:300px; /* ширина нашего блока */
-height:550px ; /* высота нашего блока */
+width:240px; /* ширина нашего блока */
+height:270px ; /* высота нашего блока */
 background: #f2f1ef; /* цвет фона */
 border-style:ridge; /* размер и цвет границы блока */
 border-color: #DABEB8;
@@ -597,28 +615,37 @@ overflow: auto;
 position:fixed; /* свойство для прокрутки по горизонтали. Автоматом, если больше блока */
 }
 
+.chosen_text_of_edition{
+    background:#895961; 
+    color: #f2f1ef;
+    font-size: 14px;
+}
+
+.text_of_edition{ 
+    color: #895961; 
+    font-size: 14px;
+    text-decoration: none !important;
+}
 
 
 /*МАТЕРИАЛЫ*/
 /* фото*/
 
 .photo_container{
-    
-     margin-right: 80px;
      display: flex;
     flex-direction: column;
-    width: 75%;
+    width: 73%;
 }
 
 .compensate-for-scrollbar {/* чтобы не съезжал контейнер при открытии картинки */
     margin-right: auto !important;
 }
 .img-responsive{
-    width:250px;
-    margin-top: 10px;
+    width:180px;
+    /* margin-top: 10px;
     margin-bottom: 15px;
     margin-right: 10px;
-    margin-left: 10px;
+    margin-left: 10px; */
 }
 
 
@@ -655,9 +682,8 @@ position:fixed; /* свойство для прокрутки по горизо�
 }
 
 .other{
-    width:300px;
-    margin-top:50px;
-    margin-left:50px;
+    margin-bottom: -20px;
+    margin-left: -5px;
     opacity:0.5;  
 }
 
@@ -665,14 +691,9 @@ position:fixed; /* свойство для прокрутки по горизо�
 
 .footer{      
     clear: both;
-    height: 50px;
+    background-color: #dbd8d3;
     font-family:Montserrat, sans-serif;
-    color: #DABEB8;
+    color: #f2f1ef;
     font-weight: 700;
-    font-size: 100%;
     text-align: center;
-    padding-top: 40px;
-
-    margin-bottom: -100px;
-    
 }

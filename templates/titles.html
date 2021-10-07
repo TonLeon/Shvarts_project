@@ -1,40 +1,37 @@
 <!DOCTYPE html>
-
 {% extends "base.html" %}
 
 {% block content %}
 <html>
-<head>
-<title>Произведения</title>
-</head>
-<body>
-  <main class="main">
-    <nav class="main__nav">
-      <ul class="main__nav-list">
-        <li class="main__nav-list-item">
-          <a class="main__nav-link" href="/list_of_texts">Стихотворения</a>
-        </li>
-        <li class="main__nav-list-item">
-          <a class="main__nav-link" href="/other">Поэмы</a>
-        </li>
-        <li class="main__nav-list-item">
-          <a class="main__nav-link" href="/other">Проза</a>
-        </li>
-        <li class="main__nav-list-item">
-          <a class="main__nav-link" href="/other">Переводы</a>
-        </li>
+  <head><title>Произведения</title></head>
+    <body>
+      <main class="main">
+        <nav class="main__nav">
+          <ul class="main__nav-list">
+            <li class="main__nav-list-item">
+              <a class="main__nav-link" href="/list_of_texts">Стихотворения</a>
+            </li>
+            <li class="main__nav-list-item">
+              <a class="main__nav-link" href="/other">Поэмы</a>
+            </li>
+            <li class="main__nav-list-item">
+              <a class="main__nav-link" href="/other">Проза</a>
+            </li>
+            <li class="main__nav-list-item">
+              <a class="main__nav-link" href="/other">Переводы</a>
+            </li>
 
 
-        <form class='search-box'>
-          <input id='search-input' class="for_search" type='text' name='search' id='inlineFormInputGroupUsername5' placeholder='Поиск по слову'/>
-          <div><button type='submit' class='other_buttons' id='process_input'>Искать</button></div>
-        </form>
-          <a href="#" title="Вернуться к началу страницы" id="up">&#8679</a>
-      </ul>
+            <form class='search-box'>
+              <input id='search-input' class="for_search" type='text' name='search' id='inlineFormInputGroupUsername5' placeholder='Поиск по слову'/>
+              <div><button type='submit' class='other_buttons' id='process_input'>Искать</button></div>
+            </form>
+              <a href="#" title="Вернуться к началу страницы" id="up">&#8679</a>
+          </ul>
+        </nav>
 
-    </nav>
-
-    <section class="titles">
+    <section class="main__content">
+      <h1 id='time_period'>Стихотворения</h1>
       <ul class="titles__periods">
         <li class="main__nav-list-item">
           <a class="main__nav-link" id="all" href="/list_of_texts">Все тексты</a>
@@ -43,7 +40,7 @@
           <a class="main__nav-link" id="sixties" href="#">1960-е</a>
         </li>
         <li class="main__nav-list-item">
-          <a class="main__nav-link" id="seventies" href="/other">1970-е</a>
+          <a class="main__nav-link" id="seventies" href="#">1970-е</a>
         </li>
         <li class="main__nav-list-item">
           <a class="main__nav-link" id='eighties' href="/other">1980-е</a>
@@ -57,34 +54,31 @@
       </ul>
   
       <div class="titles__poems">
-
-        <form>
-          <h1 id='time_period'>Стихотворения</h1>
           <div id=result>
 
             <h3 class='year'>1962</h3>
-            <div class="block_of_poems">
+            <!-- <div class="block_of_poems"> -->
               {% for item in titles %}
                 {% if item.meta.date_written == 1962 %}  
-                <pre class="titles__poem"> <a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
+                <pre><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
                 {% endif %}
               {% endfor %}
-            </div>
+            <!-- </div> -->
 
             <h3 class='year'>1963</h3>
-            <div class="block_of_poems">
+            <!-- <div class="block_of_poems"> -->
               {% for item in titles %}
                 {% if item.meta.date_written == 1963 %}
-                  <pre class="poems"><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
+                  <pre><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
                 {% endif %}
               {% endfor %}
-            </div>
+            <!-- </div> -->
 
             <h3 class='year'>1964</h3>
             <div class="block_of_poems">
               {% for item in titles %}
                 {% if item.meta.date_written == 1964 %}
-                  <pre class="poems"><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
+                  <pre><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
                 {% endif %}
               {% endfor %}
             </div>
@@ -93,7 +87,7 @@
             <div class="block_of_poems">
               {% for item in titles %}
                 {% if item.meta.date_written == 1965 %}
-                  <pre class="poems"> <a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
+                  <pre><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
                 {% endif %}
               {% endfor %}
             </div>
@@ -102,7 +96,7 @@
             <div class="block_of_poems">
               {% for item in titles %}
                 {% if item.meta.date_written == 1966 %}              
-                  <pre class="poems">  <a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre> 
+                  <pre><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre> 
                 {% endif %}
               {% endfor %}
             </div>
@@ -111,7 +105,7 @@
             <div class="block_of_poems">
             {% for item in titles %}
               {% if item.meta.date_written == 1967 %}
-                <pre class="poems"> <a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
+                <pre><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
               {% endif %}
             {% endfor %}
             </div>
@@ -120,7 +114,7 @@
             <div class="block_of_poems">
               {% for item in titles %}
                 {% if item.meta.date_written == 1968 %}
-                  <pre class="poems"> <a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
+                  <pre><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
                 {% endif %}
               {% endfor %}
             </div>
@@ -129,13 +123,12 @@
             <div class="block_of_poems">
               {% for item in titles %}
                 {% if item.meta.date_written == 1969 %}
-                  <pre class="poems">  <a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
+                  <pre><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
                 {% endif %}
               {% endfor %}
             </div>
 
           </ul>
-        </form>
       </div>
     </section>
   </main>

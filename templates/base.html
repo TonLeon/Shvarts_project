@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link href="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}">
 
-<!-- <title>Главная страница</title> -->
+<title>Главная страница</title>
 
   </head>
 
@@ -45,13 +45,15 @@
  
 {%endblock%}
 
- <div class="footer"> <hr>ver. 0. 9. 1<br></br>Центр цифровых гуманитарных исследований НИУ ВШЭ<br></br>
-</div>
-
 <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
 <script src="{{url_for('static', filename='js/main.js')}}"></script>
 <script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
-
+<footer class="footer"> 
+  <p>---</p>
+  <p>Центр цифровых гуманитарных исследований НИУ ВШЭ</p>
+  <p>ver. 0. 9. 1</p>
+</footer>
 </body>
+
 
 </html>
