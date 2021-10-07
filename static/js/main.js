@@ -11,14 +11,14 @@ $(function() {
               element.innerHTML = "Результаты поиска:"; 
               if (data.result.length !== 0){
               $(data.result).each(function (index, value) { console.log(value)
-                $("div#result").append('<pre class="titles__poem"><a class="titles__poem" href="../' + value[4] +
+                $("div#result").append('<pre class="search_result"><a class="titles__poem" href="../' + value[4] +
                       value[0] + '/">' + 
                     value[1]+ '</a>'+ '<p class="bibliography">Год написания: '+ value[3] + 
                     '</p><p class="bibliography">Опубликовано в: '+ value[2] + '</p></pre>');
           });
         }
               else{
-                $("div#result").append('<pre class="titles__poem">По Вашему запросу ничего не обнаружено. Попробуйте еще раз.</pre>')
+                $("div#result").append('<pre>По Вашему запросу ничего не обнаружено. Попробуйте еще раз.</pre>')
               };
         });
         return false;
@@ -38,19 +38,28 @@ $(function() {
       $(data.result).each(function (index, value) {
         if(index > 0){
           if (value[2] === year){
-        $("div#result").append('<pre class="titles__poem"><a class="titles__poem" href="../texts_60_' + value[0]+ '/">' + value[1] + '</a></pre>');
+        $("div#result").append('<pre><a class="titles__poem" href="../texts_60_' + value[0]+ '/">' + value[1] + '</a></pre>');
       }
           else{
             year = value[2]
-            $("div#result").append('<h3 class="year">'+ value[2] +'</h3><pre class="titles__poem"><a class="titles__poem" href="../texts_60_' + value[0]+ '/">' + value[1] + '</a></pre>');
+            $("div#result").append('<h3 class="year">'+ value[2] +'</h3><pre><a class="titles__poem" href="../texts_60_' + value[0]+ '/">' + value[1] + '</a></pre>');
           };
   }
-        else{$("div#result").append('<h3 class="year">'+ year +'</h3><pre class="titles__poem"><a class="titles__poem" href="../texts_60_' + value[0]+ '/">' + value[1] + '</a></pre>');
+        else{$("div#result").append('<h3 class="year">'+ year +'</h3><pre><a class="titles__poem" href="../texts_60_' + value[0]+ '/">' + value[1] + '</a></pre>');
     }})
   })
-})})
+})});
     // $.getJSON('/background_process', {console.log(1)})
 
+//Выдача стихотворений 70-x
+    $(function() {
+      $('a#seventies').bind('click', function() {
+          $("div#result").empty();
+          var element = document.getElementById("time_period");
+          element.innerHTML = "Стихотворения 1970-х годов"; 
+        }
+     
+    )})
 
 // Сравнение стихотворений в comparison.html
 
