@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>На прогулке</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+                    Сенаторова</name> и <name>Е. Кулик</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Сочинения, том 1. С. 119 <date type="published"
+                        >2002</date></publisher>
+                    <date type="written" when="1981">1981</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>На прогулке</head>
+            <lg type="stanza" n="1">
+                <l n="1">Меж кладбищем мальтийских рыцарей</l>
+                <l n="2">И ламаистским темным храмом —</l>
+                <l n="2">Сперва черту проведши прямо,</l>
+                <l n="3">По середине точку выцарапай,</l>
+                <l n="4">И в этой точке, строго смеренной,</l>
+                <l n="5">Меж этих двух полей заряженных</l>
+                <l n="6">Всегда сидит большая чайка</l>
+                <l n="7">И кланяется в обе стороны.</l>
+            </lg>
+            <lg type="stanza" n="2">
+                <l n="8">Как будто вер двух провода</l>
+                <l n="9">Она, подъяв, соединила</l>
+                <l n="10">И через тело пропустила,</l>
+                <l n="11">И взорвалась здесь навсегда.</l>
+                <l n="12">О, если б как она — все веры</l>
+                <l n="13">Соединить в одной, одной,</l>
+                <l n="14">И, ощетинясь будто солнце,</l>
+                <l n="15">Большой взметнуться булавой.</l>
+            </lg>
+            <date>1981</date>
+        </lg>
+    </text>
+</TEI>

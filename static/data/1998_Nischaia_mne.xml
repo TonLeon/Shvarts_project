@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** («Нищая мне говорит...»)</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+                    Сенаторова</name> и <name>Е. Павлова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>ЦСС <date type="published">2021</date></publisher>
+                    <date type="written" when="1998">1998</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>***</head>
+            <lg type="stanza" n="1">
+                <l n="1">Нищая мне говорит —</l>
+                <l n="2">Сердце у меня болит.</l>
+                <l n="3">И зачем оно болит?</l>
+                <l n="4">В нем ребеночек сидит.</l>
+                <l n="5">Разве сердце бременеет?</l>
+                <l n="6">Сердце — оно строго.</l>
+                <l n="7">Если только зачинает,</l>
+                <l n="8">Горе горькое, от Бога.</l>
+                <l n="9">Сердце бедное вздувает</l>
+                <l n="10">На распялке боли.</l>
+                <l n="11">Боль все больше, сердце больше…</l>
+                <l n="12">А родит ли? Уж рожает</l>
+                <l n="13">Темный вихорь в поле.</l>
+            </lg>
+            <date>[1998]</date>
+        </lg>
+    </text>
+</TEI>

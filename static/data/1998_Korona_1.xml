@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Корона</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+                    Сенаторова</name> и <name>Е. Павлова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Стихотворения и поэмы. 1999. С.255. <date type="published"
+                            >1999</date></publisher>
+                    <date type="written" when="1998">1998</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>Корона</head>
+            <sub>(столпник, стоящий на голове)</sub>
+            <epigraph>
+                <q rend="italics">Ты — царь, живи один.</q>
+                <bibl>А. П.</bibl>
+            </epigraph>
+            <lg type="stanza" n="1">
+                <l n="1">Я — Царь, поверженный, лишенный</l>
+                <l n="2">Воды, огня,</l>
+                <l n="3">Но древнюю зубчатую корону</l>
+                <l n="4">Не сдернете с меня.</l>
+                <l n="5">Сей обруч огненный,</l>
+                <l n="6">Печать, златой обол</l>
+                <l n="7">Сияет надо мной —</l>
+                <l n="8">Чтоб в пропасти нашел</l>
+                <l n="9">И в круг провеял</l>
+                <l n="10">Дух Сметая прах с нее,</l>
+                <l n="11">Сей крошечный воздух —</l>
+                <l n="12">Вот царство все мое.</l>
+                <l n="13">И это есть мой столп —</l>
+                <l n="14">Но не пятой босой —</l>
+                <l n="15">В него — а вздернув лоб,</l>
+                <l n="16">Врастаю головой.</l>
+            </lg>
+            <date>1998</date>
+        </lg>
+    </text>
+</TEI>

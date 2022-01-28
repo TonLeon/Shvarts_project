@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>*** («Ой-ой-ой…»)</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+          Сенаторова</name> и <name>А. Кулакова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Стихотворения и поэмы. 1999. С. 211. <date type="published"
+            >1999</date></publisher>
+          <date type="written" when="1992">1992</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>***</head>
+      <lg type="quatrain" n="1">
+        <l n="1">Ой-ой-ой!</l>
+        <l n="2">Я боюсь сидеть на стуле —</l>
+        <l n="3">Потому что он висит</l>
+        <l n="4">Над зияющею бездной.</l>
+      </lg>
+      <lg type="stanza" n="2">
+        <l n="5">Ай-ай-ай!</l>
+        <l n="6">Я боюсь летать на ступе —</l>
+        <l n="7">Потому что я люблю</l>
+        <l n="8">Быть притянутой к ладони</l>
+        <l n="9">Тяготенья и презренья.</l>
+      </lg>
+      <date>1992</date>
+    </lg>
+  </text>
+</TEI>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>*** («Слева — изгородь живая, Океан — со стороны другой…»)</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+          Сенаторова</name> и <name>А. Кулакова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>ЦСС <date type="published">2021</date></publisher>
+          <date type="written" when="1996">1996</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>***</head>
+      <lg type="stanza" n="1">
+        <l n="1">Слева — изгородь живая, Океан — со стороны другой,</l>
+        <l n="2">Я меж них бреду по тропке. Где я? Что я? Бог со мной?</l>
+        <l n="3">Как темна стена, а цветы белы,</l>
+        <l n="4">Как больны слова и светлы валы.</l>
+        <l n="5">И шумят сильнее в сумраке ночном,</l>
+        <l n="6">Вместо фонаря мне светит слово «Ом».</l>
+        <l n="7">Если я заплачу — это на века —</l>
+        <l n="8">Сердце расплеснется, затрясет бока.</l>
+        <l n="9">Изгородь все выше, все белей цветы.</l>
+        <l n="10">Сердце, не касайся сердца темноты.</l>
+      </lg>
+      <date>1996</date>
+    </lg>
+  </text>
+</TEI>

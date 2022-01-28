@@ -63,7 +63,7 @@
               </li>
 
               <li class="main__nav-list-item">
-                {% if item.ID != count - 1 %} <!-- вот тут костыль, который надо исправить в базе данных-->
+                 {% if item.ID != count - 1 %} <!--вот тут костыль, который надо исправить в базе данных -->
                   <a class="poems" href='/texts_ZT_{{item.ID + 1}}/'>
                       <button class="other_buttons" id="forward">
                           &gt;&gt;

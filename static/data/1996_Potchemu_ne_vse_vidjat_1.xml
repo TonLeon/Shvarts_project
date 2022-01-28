@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Почему не все видят ангелов</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+          Сенаторова</name> и <name>А. Кулакова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Западно-восточный ветер. 1997. С. 81. <date type="published"
+            >1997</date></publisher>
+          <date type="written" when="1996">1996</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>Почему не все видят ангелов</head>
+      <div type="dedication">Геннадию Комарову</div>
+      <lg type="quatrain" n="1">
+        <l n="1">Ангелы так быстро пролетают —</l>
+        <l n="2">Глаз не успевает их понять.</l>
+        <l n="3">Блеск мгновенный стену дня взрезает,</l>
+        <l n="4">Тьма идет с иглою зашивать.</l>
+      </lg>
+      <lg type="quatrain" n="2">
+        <l n="5">Вечность не долга. Мигнуло тенью</l>
+        <l n="6">Что-то золотое вкось.</l>
+        <l n="7">Я за ним. Ладонями глазными</l>
+        <l n="8">Хлопнула. Поймала, удалось.</l>
+      </lg>
+      <lg type="quatrain" n="3">
+        <l n="9">А если ты замрешь, вращаясь</l>
+        <l n="10">На острие веретена —</l>
+        <l n="11">То Вечность золотой пластинкой</l>
+        <l n="12">Кружится. Взмах — ее цена.</l>
+      </lg>
+      <lg type="quatrain" n="4">
+        <l n="13">И если ангел обезьяной</l>
+        <l n="14">Сидит на ямочке плеча,</l>
+        <l n="15">То нет плеча и нет печали,</l>
+        <l n="16">Нет ангела — одна свеча.</l>
+      </lg>
+      <date>1996</date>
+    </lg>
+  </text>
+</TEI>

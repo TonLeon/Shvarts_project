@@ -40,7 +40,7 @@
                 
                 
                   <div style='margin-top:30px'>
-                    <a href="/comparison_60_{{item.ID}}">
+                    <a href="/comparison_{{item.ID}}">
                     <button class='other_buttons' id= 'compare'>Сравнить</button></a>
                     </a>
                   </div>
@@ -56,7 +56,7 @@
             <ul class="movement">
               <li class="main__nav-list-item">
                 {% if previous_id is not none %}
-                <a class="poems" href='/texts_60_{{previous_id}}/'>
+                <a class="poems" href='/texts_{{previous_id}}/'>
                     <button class="other_buttons" id="back">
                      &lt;&lt; 
                     </button>
@@ -68,7 +68,7 @@
               </li>
               <li class="main__nav-list-item">
                 {% if next_id is not none%}
-                  <a class="poems" href='/texts_60_{{next_id}}/'>
+                  <a class="poems" href='/texts_{{next_id}}/'>
                       <button class="other_buttons" id="forward">
                           &gt;&gt;
                       </button>
@@ -117,7 +117,7 @@
                 <p><span class="text">Опубликовано в: </span>{{item.meta.edition}}</p>
                 {% endif %}
                 <div class="download">
-                <a class = 'download_icon' href="../static/data/60/{{item.file}}" download>
+                <a class = 'download_icon' href="../static/data/{{item.file}}" download>
                 <img src="{{ url_for('static', filename= 'img/download_icon.png')}}" width = "60" height = "60">  Скачать TEI </a></div>
             </div>
           

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** («Коль забредешь ты в Гефсиманский сад...»)</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+                    Сенаторова</name> и <name>Е. Павлова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Соло на раскаленной трубе. 1998. С.17. <date type="published"
+                            >1998</date></publisher>
+                    <date type="written" when="1998">1998</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>***</head>
+            <lg type="quatrain" n="1">
+                <l n="1">Коль забредешь ты в Гефсиманский сад,</l>
+                <l n="2">Увидишь язвенную тучу,</l>
+                <l n="3">И птицы стороною облетят,</l>
+                <l n="4">И мышь корней окаменившихся не мучит.</l>
+            </lg>
+            <lg type="quatrain" n="2">
+                <l n="5">Одервеневшее предгрозье, только вкось</l>
+                <l n="6">Смертельную тоску могла понять я,</l>
+                <l n="7">В которой обмерли деревья вместе, врозь,</l>
+                <l n="8">И не расколдовало их распятье.</l>
+            </lg>
+        </lg>
+    </text>
+</TEI>

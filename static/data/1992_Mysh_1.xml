@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Мышь</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+                    Сенаторова</name> и <name>Е. Кулик</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Вестник новой литературы. СПб., 1993. Вып. 5. С. 108. <date
+                            type="published">1993</date></publisher>
+                    <date type="written" when="1992">1992</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>Мышь</head>
+            <lg type="stanza">
+                <l n="1">Мир кончился. всхлип. вздох.</l>
+                <l n="2">тишь</l>
+                <l n="3">но еще после всего –</l>
+                <l n="4">пробегает мышь.</l>
+                <l n="5">гул отдаленных труб</l>
+                <l n="6">вой уже близок.</l>
+                <l n="7">по Невскому мышь бежит –</l>
+                <l n="8">нет, уже ее призрак.</l>
+            </lg>
+        </lg>
+    </text>
+</TEI>

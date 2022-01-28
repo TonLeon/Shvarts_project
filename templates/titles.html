@@ -34,7 +34,7 @@
       <h1 id='time_period'>Стихотворения</h1>
       <ul class="titles__periods">
         <li class="main__nav-list-item">
-          <a class="main__nav-link" id="all" href="/list_of_texts">Все тексты</a>
+          <a class="main__nav-link" id="all" href="#">Все тексты</a>
         </li>
         <li class="main__nav-list-item">
           <a class="main__nav-link" id="sixties" href="#">1960-е</a>
@@ -43,10 +43,10 @@
           <a class="main__nav-link" id="seventies" href="#">1970-е</a>
         </li>
         <li class="main__nav-list-item">
-          <a class="main__nav-link" id='eighties' href="/other">1980-е</a>
+          <a class="main__nav-link" id='eighties' href="#">1980-е</a>
         </li>
         <li class="main__nav-list-item">
-          <a class="main__nav-link" id='nineties' href="/other">1990-е</a>
+          <a class="main__nav-link" id='nineties' href="#">1990-е</a>
         </li>
         <li class="main__nav-list-item">
           <a class="main__nav-link" id='millenial' href="/other">2000-е</a>
@@ -56,78 +56,8 @@
       <div class="titles__poems">
           <div id=result>
 
-            <h3 class='year'>1962</h3>
-            <!-- <div class="block_of_poems"> -->
-              {% for item in titles %}
-                {% if item.meta.date_written == 1962 %}  
-                <pre><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
-                {% endif %}
-              {% endfor %}
-            <!-- </div> -->
-
-            <h3 class='year'>1963</h3>
-            <!-- <div class="block_of_poems"> -->
-              {% for item in titles %}
-                {% if item.meta.date_written == 1963 %}
-                  <pre><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
-                {% endif %}
-              {% endfor %}
-            <!-- </div> -->
-
-            <h3 class='year'>1964</h3>
-            <div class="block_of_poems">
-              {% for item in titles %}
-                {% if item.meta.date_written == 1964 %}
-                  <pre><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
-                {% endif %}
-              {% endfor %}
-            </div>
-
-            <h3 class='year'>1965</h3>
-            <div class="block_of_poems">
-              {% for item in titles %}
-                {% if item.meta.date_written == 1965 %}
-                  <pre><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
-                {% endif %}
-              {% endfor %}
-            </div>
-
-            <h3 class='year'>1966</h3>
-            <div class="block_of_poems">
-              {% for item in titles %}
-                {% if item.meta.date_written == 1966 %}              
-                  <pre><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre> 
-                {% endif %}
-              {% endfor %}
-            </div>
-
-            <h3 class='year'>1967</h3>
-            <div class="block_of_poems">
-            {% for item in titles %}
-              {% if item.meta.date_written == 1967 %}
-                <pre><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
-              {% endif %}
-            {% endfor %}
-            </div>
-
-            <h3 class='year'>1968</h3>
-            <div class="block_of_poems">
-              {% for item in titles %}
-                {% if item.meta.date_written == 1968 %}
-                  <pre><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
-                {% endif %}
-              {% endfor %}
-            </div>
-
-            <h3 class='year'>1969</h3>
-            <div class="block_of_poems">
-              {% for item in titles %}
-                {% if item.meta.date_written == 1969 %}
-                  <pre><a class="titles__poem" href='/texts_60_{{item.ID}}/'>{{item.title}}</a></pre>
-                {% endif %}
-              {% endfor %}
-            </div>
-
+            <h3 class='year'></h3>
+                <pre><a class="titles__poem" href='/texts_/'></a></pre>
           </ul>
       </div>
     </section>

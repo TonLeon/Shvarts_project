@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Птичья наука</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+          Сенаторова</name> и <name>Е. Гришечкина</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>ЦСС<date type="published">2021</date></publisher>
+          <date type="written" when="1983">1983</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>Птичья наука</head>
+      <lg type="quatrain" n="1">
+        <l n="1">Как будто завелось во мне гнездо,</l>
+        <l n="2">И там большой птенец, и пить он просит,</l>
+        <l n="3">А пьют птенцы — что птицы им приносят —</l>
+        <l n="4">Согретый шарик костяной воды.</l>
+      </lg>
+      <lg type="quatrain" n="2">
+        <l n="5">Из клюва в клюв передается знанье</l>
+        <l n="6">О том, как рвать платок осенней ночи,</l>
+        <l n="7">Расшитый золотом, о том, как без сознанья</l>
+        <l n="8">Лететь, прямясь, а Океан грохочет.</l>
+      </lg>
+      <lg type="quatrain" n="3">
+        <l n="9">С водой в птенца вольется и решимость,</l>
+        <l n="10">И знание дробимое о Доме —</l>
+        <l n="11">Так учит нас любовь — где истина, где мнимость,</l>
+        <l n="12">Где смерти Юг, когда плывешь в истоме.</l>
+      </lg>
+      <date>1983</date>
+    </lg>
+  </text>
+</TEI>

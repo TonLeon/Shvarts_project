@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Серый день</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+                    Сенаторова</name> и <name>Д. Соболев</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Знамя. 1992. №12. С. 51. <date type="published"
+                        >1992</date></publisher>
+                    <date type="written" when="1989">1989</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>Серый день</head>
+            <lg type="quatrain" n="1">
+                <l n="1">Второпях говорила, в трепете,</l>
+                <l n="2">Потому что времени мало —</l>
+                <l n="3">Пока молния, вздрагивая,</l>
+                <l n="4">Замедляясь, бежала.</l>
+            </lg>
+            <lg type="quatrain" n="2">
+                <l n="5">Или это была кровь моя,</l>
+                <l n="6">Тихо гаснущее бытие?</l>
+                <l n="7">Войти мне уже пора</l>
+                <l n="8">В горчичное зерно Твое.</l>
+            </lg>
+            <lg type="quatrain" n="3">
+                <l n="9">В доме Отца моего нынче ветшает все,</l>
+                <l n="10">В доме Отца все ангелы плачут —</l>
+                <l n="11">Потому что их иногда достигает тоска</l>
+                <l n="12">Где-нибудь замученной клячи.</l>
+            </lg>
+            <lg type="quatrain" n="4">
+                <l n="13">В серый день я жила на земле,</l>
+                <l n="14">В дне туманном свое торжество —</l>
+                <l n="15">Может Дух подойти и смотреть,</l>
+                <l n="16">Чтоб не видя, ты видел Его.</l>
+            </lg>
+            <lg type="quatrain" n="5">
+                <l n="17">Так порадуйся скудости их,</l>
+                <l n="18">Этих сумерек не кляни,</l>
+                <l n="19">Если нас посещает Христос —</l>
+                <l n="20">То в такие вот бедные дни.</l>
+            </lg>
+            <date>1989</date>
+        </lg>
+    </text>
+    <notesStmt>
+        <note>Впервые в: Знамя. 1992. №12. С. 51.</note>
+    </notesStmt>
+</TEI>

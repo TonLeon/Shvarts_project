@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Мышь</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+                    Сенаторова</name> и <name>Е. Кулик</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>ЦСС <date type="published">2021</date></publisher>
+                    <date type="written" when="1992">1992</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>Мышь</head>
+            <lg type="stanza">
+                <l n="1">Мир кончился: всхлип, вздох,</l>
+                <l n="2">Тишь –</l>
+                <l n="3">Но еще после всего</l>
+                <l n="4">Пробегает мышь.</l>
+                <l n="5">Гул отдаленных труб,</l>
+                <l n="6">Вой уже близок,</l>
+                <l n="7">По Невскому мышь бежит –</l>
+                <l n="8">Нет, уже ее призрак.</l>
+            </lg>
+            <date>1992</date>
+        </lg>
+    </text>
+</TEI>

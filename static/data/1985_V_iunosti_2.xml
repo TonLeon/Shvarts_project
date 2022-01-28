@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>В юности</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+          Сенаторова</name> и <name>А. Кулакова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Сочинения, том 1. 2002. С. 134. <date type="published">2002</date></publisher>
+          <date type="written" when="1985">1985</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>В юности</head>
+      <lg type="stanza" n="1">
+        <l n="1">Жизнь собиралась как гроза</l>
+        <l n="2">В то утро — утром это было,</l>
+        <l n="3">И вот она гремит над нами,</l>
+        <l n="4">И, может быть, меня убило.</l>
+        <l n="5">Завесу локоть мой продрал,</l>
+        <l n="6">Завесу бытия — и память дымом:</l>
+        <l n="7">Кричали, плакали, шептали,</l>
+        <l n="8">Дышали — и дождем все смыло.</l>
+        <l n="9">«Я никому тебя не…» — гром</l>
+        <l n="10">Мешал мне слушать, в окна бьет</l>
+        <l n="11">Холодный ветер, а потом</l>
+        <l n="12">Забвенья уксус с неба льет.</l>
+      </lg>
+      <date>1985</date>
+    </lg>
+  </text>
+</TEI>

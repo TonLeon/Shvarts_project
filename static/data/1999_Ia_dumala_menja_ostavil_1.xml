@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** («Я думала — меня оставил Бог...»)</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+                    Сенаторова</name> и <name>Е. Хереш</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Дикопись последнего времени. С. 12. <date type="publishing"
+                            >2001</date></publisher>
+                    <date type="written" when="02/1999">1999</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>***</head>
+            <lg type="stanza" n="1">
+                <l n="1">Я думала — меня оставил Бог,</l>
+                <l n="2">Ну что с того — он драгоценный луч</l>
+                <l n="3">Или иголка — человек же стог. Жесток...</l>
+                <l n="4">Я отвернулась от него — не мучь.</l>
+                <l n="5">Но кто из нас двоих жесточей и страшней?</l>
+                <l n="6">Конечно, тот, кто не имеет тела, —</l>
+                <l n="7">Он сделал нас бездонными — затем,</l>
+                <l n="8">Чтобы тоска не ведала предела.</l>
+            </lg>
+            <name type="place" rend="italics">Провиденс</name>
+        </lg>
+    </text>
+</TEI>

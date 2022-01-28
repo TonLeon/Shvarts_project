@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Никто не заметил</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+                    Сенаторова</name> и <name>Е. Павлова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>ЦСС <date type="published">2021</date></publisher>
+                    <date type="written" when="1998">1998</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>Никто не заметил</head>
+            <lg type="stanza" n="1">
+                <l n="1">Простая ночь свечей и слез,</l>
+                <l n="2">Пусть люди спали, ангелы метались</l>
+                <l n="3">И спрашивали: вправду удалось?</l>
+                <l n="4">Вы не ошиблись? Вам не показалось?</l>
+                <l n="5">«Клянусь, что на земле в реторте тесной слов</l>
+                <l n="6">Вода с огнем сегодня повенчались».</l>
+                <l n="7">Как волновались небеса</l>
+                <l n="8">И как вскипало море снов —</l>
+                <l n="9">Вода с огнем, слиясь, преображались,</l>
+                <l n="10">В бутылках круглых русских слов</l>
+                <l n="11">Печально-долго целовались.</l>
+            </lg>
+            <date>[1998]</date>
+        </lg>
+    </text>
+</TEI>

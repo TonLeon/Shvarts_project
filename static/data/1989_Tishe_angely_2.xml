@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** ("Тише! — ангелы шепчутся — тише!")</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+                    Сенаторова</name> и <name>Д. Соболев</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Песня птицы на дне морском. С. 26. <date type="published"
+                        >1995</date></publisher>
+                    <date type="written" when="1989">1989</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>*** ("Тише! — ангелы шепчутся — тише!")</head>
+            <lg type="stanza" n="1">
+                <l n="1">Тише! — ангелы шепчутся — тише!</l>
+                <l n="2">Я вот-вот, вот сейчас услышу.</l>
+                <l n="3">Просто дождь чмокает крышу —</l>
+                <l n="4">Кап да кап. Адонаи. Эль.</l>
+                <l n="5">Да подол подбирает выше</l>
+                <l n="6">И по стенке шаркает ель.</l>
+            </lg>
+            <lg type="stanza" n="2">
+                <l n="7">Нет — это ангельских крыльев</l>
+                <l n="8">Легкая давка. Пожар.</l>
+                <l n="9">Сто хористов. Дзэн. Элохим.</l>
+                <l n="10">Нет! Это все-таки дождь.</l>
+                <l n="11">Влажный в сердце удар,</l>
+                <l n="12">Передается мне с ним</l>
+                <l n="13">От ангелов — слезный дар.</l>
+            </lg>
+            <date/>
+        </lg>
+    </text>
+    <notesStmt>
+        <note>Впервые в: Камера хранения. СПб., 1991. Вып. 2. С. 139-140.</note>
+    </notesStmt>
+</TEI>

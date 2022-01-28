@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Имперская звезда</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>А. Кулакова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Соло на раскаленной трубе. 1998. С. 43.
+            <date type='published'>1998</date></publisher>
+            <date type="written" when="1989">1989</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>Имперская звезда</head>
+      <lg type="quatrain" n="1">
+        <l n="1">Горит промерзлая до сердца</l>
+        <l n="2">Звезда над пригородным морем,</l>
+        <l n="3">Скрипит баржа — куда ей деться</l>
+        <l n="4">Во льдинах узкий путь проторен.</l>
+      </lg>
+      <lg type="quatrain" n="2">
+        <l n="5">В рассвете желто-золотистом</l>
+        <l n="6">Она расплавится солинкой,</l>
+        <l n="7">Все позабудут, что она</l>
+        <l n="8">Горела надо льдами льдинкой,</l>
+      </lg>
+      <lg type="quatrain" n="3">
+        <l n="9">Что в проруби, дрожа, сияла</l>
+        <l n="10">Над индевелыми фортами</l>
+        <l n="11">Последней искрою салюта</l>
+        <l n="12">В честь их победы над врагами,</l>
+      </lg>
+      <lg type="quatrain" n="4">
+        <l n="13">Последним взглядом Калиты,</l>
+        <l n="14">От горести закрытым глазом.</l>
+        <l n="15">Не выплывет из темноты</l>
+        <l n="16">Богиня топора и мраза.</l>
+      </lg>
+    </lg>
+  </text>
+</TEI>

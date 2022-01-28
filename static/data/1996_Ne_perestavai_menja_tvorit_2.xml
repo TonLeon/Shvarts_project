@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>***("Не переставай меня творить...")</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+          Сенаторова</name> и <name>Е. Гришечкина</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Сочинения, том 1. С. 322. <date type="published">2002</date></publisher>
+          <date type="written" when="1996">1996</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>***</head>
+      <lg type="stanza">
+        <l n="1">Не переставай меня творить,</l>
+        <l n="2">На гончарном круге закружи,</l>
+        <l n="3">Я цветней и юрче становлюсь,</l>
+        <l n="4">Чем сильней сжимает горло Жизнь.</l>
+        <l n="5">Меня не уставай менять,</l>
+        <l n="6">Не то сомнусь я смертью в ком,</l>
+        <l n="7">А если дунешь в сердце мне —</l>
+        <l n="8">Я радужным взойду стеклом</l>
+        <l n="9">И в сени вышние Твои</l>
+        <l n="10">Ворвусь кружащимся волчком.</l>
+        <l n="11">Пускай творится этот мир,</l>
+        <l n="12">Хоть и в субботу, на прощанье,</l>
+        <l n="13">Встречь вдохновенью Твоему —</l>
+        <l n="14">Опять в деревьях клокотанье.</l>
+      </lg>
+      <date>1996</date>
+    </lg>
+  </text>
+</TEI>

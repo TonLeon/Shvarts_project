@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Моим стихам</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name> и <name>А. Шеля</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Сочинения, том 5. C. 239.
+                        <date type='published'>2013</date></publisher>
+                    <date type="written" when="1964">1964</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>Моим стихам</head>
+            <lg type="quatrain" n="1">
+                <l n="1">Ваша крёстная мать — Луна,</l>
+                <l n="2">вы одни у меня на свете.</l>
+                <l n="3">Как живётся вам без меня,</l>
+                <l n="4">мои смертные дети?</l>
+            </lg>
+            <lg type="quatrain" n="1">
+                <l n="5">Лишь волки, к земле припадая,</l>
+                <l n="6">в глухой и чёрный, звериный час,</l>
+                <l n="7">и ведьмы, над болотом летая,</l>
+                <l n="8">быть может, вспомнят ненароком вас.</l>
+            </lg>
+        </lg>
+    </text>
+</TEI>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>*** («Шестов мне говорит не верь…»)</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+          Сенаторова</name> и <name>А. Кулакова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Стихотворения и поэмы. 1999. С. 231. <date type="published"
+            >1999</date></publisher>
+          <date type="written" when="1994">1994</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>***</head>
+      <lg type="stanza" n="1">
+        <l n="1">Шестов мне говорит не верь</l>
+        <l n="2">Рассудку лгущему, верь яме,</l>
+        <l n="3">Из коей Господу воззвах,</l>
+        <l n="4">Сочти Ему — в чем</l>
+        <l n="5">Он виновен перед нами.</l>
+      </lg>
+      <lg type="quatrain" n="2">
+        <l n="6">Я с Господом в суд не пойду,</l>
+        <l n="7">Хотя бы Он… Наоборот —</l>
+        <l n="8">Из ямы черной я кричу,</l>
+        <l n="9">Земля мне сыплет в рот.</l>
+      </lg>
+      <lg type="quatrain" n="3">
+        <l n="10">Но ты кричи, стучи, кричи,</l>
+        <l n="11">Не слыша гласа своего —</l>
+        <l n="12">Услышит Он в глухой ночи —</l>
+        <l n="13">Ты в яме сердца у Него.</l>
+      </lg>
+      <date>1994</date>
+    </lg>
+  </text>
+</TEI>

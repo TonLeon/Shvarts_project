@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>*** («Всегда найдутся — подлее подлых...»)</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>А. Ворошилова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Танцующий Давид. 1985. С. 106.
+            <date type='published'>1985</date></publisher>
+            <date type="written" when="1980">1980</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>*** («Всегда найдутся — подлее подлых...»)</head>
+      <lg type="stanza" n="1">
+        <l n="1">Всегда найдутся — подлее подлых,</l>
+        <l n="2">хитрее хитрых и злее злых.</l>
+        <l n="3">Но есть на свете — добрее добрых,</l>
+        <l n="4">умнее умных, святей святых.</l>
+        <l n="5">К чему стремится бесконечность,</l>
+        <l n="6">рост и пределов переход?</l>
+        <l n="7">Есть люди — ангелов светлее,</l>
+        <l n="8">им все известно наперед.</l>
+        <l n="9">И выведется и родится</l>
+        <l n="10">от них, и будет жить старик,</l>
+        <l n="11">он хомо перейдет границу</l>
+        <l n="12">и Богу будет он двойник.</l>
+      </lg>
+      <date>1981</date>
+    </lg>
+  </text>
+</TEI>

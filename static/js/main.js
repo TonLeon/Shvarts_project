@@ -11,7 +11,7 @@ $(function() {
               element.innerHTML = "Результаты поиска:"; 
               if (data.result.length !== 0){
               $(data.result).each(function (index, value) { console.log(value)
-                $("div#result").append('<pre class="search_result"><a class="titles__poem" href="../' + value[4] +
+                $("div#result").append('<pre class="search_result"><a class="titles__poem" href="../texts_' +
                       value[0] + '/">' + 
                     value[1]+ '</a>'+ '<p class="bibliography">Год написания: '+ value[3] + 
                     '</p><p class="bibliography">Опубликовано в: '+ value[2] + '</p></pre>');
@@ -25,11 +25,35 @@ $(function() {
         });
       });
 
+// Загрузка всех текстов на странице
+$(function() {
+  $('a#all').bind('click', function() { 
+    $.getJSON('/show_all_poems', function(data) {
+      $("div#result").empty();
+      var element = document.getElementById("time_period");
+      element.innerHTML = "Стихотворения";
+      var result = data.result
+      let year = result[0][2]
+      $(data.result).each(function (index, value) {console.log(value)
+        if(index > 0){
+          if (value[2] === year){
+        $("div#result").append('<pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
+      }
+          else{
+            year = value[2]
+            $("div#result").append('<h3 class="year">'+ value[2] +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
+          };
+  }
+        else{$("div#result").append('<h3 class="year">'+ year +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
+    }})
+  })
+})});
+
 // Выдача стихотворений 60-х по годам на titles.html
 
 $(function() {
   $('a#sixties').bind('click', function() {
-    $.getJSON('/filter_poems_by_period', function(data) {
+    $.getJSON('/filter_poems_by_period_sixties', function(data) {
       $("div#result").empty();
       var element = document.getElementById("time_period");
       element.innerHTML = "Стихотворения 1960-х годов";
@@ -38,14 +62,14 @@ $(function() {
       $(data.result).each(function (index, value) {
         if(index > 0){
           if (value[2] === year){
-        $("div#result").append('<pre><a class="titles__poem" href="../texts_60_' + value[0]+ '/">' + value[1] + '</a></pre>');
+        $("div#result").append('<pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
       }
           else{
             year = value[2]
-            $("div#result").append('<h3 class="year">'+ value[2] +'</h3><pre><a class="titles__poem" href="../texts_60_' + value[0]+ '/">' + value[1] + '</a></pre>');
+            $("div#result").append('<h3 class="year">'+ value[2] +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
           };
   }
-        else{$("div#result").append('<h3 class="year">'+ year +'</h3><pre><a class="titles__poem" href="../texts_60_' + value[0]+ '/">' + value[1] + '</a></pre>');
+        else{$("div#result").append('<h3 class="year">'+ year +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
     }})
   })
 })});
@@ -60,6 +84,57 @@ $(function() {
         }
      
     )})
+
+
+// Выдача стихотворений 80-х
+
+$(function() {
+  $('a#eighties').bind('click', function() {
+    $.getJSON('/filter_poems_by_period_eighties', function(data) {
+      $("div#result").empty();
+      var element = document.getElementById("time_period");
+      element.innerHTML = "Стихотворения 1980-х годов";
+      var result = data.result
+      let year = result[0][2]
+      $(data.result).each(function (index, value) {
+        if(index > 0){
+          if (value[2] === year){
+        $("div#result").append('<pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
+      }
+          else{
+            year = value[2]
+            $("div#result").append('<h3 class="year">'+ value[2] +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
+          };
+  }
+        else{$("div#result").append('<h3 class="year">'+ year +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
+    }})
+  })
+})});
+
+// Выдача стихотворений 90-х
+
+$(function() {
+  $('a#nineties').bind('click', function() {
+    $.getJSON('/filter_poems_by_period_nineties', function(data) {
+      $("div#result").empty();
+      var element = document.getElementById("time_period");
+      element.innerHTML = "Стихотворения 1990-х годов";
+      var result = data.result
+      let year = result[0][2]
+      $(data.result).each(function (index, value) {
+        if(index > 0){
+          if (value[2] === year){
+        $("div#result").append('<pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
+      }
+          else{
+            year = value[2]
+            $("div#result").append('<h3 class="year">'+ value[2] +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
+          };
+  }
+        else{$("div#result").append('<h3 class="year">'+ year +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
+    }})
+  })
+})});
 
 // Сравнение стихотворений в comparison.html
 

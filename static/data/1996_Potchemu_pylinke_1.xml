@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** («Почему вот этой пылинке…»)</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+                    Сенаторова</name> и <name>Е. Кулик</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Западно-восточный ветер. С.28. <date type="published"
+                        >1997</date></publisher>
+                    <date type="written" when="1996">1996</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>***</head>
+            <lg type="stanza">
+                <l n="1">Почему вот этой пылинке</l>
+                <l n="2">Говорю я не «ты», а «я»?</l>
+                <l n="3">Кремешку, блеснувшему глухо</l>
+                <l n="4">В смертной впадине бытия.</l>
+                <l n="5">Когда бы Солнцу я посмела</l>
+                <l n="6">Сказать, лучами все паля:</l>
+                <l n="7">— Горячее мое! Родное!</l>
+                <l n="8">Ты — мое тело. Это — я. —</l>
+                <l n="9">Но даже ветром я не стану,</l>
+                <l n="10">И он уже не станет мной,</l>
+                <l n="11">Хозяйка я одна под темной</l>
+                <l n="12">Растленной этой скорлупой.</l>
+            </lg>
+            <date>1992</date>
+        </lg>
+    </text>
+</TEI>

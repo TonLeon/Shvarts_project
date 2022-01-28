@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+          <titleStmt>
+            <title>***("Земля, земля, ты ешь людей...")</title>
+            <author>Елена Шварц</author>
+          </titleStmt>
+          <respStmt>
+            <resp>Редакторы:</resp>
+            <name>П. Успенский</name>, <name>А. Шеля</name>,<name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>Е. Гришечкина</name>
+          </respStmt>
+          <respStmt>
+            <resp>Издатели:</resp>
+            <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+          </respStmt>
+          <sourceDesc>
+            <bibl>
+              <publisher>ЦСС
+                <date type='published'>2021</date></publisher>
+                <date type="written" when="1981">1981</date>
+            </bibl>
+          </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+  <text>
+       <lg type="poem">
+         <head>***</head>
+         <lg type="stanza">
+          	<l n="1">Земля, земля, ты ешь людей,</l>
+          	<l n="2">Рождая им взамен</l>
+          	<l n="3">Кастальский ключ, гвоздики луч,</l>
+          	<l n="4">И камень, и сирень.</l>
+            <l n="5">Земля, ты чавкаешь во тьме,</l>
+            <l n="6">Коснеешь и растешь,</l>
+            <l n="7">И тихо вертишь на уме,</l>
+            <l n="8">Что всех переживешь.</l>
+            <l n="9">Ну что же — радуйся! Пои</l>
+            <l n="10">Всех черным молоком,</l>
+            <l n="11">Ты разлилась в моей крови,</l>
+            <l n="12">Скрипишь под языком.</l>
+            <l n="13">О древняя змея! Траву</l>
+            <l n="14">Ты кормишь, куст в цвету,</l>
+            <l n="15">А тем, кто ходит по тебе,</l>
+            <l n="16">Втираешь тлен в пяту.</l>
+         </lg>
+         <date>1981</date>
+       </lg>
+  </text>
+  <notesStmt>
+    <note>Впервые в: Стихи 87, с. 44.</note>
+  </notesStmt>
+</TEI>

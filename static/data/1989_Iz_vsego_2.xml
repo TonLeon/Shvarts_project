@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Из всего</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>А. Кулакова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Песня птицы на дне морском. 1995. С. 27.
+            <date type='published'>1995</date></publisher>
+            <date type="written" when="1989">1989</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>Из всего</head>
+      <lg type="stanza" n="1">
+        <l n="1">То, что Гуттен-станок</l>
+        <l n="2">Прижимал к молоточкам —</l>
+        <l n="3">Боязливой бумаги шершавый лист,</l>
+        <l n="4">То, что в ухо вползало, ахая,</l>
+        <l n="5">Что в трубу святого Евстахия</l>
+        <l n="6">Набросал пианист, натащил гармонист,</l>
+        <l n="7">Нашипела змея,</l>
+        <l n="8">Нашептал дурачок,</l>
+        <l n="9">От чего сжималось глазное яблоко,</l>
+        <l n="10">Всё — чем память набила мешок —</l>
+        <l n="11">Надо его отдать рано ли, поздно.</l>
+        <l n="12">Из всего — только всего и жаль —</l>
+        <l n="13">Звёзды, и даже слова о звёздах.</l>
+      </lg>
+    </lg>
+  </text>
+</TEI>

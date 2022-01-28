@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Птичье счастье</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+          Сенаторова</name> и <name>Е. Гришечкина</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>ЦСС <date type="published">2021</date></publisher>
+          <date type="written" when="1983">1983</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>Птичье счастье</head>
+      <lg type="quatrain" n="1">
+        <l n="1">Макушку птичка мне пометила</l>
+        <l n="2">Своею каплею лепрозной,</l>
+        <l n="3">Все говорят — что это к счастью,</l>
+        <l n="4">О счастии все мыслят розно.</l>
+      </lg>
+      <lg type="stanza" n="2">
+        <l n="5">Мое же счастье выражалось,</l>
+        <l n="6">Что не везло ни в чем, ни в чем,</l>
+        <l n="7">Но что бы, что бы ни случалось.</l>
+        <l n="8">Все сердце жарко целовалось</l>
+        <l n="9">С горячим солнечным лучом.</l>
+      </lg>
+      <lg type="quatrain" n="3">
+        <l n="10">Оптичена зачем — не знаю,</l>
+        <l n="11">По-птичьи щелкну, говоря,</l>
+        <l n="12">Плечом костлявым разрезаю</l>
+        <l n="13">Шелка тугие октября.</l>
+      </lg>
+      <date>1983</date>
+    </lg>
+  </text>
+  <notesStmt>
+    <note>Опубликовано в: Сочинения, том 1., С. 163.</note>
+  </notesStmt>
+</TEI>

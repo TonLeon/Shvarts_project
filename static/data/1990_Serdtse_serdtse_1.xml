@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>*** («Сердце, сердце, тебя все слушай…»)</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>А. Ворошилова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Знамя. 1992. № 12. С. 52.
+            <date type='published'>1992</date></publisher>
+            <date type="written" when="1990">1990</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>***</head>
+      <lg type="stanza" n="1">
+        <l n="1">Сердце, сердце, тебя все слушай,</l>
+        <l n="2">На тебя же не посмотри —</l>
+        <l n="3">На боксерскую мелкую грушу,</l>
+        <l n="4">Избиваемую изнутри.</l>
+        <l n="5">Что в тебе все стучится, клюется —</l>
+        <l n="6">Астральный цыпленок какой?</l>
+        <l n="7">Что прорежется больно и скажет:</l>
+        <l n="8">Я не смерть, а двойник твой.</l>
+        <l n="9">Что же, что же мне делать?</l>
+        <l n="10">Своего я сердца боюсь,</l>
+        <l n="11">И не кровью его умыла,</l>
+        <l n="12">А водицею дней, вот и злюсь.</l>
+        <l n="13">Не за то тебя, сердце, ругаю —</l>
+        <l n="14">Что темное и нездешнее,</l>
+        <l n="15">А за то, что сметливо, лукаво</l>
+        <l n="16">И безутешное.</l>
+      </lg>
+      <date>1989</date>
+    </lg>
+  </text>
+</TEI>

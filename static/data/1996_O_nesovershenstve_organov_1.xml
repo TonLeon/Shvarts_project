@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>О несовершенстве органов чувств</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+          Сенаторова</name> и <name>Е. Гришечкина</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Соло на раскаленной трубе. С. 8. <date type="published">1998</date></publisher>
+          <date type="written" when="1996">1996</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>О несовершенстве органов чувств</head>
+      <lg type="quatrain" n="1">
+        <l n="1">Вот радуга — в ней семьдесят цветов, оттенков и ворот,</l>
+        <l n="2">На подступах к глазам — я чую,</l>
+        <l n="3">Я вижу зеркало — в нем семьдесят детей,</l>
+        <l n="4">Толпа теней, блестя, таясь, кочует.</l>
+      </lg>
+      <lg type="quatrain" n="2">
+        <l n="5">Гудят, звенят на чердаках ушей,</l>
+        <l n="6">А человек и в полдень нетопырь.</l>
+        <l n="7">Глубокая вода, и я при ней</l>
+        <l n="8">Как рюмка на колодезной цепи.</l>
+      </lg>
+      <lg type="quatrain" n="3">
+        <l n="9">Какая длинная нам выпала весна —</l>
+        <l n="10">Не развернется лист, но делает усилье.</l>
+        <l n="11">Хотя бы выросла вторая голова!</l>
+        <l n="12">Прорезались хоть бабочкины крылья!</l>
+      </lg>
+    </lg>
+  </text>
+</TEI>
