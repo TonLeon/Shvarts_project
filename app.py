@@ -230,7 +230,7 @@ def filter_poems_nineties():
 
 @app.route('/printed_edition/')
 def get_list_of_texts_from_printed_editions():
-	titles, duplicates, _, _ = get_poems_titles()
+	titles, _, _, _ = get_collection_titles('Shvarts_ZT')
 	return render_template('printed_edition.html', page_name='texts_from_printed_editions', 
 							titles=titles, duplicates=duplicates)
 
