@@ -18,7 +18,7 @@ $(function() {
           });
         }
               else{
-                $("div#result").append('<pre>По Вашему запросу ничего не обнаружено. Попробуйте еще раз.</pre>')
+                $("div#result").append('<pre style="margin-left:25px; margin-top:50px;">По Вашему запросу ничего не обнаружено. Попробуйте еще раз.</pre>')
               };
         });
         return false;
