@@ -6,6 +6,7 @@
   <head><title>Произведения</title></head>
     <body>
       <main class="main">
+        
         <nav class="main__nav">
           <ul class="main__nav-list">
             <li class="main__nav-list-item">
@@ -21,17 +22,18 @@
               <a class="main__nav-link" href="/other">Переводы</a>
             </li>
 
-
-            <form class='search-box'>
-              <input id='search-input' class="for_search" type='text' name='search' id='inlineFormInputGroupUsername5' placeholder='Поиск по слову'/>
-              <div><button type='submit' class='other_buttons' id='process_input'>Искать</button></div>
-            </form>
               <a href="#" title="Вернуться к началу страницы" id="up">&#8679</a>
           </ul>
         </nav>
 
     <section class="main__content">
-      <h1 id='time_period'>Стихотворения</h1>
+      <h1 class="main__title" id='time_period'>Стихотворения</h1>
+
+      <form class='search-box'>
+        <input id='search-input' class="for_search" type='text' name='search' id='inlineFormInputGroupUsername5' placeholder='Поиск по слову'/>
+        <button type='submit' class='other_buttons' id='process_input'>Искать</button>
+      </form>
+      
       <ul class="titles__periods">
         <li class="main__nav-list-item">
           <a class="main__nav-link" id="all" href="#">Все тексты</a>

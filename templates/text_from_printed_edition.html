@@ -24,10 +24,11 @@
 <body>
     
     <main class="main">
-        <div class="edition_name">Стихи из «Зелёной тетради»</div>
+        
         <nav class="main__nav">
-            
+            <div class="edition_name">Стихи из «Зелёной тетради»</div>
                     <div class = collection_contents>
+                        
                         <ul class=" main__nav-list_content">
                             {% for title in titles %}
                                 {% if title.ID == item.ID %}
@@ -38,13 +39,20 @@
                                     <li class="main__nav-list-item">
                                         <a class="text_of_edition" href="/{{title.path}}{{title.ID}}">{{title.title}}</a>
                                     </li>
+                                    <!-- <li class="main__nav-list-item">
+                                        <a href="#" title="Вернуться к началу страницы" id="up_content"></a>
+                                    </li> -->
+                                    
                                 {% endif %}
                             {% endfor %}
+                            <!-- <li class="main__nav-list-item">
+                                <a href="#" id="up_content">&#8679</a>
+                            </li> -->
                         </ul>  
                     </div> 
-                <a href="#" title="Вернуться к началу страницы" id="up_content">&#8679</a>               
+                       
         </nav> 
-                  
+         
         <section class="move_over_poems">
 
             <ul class="movement">

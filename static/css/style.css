@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
 
 /* ПАЛИТРА
 #DABEB8 нежно-розовый RGB (218, 190, 184)
@@ -15,10 +16,10 @@ html {
 
 /* ЦВЕТ, ОТСТУПЫ, ФОН, ШИРИНА */
 body { 
-    width: 1100px;
-    min-height: 100%;
+    /* width: 1100px; */
+    /* min-height: 100%; */
     margin: auto;
-    background-color: #f2f1ef;
+    background-color: #dbd8d3;
 }
 
 html{
@@ -35,22 +36,25 @@ html{
     display: flex;
     flex-direction: column;
     width: 100%;
-    
-    margin: 0 0 50px 0;
+    background: white;
+    /* margin: 0 0 50px 0; */
 }
 .header_name {
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     color:#895961;
     opacity: 0.6;
-    margin-top:15px;
-    align-content: right;
-    font-size: 110%;
-    margin-top:55px;
+    font-size: 42px;
+    margin-bottom: 40px;
+    text-align: center;
+    /* align-content: right; */
+    /* font-size: 38px;
+    margin-top:55px; */
 }
 .header__name-image {
     object-fit: contain;
     min-width: 550px;
-    align-content: right;
+    margin: 34px;
+    margin-left: 60px;
 }
 
 .header__nav {
@@ -75,9 +79,9 @@ html{
 }
 
 .btn{
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 500;
-    font-size: 170%;
+    font-size: 38px;
     color:#8E917E;
     background-color: #dbd8d3;
     border-color:none;
@@ -105,7 +109,7 @@ html{
 }
 
 .btn:hover:before /*кнопка еще без наплывания*/{ 
-    height: 50px; 
+    height: 70px; 
     border-style: none;
     text-decoration: none;
 }
@@ -117,6 +121,9 @@ box-shadow: none;
 }
 
 /* НАВИГАЦИОННАЯ ПАНЕЛЬ СБОКУ */
+
+.main__nav
+
 .main__nav-list_content{
     list-style: none;
     padding: 0;
@@ -124,7 +131,7 @@ box-shadow: none;
 }
 
 .main__nav-link_content {
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     color:#895961; 
     font-size: 17px;
 }
@@ -132,23 +139,23 @@ box-shadow: none;
     min-height: 370px;
     display: flex;
     flex-direction: row;
-    margin: 20px;
+    /* margin: 20px; */
     justify-content: space-between;
 
 }
 
 .main__nav-list {
     list-style: none;
-    padding: 0;
-    margin: 0;
+    /* padding: 0; */
+    margin-left: 40px;
     position: fixed;
 
 }
 
 .main__nav-link {
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     color:#895961; 
-    font-size: 24px;
+    font-size: 36px;
     border-color: #8E917E;
     border-bottom-style: dashed;
 
@@ -160,7 +167,7 @@ box-shadow: none;
 /*вверх */
 #up{
     
-    color: #DABEB8;
+    color: white;
     border-style: none;
     font-size: 60px;
     text-align: center;
@@ -170,13 +177,13 @@ box-shadow: none;
 }
 #up_content{
     
-    color: #DABEB8;
+    color: white;
     border-style: none;
     font-size: 60px;
     text-align: center;
     opacity:0.6; 
-    position:fixed;
-    margin-top: 620px;
+    /* position:fixed; */
+    /* margin-top: 620px; */
 
 }
 
@@ -197,14 +204,14 @@ a{
 .code{
     color: #895961;
     background:  rgba(218, 190, 184, 0.6);
-    font-family: Montserrat,sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 700;
     font-size:100%;
 }
 
 /*Остальные кнопки*/
 .other_buttons{
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 24px;
     border-color:#DABEB8;
     color: #895961;
@@ -214,16 +221,17 @@ a{
 }
 /* для подписей */
 .signature{
-    font-family: Montserrat, sans-serif;
-
+    font-family: 'Oswald', sans-serif;
     font-size:100%;
     color: #895961;
     text-align: right;
+    margin-right: 8%;
 }
 
 /* ПОИСК СБОКУ В НАВИГАЦИОННОЙ ПАНЕЛИ НА titles.html */
 .search-box{
-    margin-top: 35px;
+    margin-bottom: 30px;
+    
 }
 
 .search-input {
@@ -231,8 +239,8 @@ a{
     font-size: 18px;
     border: none;
     background: none;
-    padding: 0;
-    margin: 16px 0 0;
+    /* padding: 0; */
+    /* margin: 16px 0 0; */
 }
 
 .search-input:focus {
@@ -241,8 +249,10 @@ a{
 
 .for_search {
     text-decoration: none !important;
-    font-family: "Montserrat", sans-serif; 
-    font-size: 110%; 
+    font-family: 'Oswald', sans-serif;
+    font-size: 18px;
+    width: 80%;
+    margin-left: 25px;
     color: #895961 !important;
 }
 
@@ -266,10 +276,10 @@ a{
     border-style: ridge ;
 }
 
-#process_input{
+/* #process_input{
     margin-top: 15px;
 
-}
+} */
 
 .search_result{
     margin-top: 30px;
@@ -281,30 +291,36 @@ a{
     font-size: 14px;
     color:#895961;
     opacity: 0.6;
+    margin-left:25px;
 }
 
 /* ТЕКСТ О ПРОЕКТЕ В index.html */
 .main__content {
     display: flex;
     flex-direction: column;
-    width: 73%;
+    width: 70%;
+    /* margin-right: 5%; */
+    background: #f2f1ef;
 }
 
 .main__title {
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 300;
     font-size: 36px;
     color: #DABEB8;
     width: 100%;
+    margin-left: 25px;
+    margin-top: 50px;
 }
 
 .main__text {
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: #895961;
     font-size: 18px;
     font-weight: 300;
-    text-align: start;
-    width: 100%;
+    text-align:justify;
+    width: 90%;
+    margin-left: 25px;
 }
 
 .main__team {
@@ -329,7 +345,7 @@ a{
 }
 
 .main__team-name/*Команда: имена*/{
-  font-family: Montserrat, sans-serif;  
+  font-family: 'Oswald', sans-serif;  
   color:#8E917E;
   margin-top: 10px;
 }
@@ -340,7 +356,8 @@ a{
 .move_over_poems {
     display: flex;
     flex-direction: column;
-    width: 73%;
+    width: 70%;
+    background: #f2f1ef;
 }
 
 .movement{
@@ -350,6 +367,7 @@ a{
     padding: 0;
     width: 70%;
     margin-bottom:30px;
+    margin-left:25px;
 }
 
 #back, #forward{
@@ -360,17 +378,18 @@ a{
 
 
 .head{
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: #895961; 
     font-size: 23px; 
     font-weight: bold;
     padding-bottom: 30px;
+    margin-left:25px;
 }
 
 .dedication{
     padding-left:170px;
     font-size: 100%;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: #8E917E ;  
     font-style: italic;
 }
@@ -378,21 +397,23 @@ a{
 .epigraph{
     padding-left:170px;
     font-size: 100%;
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: #8E917E ; 
     font-style: italic;
 }
 
 .text {
    color: #3F3031; 
-   font-family: Montserrat, sans-serif;
+   font-family: 'Oswald', sans-serif;
    font-size:18px;
+   margin-left:25px;
 }
 
 .meta {
    color:#8E917E; 
-   font-family: Montserrat, sans-serif;
+   font-family: 'Oswald', sans-serif;
    font-size: 110%;
+   /* margin-left:25px; */
 }
 
 .download_icon {
@@ -401,6 +422,7 @@ a{
      font-weight: bold;
      text-decoration: none !important;
      padding-top: -200px;
+     margin-left:25px;
 }
 
 .download_icon:hover {
@@ -414,7 +436,7 @@ a{
 }
 
 .comparison{
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 100%;
     color: #DABEB8;
     padding-top: 0px;
@@ -434,7 +456,8 @@ a{
     list-style: none;
     justify-content: space-between;
     padding: 0;
-    width: 100%;
+    width: 80%;
+    margin-left: 25px;
 }
 
 
@@ -448,11 +471,12 @@ a{
 
 .titles__poem {
     text-decoration: none !important;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-size: 22px;
     color: #3F3031 !important;
     font-weight: 300;
     opacity: 0.5;
+    margin-left: 25px;
 }
 
 /* .poems{
@@ -467,19 +491,21 @@ a{
 
 
 #time_period{
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Oswald', sans-serif;
     opacity:0.9;
     color: #DABEB8;
     margin-bottom: 30px;
+    font-size: 42px;
 }
 .year{
     color: #895961; 
     opacity:0.9;
     font-size: 32px;
     margin-top: 30px;
+    margin-left: 25px;
     /* padding-top: 32px; */
     /* padding-bottom: 32px; */
-    font-family: "Montserrat", sans-serif; 
+    font-family: 'Oswald', sans-serif; 
     font-weight: 500px;
 }
 
@@ -508,9 +534,12 @@ p.head{
 
 .highlight_old {background-color: #DABEB8;}
 	
-.two_poems_to_compare{
+.two_poems_to_compare {
     display: flex;
-    width: 78%;
+    width: 70%;
+    margin-right: 40px;
+    margin-top: 50px;
+    background: #f2f1ef;
 }
 
 .section_1
@@ -529,7 +558,7 @@ p.head{
 
 .select {
         margin-bottom: 50px;
-        font-family: "Montserrat", sans-serif;
+        font-family: 'Oswald', sans-serif;
         position: relative;
         display: block;
         height: 40px;
@@ -545,7 +574,7 @@ box-shadow: none;}
 
 .dropdown-menu {
         margin-bottom: 50px;
-        font-family: "Montserrat", sans-serif;
+        font-family: 'Oswald', sans-serif;
         position: relative;
         display: block;
         height: 40px;
@@ -585,15 +614,75 @@ option.select{
 .books:hover {
     opacity: 1.0;
 }
+
+.box-element__library{
+    padding: 25px;
+    background: #f2f1ef;
+    color:#8E917E;
+}
+
+.box-element__library .box-element__text {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-wrapper {
+    grid-template-columns: repeat(4, 0.3fr);
+}
+.main-wrap {
+    display: flex;
+    flex-direction: column;
+    min-height: 55vh;
+    padding: 35px;
+}
+
+.main-wrap .content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 0.3fr);
+    grid-gap: 20px;
+}
+
+.collection__title{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    color: #895961;
+    width: 100%;
+    /* margin-left: 25px;
+    margin-top: 50px; */
+
+}
+.collection__author{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    color: #DABEB8;
+    width: 100%;
+    /* margin-left: 25px;
+    margin-top: 50px; */
+
+}
+
+.collection_bibliography{
+    margin-bottom: 0px; 
+    font-size: 14px;
+    color:#895961;
+    opacity: 0.6;
+    font-family: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    /* margin-left:25px; */
+}
+
 /* СБОРНИКИ*/
 
 .edition_name{
-    font-family:Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     color:#895961;
-    font-size: 17px;
+    font-size: 32px;
     font-weight:700;
-    position:fixed;
+    /* position:fixed; */
     margin-top:10px;
+    margin-left:30px;
 
 }
 
@@ -601,29 +690,32 @@ option.select{
     width:247px;
 }
 
-.collection_contents{
-margin-top:80px !important;
-margin-bottom:80px !important;
-padding: 10px !important;
-font-size: 20%;
-width:240px; /* ширина нашего блока */
-height:270px ; /* высота нашего блока */
-background: #f2f1ef; /* цвет фона */
-border-style:ridge; /* размер и цвет границы блока */
-border-color: #DABEB8;
-overflow: auto;
-position:fixed; /* свойство для прокрутки по горизонтали. Автоматом, если больше блока */
+.collection_contents {
+    font-family: 'Oswald', sans-serif;
+    font-size: 16px;
+    margin-top: 30px !important;
+    margin-bottom: 80px !important;
+    padding: 10px !important;
+    /* font-size: 20%; */
+    /* width: 28%; */
+    margin-left: 30px;
+    height: 500px;
+    /* background: #f2f1ef; */
+    /* border-style: ridge; */
+    /* border-color: #DABEB8; */
+    /* overflow: auto;
+    position: fixed; */
 }
 
 .chosen_text_of_edition{
     background:#895961; 
     color: #f2f1ef;
-    font-size: 14px;
+    font-size: 24px;
 }
 
 .text_of_edition{ 
     color: #895961; 
-    font-size: 14px;
+    font-size: 24px;
     text-decoration: none !important;
 }
 
@@ -673,7 +765,7 @@ position:fixed; /* свойство для прокрутки по горизо�
 /* ДЛЯ НЕЗАПОЛНЕННЫХ СТРАНИЦ*/
 
 .other_text /* ПОКА ЗДЕСЬ ПУСТО */{
-    font-family: Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 900;
     font-size: 350%;
     color:#8E917E;
@@ -682,7 +774,7 @@ position:fixed; /* свойство для прокрутки по горизо�
 }
 
 .other{
-    margin-bottom: -20px;
+    /* margin-bottom: -20px; */
     margin-left: -5px;
     opacity:0.5;  
 }
@@ -692,7 +784,7 @@ position:fixed; /* свойство для прокрутки по горизо�
 .footer{      
     clear: both;
     background-color: #dbd8d3;
-    font-family:Montserrat, sans-serif;
+    font-family: 'Oswald', sans-serif;
     color: #f2f1ef;
     font-weight: 700;
     text-align: center;
