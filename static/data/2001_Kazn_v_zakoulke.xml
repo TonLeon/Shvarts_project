@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Казнь в закоулке</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>А. Ворошилова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>ЦСС
+            <date type='published'>2022</date></publisher>
+            <date type="written" when="05/08/2001">2001</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>Казнь в закоулке</head>
+      <lg type="quatrain" n="1">
+        <l n="1">На желтой заре разрыв-города́</l>
+        <l n="2">Вставали из-за болот,</l>
+        <l n="3">Строила тихо собою вода</l>
+        <l n="4">Белый подводный флот.</l>
+      </lg>
+      <lg type="quatrain" n="2">
+        <l n="5">Сдует шерстинки седой овцы</l>
+        <l n="6">Ночной беспощадный мороз,</l>
+        <l n="7">Кто-то скользнул из Невы в Коцит,</l>
+        <l n="8">Просто нырнул насквозь.</l>
+      </lg>
+      <lg type="quatrain" n="3">
+        <l n="9">Сонный декабрь натирает в труху</l>
+        <l n="10">Колотый сталью лед,</l>
+        <l n="11">Чтобы толкался в синем пуху</l>
+        <l n="12">Локтем кирпичный завод.</l>
+      </lg>
+      <lg type="quatrain" n="4">
+        <l n="13">С маху в прорубях сеет январь</l>
+        <l n="14">Тени и корни звезд,</l>
+        <l n="15">Чтобы, пройдя через ров и мост,</l>
+        <l n="16">Вышли они на помост.</l>
+      </lg>
+      <lg type="quatrain" n="5">
+        <l n="17">И тогда я к ним подойду,</l>
+        <l n="18">Тихо за руку взяв</l>
+        <l n="19">Кого-нибудь в последнем ряду:</l>
+        <l n="20">«Значит, пора, my love».</l>
+      </lg>
+      <date>5 августа 2001</date>
+      <name type="place">Готланд</name>
+    </lg>
+  </text>
+  <notesStmt>
+    <note>Впервые в: Звезда. 2002. № 6. С. 6. Датировка уточняется по листу компьютерного набора (1045).</note>
+  </notesStmt>
+</TEI>

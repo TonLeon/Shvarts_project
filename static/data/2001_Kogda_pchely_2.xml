@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+          <titleStmt>
+            <title>*** ("Когда пчелы под вечер слетаются...")</title>
+            <author>Елена Шварц</author>
+          </titleStmt>
+          <respStmt>
+            <resp>Редакторы:</resp>
+            <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>Е. Гришечкина</name>
+          </respStmt>
+          <respStmt>
+            <resp>Издатели:</resp>
+            <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+          </respStmt>
+          <sourceDesc>
+            <bibl>
+              <publisher>Сочинения, том 1. С. 423.
+                <date type='published'>2002</date></publisher>
+                <date type="written" when="2001">2001</date>
+            </bibl>
+          </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+  <text>
+       <lg type="poem">
+         <head>***</head>
+         <lg type="stanza">
+            <l n="1">Когда пчелы под вечер слетаются,</l>
+            <l n="2">В соты мед впечатает завхоз,</l>
+            <l n="3">И опять обратно собираются...</l>
+            <l n="4">Это вот и есть метемпсихоз?</l>
+            <l n="5">Когда имя и носитель имени</l>
+            <l n="6">Разойдутся на путях,</l>
+            <l n="7">Вдруг из серо-розового вымени</l>
+            <l n="8">Хлынет антидот, губящий страх.</l>
+         </lg>
+          <date>2001</date>
+       </lg>
+  </text>
+</TEI>

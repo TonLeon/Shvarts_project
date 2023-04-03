@@ -17,8 +17,8 @@
             </respStmt>
             <sourceDesc>
                 <bibl>
-                    <publisher>ЦСС <date type="publishing">2021</date></publisher>
-                    <date type="written" when="23/03/1999">1999</date>
+                    <publisher>ЦСС <date type="published">2021</date></publisher>
+                    <date type="written" when="1999">23 марта 1999</date>
                 </bibl>
             </sourceDesc>
         </fileDesc>

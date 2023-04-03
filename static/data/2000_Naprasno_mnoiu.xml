@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>*** («Напрасно мною выстрелит метро…»)</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>А. Ворошилова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>ЦСС
+            <date type='published'>2022</date></publisher>
+            <date type="written" when="2000">2000</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>***</head>
+      <div type="dedication">Б. Ахмадулиной</div>
+      <lg type="quatrain" n="1">
+        <l n="1">Напрасно мною выстрелит метро</l>
+        <l n="2">В пустое сердце мокрого проспекта,</l>
+        <l n="3">Меня не видно, я никто, ничто,</l>
+        <l n="4">Я выпала из радужного спектра.</l>
+      </lg>
+      <lg type="quatrain" n="2">
+        <l n="5">Напрасно мною выстрелит метро.</l>
+        <l n="6">В его стволах ружейных мчась напрасно,</l>
+        <l n="7">Я раню жизнь, царапнув только рот,</l>
+        <l n="8">Но это не смертельно, не опасно.</l>
+      </lg>
+      <date>[2000]</date>
+    </lg>
+  </text>
+  <notesStmt>
+    <note>Опубликовано в: Дикопись последнего времени, С. 27. Год написания восстанавливается по расположению копии со стихотворением среди листов того же формата со стихами 2000 г.</note>
+  </notesStmt>
+</TEI>

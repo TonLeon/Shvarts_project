@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** («Как флорентийский дюк...»)</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+             <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>Е. Хереш</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>ЦСС
+                        <date type='published'>2021</date></publisher>
+                    <date type="written" when="30/01/2010">2010</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>*** («Как флорентийский дюк...»)</head>
+<lg type="stanza" n="1"> 
+<l n="1">Как флорентийский дюк,</l>
+<l n="2">Отравленный коварно,</l>
+<l n="3">Я угасаю. Дух,</l>
+<l n="4">Мечась по клетке тварной,</l>
+<l n="5">Уже почти вовне,</l>
+<l n="6">Уже почти снаружи.</l>
+<l n="7">Глаза туманятся, мерцая,</l>
+<l n="8">Смотрят вчуже.</l>
+</lg>
+<date>30 января 2010</date>
+        </lg>
+    </text>
+    <notesStmt>
+    <note>Впервые в: Перелетная птица, С. 38.
+
+        Перелетная птица, С. 38, дат.: 30 янв. 2010
+        Собрание сочинений. С. 42.</note>
+  </notesStmt>
+</TEI>

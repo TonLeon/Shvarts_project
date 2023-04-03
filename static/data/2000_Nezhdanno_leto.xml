@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** («Нежданно лето налетело...»)</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>,<name>Е. Хереш</name> и <name>Е. Павлова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>ЦСС
+                        <date type='published'>2022</date></publisher>
+                        <date type="written" when="20/04/2000">2000</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>***</head>
+        <lg type="stanza">
+ <l n="1">Нежданно лето налетело</l>
+ <l n="2">(Весну как будто пропустили),</l>
+ <l n="3">И листья в почках засвистели,</l>
+ <l n="4">А птицы лаковые кольца</l>
+ <l n="5">В опухших горлышках вертели,</l>
+ <l n="6">Потом раскидывали с крыши</l>
+ <l n="7">Серебряную мелочь — в вечер.</l>
+ <l n="8">Ты знаешь, я стремлюсь не слышать,</l>
+ <l n="9">Что птицы страстные щебечут.</l>
+        </lg>
+        <date>20 апреля 2000</date>
+        </lg>
+</text>
+<notesStmt>
+<note>Впервые в: Звезда. 2000. №8. С. 3. Датировка уточняется по листам компьютерного набора (464, 959).</note>
+        <note>Сочинения, том 1. С. 413; дат.: 2000
+        Дикопись последнего времени, С. 66; б/д.
+        Звезда. 2000. №8. С. 3, б/д.</note>
+<note>Архив:
+464, 959</note> 
+</notesStmt>
+</TEI>

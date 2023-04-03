@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** («Меж двух толщинок времени»)</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>Е. Кулик</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Звезда. 2002. №6. С. 4.
+                        <date type='published'>2002</date></publisher>
+                        <date type="written" when="2001">2001</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+<lg type="poem">
+<head>***</head>
+<lg type="stanza">
+ <l n="1">Меж двух толщинок времени</l>
+ <l n="2">Жизни вонзилась бритва —</l>
+ <l n="3">Здесь теперь кровоточит,</l>
+ <l n="4">Здесь теперь не заживет.</l>
+ <l n="5">То, что было без меня,</l>
+ <l n="6">То, что будет без меня,</l>
+ <l n="7">А меж них скользит, алея,</l>
+ <l n="8">Сила лезвия безумная.</l>
+ </lg>
+    </lg>
+</text>
+</TEI>

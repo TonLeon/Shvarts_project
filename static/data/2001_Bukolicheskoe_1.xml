@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+          <titleStmt>
+            <title>Буколическое</title>
+            <author>Елена Шварц</author>
+          </titleStmt>
+          <respStmt>
+            <resp>Редакторы:</resp>
+            <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>Е. Гришечкина</name>
+          </respStmt>
+          <respStmt>
+            <resp>Издатели:</resp>
+            <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+          </respStmt>
+          <sourceDesc>
+            <bibl>
+              <publisher>Знамя. 2001. №8. С. 3.
+                <date type='published'>2001</date></publisher>
+                <date type="written" when="2001">2001</date>
+            </bibl>
+          </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+  <text>
+       <lg type="poem">
+         <head>Буколическое</head>
+          <div type="dedication">В. Шубинскому</div>
+         <lg type="stanza">
+            <l n="1">Ведь мы живем не для корысти,</l>
+            <l n="2">А чтобы жизнь чуть позади вести.</l>
+            <l n="3">И легкие венки из душных трав плести,</l>
+            <l n="4">И чтоб Иван да Марья позабыли</l>
+            <l n="5">О нас, доверив черных коз пасти.</l>   
+            <l n="6">Я их пасу на маленьком лугу,</l>
+            <l n="7">На изумрудном, круглом, разноцветном,</l>
+            <l n="8">С веселой помощью косматых псов,</l>
+            <l n="9">И глядя на кудели облаков,</l>
+            <l n="10">Блуждая взором в ясном небе</l>
+            <l n="11">И на стрекоз голубоглазых,</l>
+            <l n="12">На крылья призрачные их,</l>
+            <l n="13">Лениво облака постёгивая взглядом,</l>
+            <l n="14">Пасу ягнят небесных и земных.</l>
+         </lg>
+       </lg>
+  </text>
+</TEI>

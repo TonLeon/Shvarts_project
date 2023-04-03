@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>НОВОСЕЛЬЕ ЗИМЫ</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>К. Кудинова</name>, <name>Л. Родичева</name>, <name>Е. Хереш</name> и <name>Е. Сенаторова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name> и <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Звезда. 2002. №6. С.5
+                        <date type='published'>2002</date></publisher>
+                        <date type="written" when="2001"></date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+    <lg type="poem">
+            <head>НОВОСЕЛЬЕ ЗИМЫ</head>
+            <lg type="quatrain" n="1">
+                <l n="1">Бельмом вдруг вспыхнул циферблат</l>
+                <l n="2">Под фарами авто больного.</l>
+                <l n="3">Глухой Харон с луной немой</l>
+                <l n="4">Вот-вот зачнут глухонемого.</l>
+                        </lg>
+            <lg type="quatrain" n="2">      
+                <l n="5">Он будет ухать как сова</l>
+                <l n="6">И жить другим на горе.</l>
+                <l n="7">Кричит он вещие слова,</l>
+                <l n="8">Все время слыша море.</l>
+                        </lg>
+            <lg type="quatrain" n="3">      
+                <l n="9">Темное зеркало в мелком поту,</l>
+                <l n="10">В легких стеклянных прыщах,</l>
+                <l n="11">Отражало огни и пустоту,</l>
+                <l n="12">Когда застревало в дверях.</l>
+                                </lg>
+            <lg type="quatrain" n="4">      
+                <l n="13">На это вороны молча глядят</l>
+                <l n="14">На ледяных кустах.</l>
+                <l n="15">Это завелся жилец Зима</l>
+                <l n="16">В наших дурных местах.</l>
+           </lg>
+               <date>2001</date>
+        </lg>
+</text>
+</TEI>

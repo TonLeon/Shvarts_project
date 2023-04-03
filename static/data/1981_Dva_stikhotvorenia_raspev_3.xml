@@ -18,7 +18,7 @@
                 <bibl>
                     <publisher>Сочинения, том 1. С. 150-152
                         <date type='published'>2002</date></publisher>
-                        <date type="written" when="1981">1981</date>
+                        <date type="written" when="1981"></date>
                 </bibl>
             </sourceDesc>
         </fileDesc>

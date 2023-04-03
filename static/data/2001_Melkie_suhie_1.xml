@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>*** («Мелкие сухие облака…»)</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>А. Ворошилова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Звезда. 2002. № 6. С. 5.
+            <date type='published'>2002</date></publisher>
+            <date type="written" when="29/05/2001">2001</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>***</head>
+      <lg type="stanza">
+        <l n="1">Мелкие сухие облака</l>
+        <l n="2">На гору сыпались. Вдали</l>
+        <l n="3">(Как будто бы овца невидимая шла)</l>
+        <l n="4">Они из ничего опять росли.</l>
+        <l n="5">Осколок ногтя, врезанный в мизинец,</l>
+        <l n="6">Покусывая, голову склоня,</l>
+        <l n="7">Я помнила, что синева в лазури</l>
+        <l n="8">Дороже леса мятого огня.</l>
+      </lg>
+    </lg>
+  </text>
+</TEI>

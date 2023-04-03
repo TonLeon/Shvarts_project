@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** («Как флорентийский дюк...»)</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+             <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>Е. Хереш</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Собрание сочинений. Т. 5. С. 42.
+                        <date type='published'>2013</date></publisher>
+                    <date type="written" when="30/01/2010">2010</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>*** («Как флорентийский дюк...»)</head>
+<lg type="stanza" n="1"> 
+<l n="1">Как флорентийский дюк,</l>
+<l n="2">Отравленный коварно,</l>
+<l n="3">Я угасаю. Дух,</l>
+<l n="4">Мечась по клетке тварной,</l>
+<l n="5">Уже почти вовне,</l>
+<l n="6">Уже почти снаружи.</l>
+<l n="7">Глаза туманятся, мерцая,</l>
+<l n="8">Смотрят вчуже.</l>
+</lg>
+<date>30 янв.2010</date>
+        </lg>
+    </text>
+</TEI>

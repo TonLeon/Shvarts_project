@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Закат на Verts Galants</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Е. Хереш</name> и <name>Д. Соболев</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>ЦСС
+                        <date type='published'>2021</date></publisher>
+                        <date type="written" when="14/05/2000">2000</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>Закат на Verts Galants1</head>
+        <lg type="stanza" n="1">
+<l n="1">Пропела птица —</l>
+<l n="2">Будто повернула</l>
+<l n="3">Три раза ключ.</l>
+<l n="4">И Солнце выдохнуло и вдохнуло</l>
+<l n="5">Последний луч.</l>
+</lg>
+<lg type="stanza" n="2">
+<l n="6">Затихла птица —</l>
+<l n="7">Будто повернула</l>
+<l n="8">Уключину на сломанном весле.</l>
+<l n="9">На Verts Gаlаnts, в закате это было,</l>
+<l n="10">Где медленно сгорал Жак де Моле.</l>
+</lg>
+<lg type="quatrain" n="3">
+<l n="11">А Солнце все равно утонет в Сене,</l>
+<l n="12">И не сказала я ему — постой!</l>
+<l n="13">И не просила. Я вдруг стала просто</l>
+<l n="14">Живою устрицей, лимонной пустотой.</l>
+</lg>
+<date>14 мая 2000</date>
+        </lg>
+        <note type="footnote">1Verts Gаlаnts — остроконечный островок на Сене, под Новым мостом, устремленный на запад, навстречу другим кораблям.</note>
+</text>
+<notesStmt>
+<note>Впервые в: Звезда. 2001. №1. С. 17-18</note>
+</notesStmt>
+</TEI>
