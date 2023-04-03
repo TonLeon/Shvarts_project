@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>*** («Под белою звездой бредут…»)</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>А. Кулакова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>Е. Хереш</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Дикопись последнего времени. 2001. С. 53.
+            <date type='published'>2001</date></publisher>
+            <date type="written" when="04/03/2000">2000</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>***</head>
+      <lg type="stanza">
+        <l n="1">Под белою звездой бредут</l>
+        <l n="2">С бубенчиками два быка,</l>
+        <l n="3">Мутнеет снизу синева,</l>
+        <l n="4">Земного вечера тоска.</l>
+        <l n="5">Американскую ромашку</l>
+        <l n="6">Коровы приминает бас,</l>
+        <l n="7">И вечер сам плетется в стойло,</l>
+        <l n="8">Прищуривая синий глаз.</l>
+      </lg>
+    </lg>
+  </text>
+</TEI>

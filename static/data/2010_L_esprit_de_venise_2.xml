@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>L'ESPRIT DE VENISE</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+             <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>Е. Хереш</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Собрание сочинений. Т. 5. С. 43.
+                        <date type='published'>2013</date></publisher>
+                    <date type="written" when="01/03/2010">2010</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>L'ESPRIT DE VENISE</head>
+<lg type="quatrain" n="1"> 
+<l n="1">Крыса сидела на кромке канала.</l>
+<l n="2">Вся в забытьи, она созерцала</l>
+<l n="3">Плывущие корки, бутылки, зерцала,</l>
+<l n="4">Но, заслышав шаги, в ноябрьскую прыгнула воду.</l>
+</lg>
+<lg type="stanza" n="2">
+<l n="5">Едва я вошла и вдруг оглянулась:</l>
+<l n="6">Огромная чёрная крыса в дверях, подбоченясь, стояла</l>
+<l n="7">И что-то в сердцах бормотала:</l>
+<l n="8">«Я бы выпила, я б закусила».</l>
+<l n="9">К себе придвинув чарку, замолчала,</l>
+<l n="10">Чуть отхлебнула кьянти молодого.</l>
+<l n="11">Она была метаморфоз купца</l>
+<l n="12">Венецианского, расчётливого, злого,</l>
+<l n="13">И маску сдвинула, но треть лица скрывала.</l>
+</lg>
+<date>1 марта 2010</date>
+        </lg>
+    </text>
+</TEI>

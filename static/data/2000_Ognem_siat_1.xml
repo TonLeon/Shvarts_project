@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+ <teiHeader>
+  <fileDesc>
+   <titleStmt>
+    <title>*** (Огнем потаенным сиять)</title>
+    <author>Елена Шварц</author>
+   </titleStmt>
+   <respStmt>
+    <resp>Редакторы:</resp>
+    <name>П. Успенский</name>, <name>А.Шеля</name>, <name>Л.Родичева</name>, <name>Е.
+     Сенаторова</name>, <name>Е. Хереш</name> и <name>В.Федорова</name>
+   </respStmt>
+   <respStmt>
+    <resp>Издатели:</resp>
+    <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+   </respStmt>
+   <sourceDesc>
+    <bibl>
+     <publisher>Дикопись последнего времени, С. 62. <date type="published">2001</date></publisher>
+     <date type="written" when="2000">2000</date>
+    </bibl>
+   </sourceDesc>
+  </fileDesc>
+ </teiHeader>
+ <text>
+  <lg type="poem">
+   <head>***</head>
+   <lg type="stanza">
+    <l n="1">Огнем потаенным сиять —</l>
+    <l n="2">Угольком, зажатым в ладонь,</l>
+    <l n="3">Плыть Ионой в большой треске</l>
+    <l n="4">По дымящей морозом реке,</l>
+    <l n="5">Быть иконой, зарытой в песке,</l>
+    <l n="6">Так уж выпало — быть таким,</l>
+    <l n="7">Кто до времени крепко таим…</l>
+    <l n="8">Быть проглоченным в муках кольцом,</l>
+    <l n="9">Быть личиной, лакуной, ликоной,</l>
+    <l n="10">Быть молчанием в ухо царю —</l>
+    <l n="11">То, что вышептал мыш из-под трона.</l>
+   </lg>
+  </lg>
+ </text>
+</TEI>

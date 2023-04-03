@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+ <teiHeader>
+  <fileDesc>
+   <titleStmt>
+    <title>Антропологическое страноведение</title>
+    <author>Елена Шварц</author>
+   </titleStmt>
+   <respStmt>
+    <resp>Редакторы:</resp>
+    <name>П. Успенский</name>, <name>А.Шеля</name>, <name>Л.Родичева</name>, <name>Е.
+     Сенаторова</name>, <name>Е. Хереш</name> и <name>В.Федорова</name>
+   </respStmt>
+   <respStmt>
+    <resp>Издатели:</resp>
+    <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+   </respStmt>
+   <sourceDesc>
+    <bibl>
+     <publisher>Дикопись последнего времени, С. 67. <date type="published">2001</date></publisher>
+     <date type="written" when="2000">2000</date>
+    </bibl>
+   </sourceDesc>
+  </fileDesc>
+ </teiHeader>
+ <text>
+  <lg type="poem">
+   <head>Антропологическое страноведение</head>
+   <div type="dedication">Тому Эпстайну</div>
+   <lg type="stanza">
+    <l n="1">Человек граничит с морем,</l>
+    <l n="2">Он - чужaя всем стрaнa,</l>
+    <l n="3">В нем кочуют реки, горы,</l>
+    <l n="4">Ропщут племенa,</l>
+    <l n="5">В нем тaятся руды, звери,</l>
+    <l n="6">Тлеют городa,</l>
+    <l n="7">Но когдa он смотрит в точку –</l>
+    <l n="8">Тонет, тонет нaвсегдa.</l>
+    <l n="9">Человек грaничит с морем,</l>
+    <l n="10">Но не весь и не всегдa, -</l>
+    <l n="11">Дрогнет ум, потоп нaчнется,</l>
+    <l n="12">Хлынет темнaя водa.</l>
+   </lg>
+  </lg>
+ </text>
+</TEI>

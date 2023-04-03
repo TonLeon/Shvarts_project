@@ -1,55 +1,54 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <TEI>
-<teiHeader>
-<fileDesc>
-<titleStmt>
-<title>Лето уже спускалось кругами</title>
-<author>Елена Шварц</author>
-</titleStmt>
-<respStmt>
-<resp>Редакторы:</resp>
-<name>П. Успенский</name>, <name>А.Шеля</name>, <name>Л.Родичева</name>, <name>Е. Сенаторова</name> и <name>В.Федорова</name>
- </respStmt>
-<respStmt>
-<resp>Издатели:</resp>
-<name>Л. Родичева</name>, <name>Е. Сенаторова</name>
-</respStmt>
-<sourceDesc>
-<bibl>
-<publisher>ЦСС
-<date type='published'>2021</date></publisher>
-<date type="written" when='1986'>1986</date>
-</bibl>
-</sourceDesc>
-</fileDesc>
-</teiHeader>
-<text>
-<lg type="poem">
-<head>Лето уже спускалось кругами</head>
-<lg type="quatrain" n="1">
-<l n="1">Лето уже спускалось кругами,</l>
-<l n="2">Влажнели, блестели сумерки.</l>
-<l n="3">Ты сказал, поправляя галстук:</l>
-<l n="4">— В вечности мы уже умерли.</l>
-</lg>
-<lg type="quatrain" n="1">
-<l n="5">— Но если так, — я сказала печально,</l>
-<l n="6">Подбивая лето ботинком вверх, —</l>
-<l n="7">Мы в ней и живем, и вечно тянется</l>
-<l n="8">За нами мелкий какой-нибудь грех.</l>
-</lg>
-<lg type="quatrain" n="1">
-<l n="9">О блаженство — в первую ночь июня,</l>
-<l n="10">Когда загустели сумерки,</l>
-<l n="11">Веткой махать и долго думать,</l>
-<l n="12">Что мы уже умерли, умерли.</l>
-</lg>
-<date>1986</date>
-</lg>
-</text>
-<notesStmt>
-<note>Впервые в: Стихотворения и поэмы, с. 172.
-Стихотворения и поэмы. С.172; 1986
-Сочинения, том 1. С. 213; дат.: 1986</note>
-</notesStmt>
+ <teiHeader>
+  <fileDesc>
+   <titleStmt>
+    <title>Лето уже спускалось кругами</title>
+    <author>Елена Шварц</author>
+   </titleStmt>
+   <respStmt>
+    <resp>Редакторы:</resp>
+    <name>П. Успенский</name>, <name>А.Шеля</name>, <name>Л.Родичева</name>, <name>Е.
+     Сенаторова</name> и <name>В.Федорова</name>
+   </respStmt>
+   <respStmt>
+    <resp>Издатели:</resp>
+    <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+   </respStmt>
+   <sourceDesc>
+    <bibl>
+     <publisher>ЦСС <date type="published">2021</date></publisher>
+     <date type="written" when="1986">1986</date>
+    </bibl>
+   </sourceDesc>
+  </fileDesc>
+ </teiHeader>
+ <text>
+  <lg type="poem">
+   <head>Лето уже спускалось кругами</head>
+   <lg type="quatrain" n="1">
+    <l n="1">Лето уже спускалось кругами,</l>
+    <l n="2">Влажнели, блестели сумерки.</l>
+    <l n="3">Ты сказал, поправляя галстук:</l>
+    <l n="4">— В вечности мы уже умерли.</l>
+   </lg>
+   <lg type="quatrain" n="1">
+    <l n="5">— Но если так, — я сказала печально,</l>
+    <l n="6">Подбивая лето ботинком вверх, —</l>
+    <l n="7">Мы в ней и живем, и вечно тянется</l>
+    <l n="8">За нами мелкий какой-нибудь грех.</l>
+   </lg>
+   <lg type="quatrain" n="1">
+    <l n="9">О блаженство — в первую ночь июня,</l>
+    <l n="10">Когда загустели сумерки,</l>
+    <l n="11">Веткой махать и долго думать,</l>
+    <l n="12">Что мы уже умерли, умерли.</l>
+   </lg>
+   <date>1986</date>
+  </lg>
+ </text>
+ <notesStmt>
+  <note>Впервые в: Стихотворения и поэмы, с. 172. Стихотворения и поэмы. С.172; 1986 Сочинения, том
+   1. С. 213; дат.: 1986</note>
+ </notesStmt>
 </TEI>

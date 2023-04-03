@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Толкование псалма</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>А. Кулакова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Знамя. 2001. № 8. С. 5.
+            <date type='published'>2001</date></publisher>
+            <date type="written" when="2001">2001</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>Толкование псалма</head>
+      <epigraph>
+        <q>
+          <l n="1">«Однажды сказал Бог</l>
+          <l n="2">И дважды я услышал это»</l>
+        </q>
+        <bibl>Пс. 61.12</bibl>
+      </epigraph>
+      <lg type="quatrain" n="1">
+        <l n="1">«Однажды сказал Бог</l>
+        <l n="2">И дважды я слышал это»</l>
+        <l n="3">Разве же человек —</l>
+        <l n="4">Подобие горного эха?</l>
+      </lg>
+      <lg type="quatrain" n="2">
+        <l n="5">В силе Бог сказал,</l>
+        <l n="6">Но и в милости прорек Господь.</l>
+        <l n="7">Надобно это слово</l>
+        <l n="8">Надвое расколоть,</l>
+      </lg>
+      <lg type="quatrain" n="3">
+        <l n="9">Иначе мы не услышим,</l>
+        <l n="10">Иначе мы не поймём,</l>
+        <l n="11">Это как солнце в бурю,</l>
+        <l n="12">Или как шёпот и гром,</l>
+      </lg>
+      <lg type="quatrain" n="4">
+        <l n="13">Который как круглое слово</l>
+        <l n="14">Катится в небе в грозу…</l>
+        <l n="15">Так над колодцем ребёнка</l>
+        <l n="16">Держит сестра на весу.</l>
+      </lg>
+    </lg>
+  </text>
+</TEI>
