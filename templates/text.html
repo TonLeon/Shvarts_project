@@ -114,7 +114,7 @@
 
                 {% else %}
                 <p><span class="text">Год написания: </span>{{item.meta.date_written}}</p>
-                <p><span class="text">Опубликовано в: </span>{{item.meta.edition}}</p>
+                <p><span class="text">Опубликовано в: </span><br><span class="text">{{item.meta.edition}}</span></p>
                 {% endif %}
                 <div class="download">
                 <a class = 'download_icon' href="../static/data/{{item.file}}" download>

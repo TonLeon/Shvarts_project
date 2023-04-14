@@ -51,7 +51,8 @@ def get_poems_texts(ID):
             count = collection.count_documents({})
             all_counts.append(count)
             
-            poem_texts = [text for text in collection.find({"poem_text": {"$exists": True}, "ID":ID})] #вот тут словарь в списке
+
+            poem_texts = [text for text in collection.find({"poem_text": {"$exists": True}, "ID":ID})] 
             all_poem_texts = all_poem_texts + poem_texts
             
             duplicates = [title for title in collection.find({"root": {'$ne':[]}})]
@@ -60,7 +61,6 @@ def get_poems_texts(ID):
     return all_poem_texts, all_duplicates, all_counts 
 
 
-# Для сборников
 
 def get_collection_titles(name_of_db):
     client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
@@ -78,11 +78,11 @@ def get_collection_texts(ID, name_of_db):
     db = client['admin']
     collection = db[name_of_db]
     count = collection.count_documents({})
-    poem_texts = [text for text in collection.find({"poem_text": {"$exists": True}, "ID":ID})] #вот тут словарь в списке
+    poem_texts = [text for text in collection.find({"poem_text": {"$exists": True}, "ID":ID})]
     duplicates = [title for title in collection.find({"root": {'$ne':[]}})]
     return poem_texts, duplicates, count 
 
-# Функция для поиска по всем коллекциям
+
 def search_result(word):
     client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
     db = client['admin']
@@ -109,7 +109,7 @@ def search_result(word):
 
     return sorted(poems, key=lambda x: x[1])
 
-# Вывод всех текстов
+
 def show_all_poems():
     client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
     db = client['admin']
@@ -136,7 +136,7 @@ def show_all_poems():
 
     return poems
 
-#Функция для фильтрации стихов на странице произведений по десятилетиям
+
 def filter_poems_by_year(name_of_db, start_year, end_year):
     client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
     db = client['admin']
@@ -164,14 +164,14 @@ def base():
 def index():
     return render_template('index.html', page_name='project')
 
-# Выведение названия стихов на странце произведений
+
 @app.route('/list_of_texts/')
 def get_list_of_texts():
 	titles, duplicates, _, _ = get_poems_titles()
 	return render_template('titles.html', page_name='list_of_texts', 
 							titles=titles, duplicates=duplicates)
 
-# Выведение текста произведения после нажатия
+
 @app.route('/texts_<int:ID>/')
 def get_text_sixties(ID):
     _, _, non_dup_id_2_next_nondup, non_dup_id_2_previous_nondup = get_poems_titles()
@@ -190,7 +190,6 @@ def all_poems():
         return str(e)
 
 
-# Фильтрация 60-х годов
 @app.route('/filter_poems_by_period_sixties')
 def filter_poems_sixties():
     try:
@@ -198,9 +197,16 @@ def filter_poems_sixties():
         return jsonify(result=result)
     except Exception as e:
         return str(e)
+    
+@app.route('/filter_poems_by_period_seventies')
+def filter_poems_seventies():
+    try:
+        result = filter_poems_by_year('Shvarts_70', 1970, 1979)
+        return jsonify(result=result)
+    except Exception as e:
+        return str(e)
 
 
-# Фильтрация 80-х годов
 @app.route('/filter_poems_by_period_eighties')
 def filter_poems_eighties():
     try:
@@ -209,7 +215,7 @@ def filter_poems_eighties():
     except Exception as e:
         return str(e)
 
-# Фильтрация 90-х годов
+
 @app.route('/filter_poems_by_period_nineties')
 def filter_poems_nineties():
     try:
@@ -217,10 +223,18 @@ def filter_poems_nineties():
         return jsonify(result=result)
     except Exception as e:
         return str(e)
+    
+@app.route('/filter_poems_by_period_millenial')
+def filter_poems_millenial():
+    try:
+        result = filter_poems_by_year('Shvarts_20', 2000, 2010)
+        return jsonify(result=result)
+    except Exception as e:
+        return str(e)
 
-# Печатные издания
 
-@app.route('/printed_edition/') #сейчас это работает только для Зеленой тетради
+
+@app.route('/printed_edition/') 
 def get_list_of_texts_from_printed_editions():
 	titles, duplicates, _, _ = get_collection_titles('Shvarts_ZT')
 	return render_template('printed_edition.html', page_name='texts_from_printed_editions', 
@@ -233,7 +247,7 @@ def get_ZT_text(ID):
     return render_template('text_from_printed_edition.html', page_name='texts', 
 							poem_texts=poem_texts, duplicates=duplicates, count=count, titles=titles)
 
-# Поиск
+
 @app.route('/background_process', methods=['GET', 'POST', 'DELETE', 'PATCH'])
 def background_process():
     try:
@@ -244,28 +258,27 @@ def background_process():
     except Exception as e:
         return str(e)
 
-#Фотоархив
+
 @app.route('/contrib/')
 def photos():
     return render_template('contrib.html', page_name='photos')
 
-#Пустая страница
+
 @app.route('/other/')
 def other():
     return render_template('other.html', page_name='other')
 
-#Библиотека
+
 @app.route('/bibl/')
 def bibl():
     return render_template('bibl.html', page_name="bibl")
 
-# Сравнение текстов
 @app.route('/comparison_<int:ID>/')
 def compare_poems(ID):
     poem_texts, duplicates, _ = get_poems_texts(ID)
     return render_template('comparison.html', poem_texts=poem_texts, duplicates=duplicates)
 
-#Что-то непонятное
+
 @app.route('/trial/')
 def trial():
     return render_template('trial.html', page_name="trial")

@@ -76,14 +76,28 @@ $(function() {
     // $.getJSON('/background_process', {console.log(1)})
 
 //Выдача стихотворений 70-x
-    $(function() {
-      $('a#seventies').bind('click', function() {
-          $("div#result").empty();
-          var element = document.getElementById("time_period");
-          element.innerHTML = "Стихотворения 1970-х годов"; 
-        }
-     
-    )})
+$(function() {
+  $('a#seventies').bind('click', function() {
+    $.getJSON('/filter_poems_by_period_seventies', function(data) {
+      $("div#result").empty();
+      var element = document.getElementById("time_period");
+      element.innerHTML = "Стихотворения 1970-х годов";
+      var result = data.result
+      let year = result[0][2]
+      $(data.result).each(function (index, value) {
+        if(index > 0){
+          if (value[2] === year){
+        $("div#result").append('<pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
+      }
+          else{
+            year = value[2]
+            $("div#result").append('<h3 class="year">'+ value[2] +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
+          };
+  }
+        else{$("div#result").append('<h3 class="year">'+ year +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
+    }})
+  })
+})});
 
 
 // Выдача стихотворений 80-х
@@ -119,6 +133,31 @@ $(function() {
       $("div#result").empty();
       var element = document.getElementById("time_period");
       element.innerHTML = "Стихотворения 1990-х годов";
+      var result = data.result
+      let year = result[0][2]
+      $(data.result).each(function (index, value) {
+        if(index > 0){
+          if (value[2] === year){
+        $("div#result").append('<pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
+      }
+          else{
+            year = value[2]
+            $("div#result").append('<h3 class="year">'+ value[2] +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
+          };
+  }
+        else{$("div#result").append('<h3 class="year">'+ year +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
+    }})
+  })
+})});
+
+// Выдача стихотворений 2000-х
+
+$(function() {
+  $('a#millenial').bind('click', function() {
+    $.getJSON('/filter_poems_by_period_millenial', function(data) {
+      $("div#result").empty();
+      var element = document.getElementById("time_period");
+      element.innerHTML = "Стихотворения 2000-х годов";
       var result = data.result
       let year = result[0][2]
       $(data.result).each(function (index, value) {
