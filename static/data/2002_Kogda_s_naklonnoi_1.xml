@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** ("Когда с наклонной высоты...")</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Н. Игнатьева</name> и <name>Е. Хереш</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+  <publisher>Новый мир. 2003. №5. С. 10-11
+     <date type='published'>2003</date></publisher>
+                    <date type="written" when="2000">2002</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>***</head>
+            <lg type="stanza">
+                <l n="1">Когда с наклонной высоты</l>
+<l n="2">Скользит, мерцая ночь,</l>   
+<l n="3">Шепни, ужели видишь ты</l>
+<l n="4">Свою смешную дочь?</l>
+<l n="5">Она на ветер кинет всё,</l>
+<l n="6">Что дарит ей судьба,</l>
+<l n="7">И волосы её белы,</l>
+<l n="8">Она дика, груба.</l>
+<l n="9">Она и нищим подаёт,</l>
+<l n="10">И нищий ей подаст,</l>
+<l n="11">И в небе скошенном и злом</l>
+<l n="12">Всё ищет кроткий взгляд.</l>
+</lg>
+</lg>
+</text>
+</TEI>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Утренний натюрморт</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>А. Ворошилова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Звезда. 2003. № 12. С. 4.
+            <date type='published'>2003</date></publisher>
+            <date type="written" when="13/09/2003">2003</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>Утренний натюрморт</head>
+      <lg type="stanza">
+        <l n="1">Утром выйдешь на кухню вяло,</l>
+        <l n="2">Пол-яблока, хлеба нет,</l>
+        <l n="3">На столе только черный Хлебников, это немало.</l>
+        <l n="4">Ешьте, дети, его,</l>
+        <l n="5">Черный хлеб превратится в лиловую водку.</l>
+        <l n="6">Голова в темноте засияет ало,</l>
+        <l n="7">Вы станете говорить на язы́ках.</l>
+        <l n="8">Стал черным кирпичом, горьким хлебом,</l>
+        <l n="9">А умер в сене на скрипящей телеге</l>
+        <l n="10">(О, как ясно она проскрипела: «Пора!»)</l>
+        <l n="11">Под ускользающим небом.</l>
+      </lg>
+    </lg>
+  </text>
+</TEI>

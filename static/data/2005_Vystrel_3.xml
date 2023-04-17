@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Выстрел</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+                    Сенаторова</name> и <name>Е. Хереш</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Сочинения, том 3. С. 119. <date type="published"
+                        >2008</date></publisher>
+                    <date type="written" when="23/05/2005">2005</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>Выстрел</head>
+            <lg type="triplet" n="1">
+                <l n="1">С такою лёгкостью в теле проснулась —,</l>
+                <l n="2">Будто я вчера застрелилась</l>
+                <l n="3">Ви́шневой косточкой...</l>
+            </lg>
+            <lg type="quatrain" n="2">
+                <l n="4">Всё же косточка попала в цель</l>
+                <l n="5">(Хоть и не было там светло) —</l>
+                <l n="6">В красную землю, лепестков метель,</l>
+                <l n="7">В благодатную занесло.</l>
+            </lg>
+            <lg type="quatrain" n="3">
+                <l n="8">Она упала не в путь проезжий</l>
+                <l n="9">И не на камне,</l>
+                <l n="10">И машет белыми руками</l>
+                <l n="11">И цветью снежной.</l>
+            </lg>
+            <lg type="stanza" n="4">
+                <l n="12">В самом деле (экое дело!)</l>
+                <l n="13">В сердце что-то цвело и белело —</l>
+                <l n="14">Сакура там расцвела.</l>
+                <l n="15">Все — вплоть до самой малой кровинки,</l>
+                <l n="16">Замирая, дивились этой новинке.</l>
+                <l n="17">Vitа nuovа болела,</l>
+                <l n="18">Vitа nuovа бела.</l>
+            </lg>
+            <date>2005</date>
+        </lg>
+    </text>
+</TEI>

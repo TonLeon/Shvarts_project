@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ВКЛЮЧАЯ И ВЫКЛЮЧАЯ СВЕТ</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+                    Сенаторова</name>, <name>Е. Хереш</name> и <name>Е. Кулик</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Трость скорописца, С. 76. <date type="published"
+                        >2004</date></publisher>
+                    <date type="written" when="2004">2004</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>ВКЛЮЧАЯ И ВЫКЛЮЧАЯ СВЕТ</head>
+            <lg type="stanza">
+                <l n="1">Выключая свет,</l>
+                <l n="2">Успеваю заметить</l>
+                <l n="3">(В крупинку мига) —</l>
+                <l n="4">Как тьма</l>
+                <l n="5">Взмахивает рукавами,</l>
+                <l n="6">Люблю смотреть,</l>
+                <l n="7">Как она выживает свет,</l>
+                <l n="8">Выталкивает, выгрызает,</l>
+                <l n="9">Быстро смывая его</l>
+                <l n="10">Густою водою своей.</l>
+                <l n="11">А свет никогда не делает так,</l>
+                <l n="12">Он — простак,</l>
+                <l n="13">Вспыхивает — будто и нет</l>
+                <l n="14">Злой этой младшей сестры.</l>
+            </lg>
+        </lg>
+    </text>
+</TEI>

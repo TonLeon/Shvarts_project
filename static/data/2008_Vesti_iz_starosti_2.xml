@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Вести из старости</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>Е. Павлова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Собрание сочинений, Т. 5. 2013. С. 8.
+                        <date type='published'>2013</date></publisher>
+                        <date type="written" when="2008">2008</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+     <lg type="collection">
+            <head>Вести из старости</head>
+                <lg type="poem" n="1">
+                <head>1. На улице</head>
+            <lg type="quatrain" n="1">
+ <l n="1">Вдруг зеркало по мне скользнуло,</l>
+ <l n="2">Чуть издеваясь, чуть казня, —</l>
+ <l n="3">Придурковатая старуха</l>
+ <l n="4">Взглянула косо на меня.</l>
+            </lg>
+            <lg type="quatrain" n="2">
+ <l n="5">Я часто в зеркалах менялась,</l>
+ <l n="6">Но узнавала. А теперь...</l>
+ <l n="7">Я б удивилась даже меньше,</l>
+ <l n="8">Когда б оттуда прыгнул зверь.</l>
+            </lg>
+        <date>21 окт. 2007</date>
+                </lg>
+                <lg type="poem" n="2">
+                <head>2. Песенка</head>
+            <lg type="quatrain" n="1">
+ <l n="1">Солнышко вставало</l>
+ <l n="2">С песнею утешной,</l>
+ <l n="3">Ведь оно не знало</l>
+ <l n="4">О любви кромешной.</l>
+            </lg>
+            <lg type="quatrain" n="2">
+ <l n="5">Синева слетела</l>
+ <l n="6">На сугробы сада,</l>
+ <l n="7">И синица спела —</l>
+ <l n="8">Больше жить не надо.</l>
+            </lg>
+        <date>25 февр. 2008</date>
+                </lg>
+    </lg>
+</text>
+</TEI>

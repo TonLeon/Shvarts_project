@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Штормовое предупреждение</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Е. Хереш</name> и <name>Д. Соболев</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Сочинения, том 3. С. 57
+                        <date type='published'>2008</date></publisher>
+                        <date type="written" when="20/08/2003">2003</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>Штормовое предупреждение</head>
+        <lg type="stanza">
+<l n="1">О если б ветра вал!</l>
+<l n="2">О если б буря выла!</l>
+<l n="3">Я, может быть, себя</l>
+<l n="4">И жизнь забыла.</l>
+<l n="5">О если б взвыл Залив</l>
+<l n="6">Под ветром в нетерпенье!</l>
+<l n="7">О если б ливень лил,</l>
+<l n="8">О если б наводненье!</l>
+<l n="9">О если бы душа,</l>
+<l n="10">Свои пройдя границы,</l>
+<l n="11">Как смерть бы пронеслась</l>
+<l n="12">Над сердцем злой столицы.</l>
+</lg>
+        </lg>
+</text>
+</TEI>

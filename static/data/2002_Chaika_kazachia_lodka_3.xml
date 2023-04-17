@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Чайка — казачья лодка и птица</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>А. Ворошилова</name> и <name>Е. Хереш</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Сочинения, том 3. 2008. С. 25.
+            <date type='published'>2008</date></publisher>
+            <date type="written" when="03/09/2002">2002</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>Чайка — казачья лодка и птица</head>
+      <div type="dedication">Александру Миронову</div>
+      <lg type="stanza">
+        <l n="1">Ходит чайка вверх по горю —</l>
+        <l n="2">Ветер гонит — не кружа,</l>
+        <l n="3">И, дошедши до границы,</l>
+        <l n="4">Замирает — вся дрожа.</l>
+        <l n="5">Ходит чайка вниз по горю,</l>
+        <l n="6">До водоворота сердца.</l>
+        <l n="7">Там и тонет, превращая</l>
+        <l n="8">Белый парус в белый мак.</l>
+        <l n="9">Хоть и тонет, но всплывает</l>
+        <l n="10">И бежит опять к границе,</l>
+        <l n="11">Чтобы там, кружась и тая,</l>
+        <l n="12">Взрезать воздух визгом птицы.</l>
+      </lg>
+    </lg>
+  </text>
+</TEI>

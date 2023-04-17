@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+          <titleStmt>
+            <title>Церковная свеча</title>
+            <author>Елена Шварц</author>
+          </titleStmt>
+          <respStmt>
+            <resp>Редакторы:</resp>
+            <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>Е. Гришечкина</name>
+          </respStmt>
+          <respStmt>
+            <resp>Издатели:</resp>
+            <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+          </respStmt>
+          <sourceDesc>
+            <bibl>
+             <publisher>Собрание сочинений. Т.5. С. 28.
+                <date type='published'>2013</date></publisher>
+                <date type="written" when="20/01/2009">2009</date>
+            </bibl>
+          </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+  <text>
+       <lg type="poem">
+         <head>Церковная свеча</head>
+         <lg type="stanza" n="1">
+            <l n="1">Меняя тело на свеченье,</l>
+            <l n="2">Свой воск на свет исчезновенья,</l>
+            <l n="3">Как знаменье Преображенья,</l>
+            <l n="4">От тихого ли дуновенья</l>
+            <l n="5">К востоку клонится свеча,</l>
+         </lg>
+         <lg type="triplet" n="2">
+            <l n="6">Как бы овца Христова</l>
+            <l n="7">Иль сокровенное, в слезах,</l>
+            <l n="8">Едва прошёптанное слово.</l>
+         </lg>
+         <lg type="quatrain" n="3">
+            <l n="9">И кто её зажёг — смотрел</l>
+            <l n="10">В неё, как сонный сокол,</l>
+            <l n="11">И в сердце пламени тонул</l>
+            <l n="12">В безмыслии высоком.</l>
+         </lg>
+         <date>20 янв. 2009</date>
+       </lg>
+  </text>
+</TEI>

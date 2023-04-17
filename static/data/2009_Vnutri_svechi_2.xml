@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ВНУТРИ СВЕЧИ</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, и <name>Е. Хереш</name> и <name>Е. Кулик</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Собрание сочинений. Т.5. С. 31
+                        <date type='published'>2013</date></publisher>
+                        <date type="written" when="2009">2009</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+<lg type="poem">
+<head>ВНУТРИ СВЕЧИ</head>
+<lg type="stanza">
+ <l n="1">В мандорле* живого огня,</l>
+ <l n="2">На лазурном подножии</l>
+ <l n="3">В тёмном облачке,</l>
+ <l n="4">В туманном орешке</l>
+ <l n="5">Чёрным иноком фитиль</l>
+ <l n="6">Колеблется в такт молитве.</l>
+ <l n="7">Святой, ты живёшь в огне,</l>
+ <l n="8">Который порой недвижен,</l>
+ <l n="9">Порой качает его дыханье</l>
+ <l n="10">Невидимого Бога.</l>
+  </lg>
+  <date>18 апр. 2009, накануне Пасхи</date>
+    </lg>
+</text>
+</TEI>

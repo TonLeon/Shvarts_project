@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** («Совы ночами из узких дупел...»)</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+             <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>Е. Хереш</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Трость скорописца. С. 69. 
+                        <date type='published'>2004</date></publisher>
+                    <date type="written" when="07/09/2003">2003</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>*** («Совы ночами из узких дупел...»)</head>
+<lg type="stanza">
+<l n="1">Совы ночами из узких дупел</l>
+<l n="2">Следят за травинкой, веткой, кустом.</l>
+<l n="3">Господи, в церкви войду под купол</l>
+<l n="4">И наружу пробьюсь крестом.</l>
+<l n="5">Дальше, дальше куда уж деться,</l>
+<l n="6">Дальше заметь меня Ты,</l>
+<l n="7">Видишь, как сокрушенное сердце</l>
+<l n="8">Рвет себя на бинты —</l>
+<l n="9">Для тех, чья душа к могиле приникла,</l>
+<l n="10">Где их любимые спят в ночи.</l>
+<l n="11">Дьявол смеется на водах страданья,</l>
+<l n="12">Но отразишься в них Ты.</l>
+</lg>
+        </lg>
+    </text>
+</TEI>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+          <titleStmt>
+            <title>Воспоминание о Риме</title>
+            <author>Елена Шварц</author>
+          </titleStmt>
+          <respStmt>
+            <resp>Редакторы:</resp>
+            <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>Е. Гришечкина</name>
+          </respStmt>
+          <respStmt>
+            <resp>Издатели:</resp>
+            <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+          </respStmt>
+          <sourceDesc>
+            <bibl>
+              <publisher>Перелетная птица, С. 26.
+                <date type='published'>2011</date></publisher>
+                <date type="written" when="06/03/2009">2009</date>
+            </bibl>
+          </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+  <text>
+       <lg type="poem">
+         <head>Воспоминание о Риме</head>
+         <lg type="stanza">
+            <l n="1">Меня, как сухую ветвь,</l>
+            <l n="2">К Риму долго несла река,</l>
+            <l n="3">И очнулась я, чуть отпив</l>
+            <l n="4">Древле волчьего молока,</l>
+            <l n="5">Что сочится из всех щелей,</l>
+            <l n="6">Что от самых младых ногтей</l>
+            <l n="7">Каждый римлянин жадно пьёт</l>
+            <l n="8">Из Волчицы, простёршей над градом</l>
+            <l n="9">Голубой и бездонный живот.</l>
+            <l n="10">Вот я шла и брела под ним,</l>
+            <l n="11">Бормотала себе, и незримо</l>
+            <l n="12">Обломок жизни моей</l>
+            <l n="13">Прилепился к руинам Рима.</l>
+         </lg>
+          <date>6 марта 2009</date>
+       </lg>
+  </text>
+</TEI>

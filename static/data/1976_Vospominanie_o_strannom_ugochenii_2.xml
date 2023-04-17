@@ -13,14 +13,13 @@
             </respStmt>
             <respStmt>
                 <resp>Издатели:</resp>
-                <name>Л. Родичева</name> и <name>Е. Сенаторова</name>, <name>Д. Скоринкин</name>, <name>А. Панасюк</name>
+                <name>Л. Родичева</name> и <name>Е. Сенаторова</name>, <name>Д. Скоринкин</name>,
+                    <name>А. Панасюк</name>
             </respStmt>
             <sourceDesc>
                 <bibl>
-                    <publisher>Стихи 90. С.33 <date type="published"
-                        >1990</date></publisher>
-                    <date type="written" when="1976">1976
-                    </date>
+                    <publisher>Стихи 90. С.33 <date type="published">1990</date></publisher>
+                    <date type="written" when="1976">1976</date>
                 </bibl>
             </sourceDesc>
         </fileDesc>
@@ -59,8 +58,6 @@
         </lg>
     </text>
 </TEI>
-
-
 <!--Танцующий Давид. С.13; май 1976
 Стихи 90. С.33; без датировки
 Стихотворения и поэмы. С.48; 1976

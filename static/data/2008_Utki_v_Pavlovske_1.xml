@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Утки в Павловске</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>А. Ворошилова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Перелетная птица. 2011. С. 17.
+            <date type='published'>2011</date></publisher>
+            <date type="written" when="2008">2008</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>Утки в Павловске</head>
+      <lg type="stanza" n="1">
+        <l n="1">Ветер дохнул, и вдруг</l>
+        <l n="2">Речка Славянка</l>
+        <l n="3">Обратилась</l>
+        <l n="4">В Диану Эфесскую:</l>
+        <l n="5">Бугорками пошла,</l>
+        <l n="6">Мелкой грудью заволновалась,</l>
+        <l n="7">Из каждого сверкающего соска</l>
+        <l n="8">Утки пьют молоко как младенцы.</l>
+      </lg>
+      <lg type="quatrain" n="2">
+        <l n="9">Птицы, вскормленные осенним</l>
+        <l n="10">Одовянным молоком,</l>
+        <l n="11">Солдатами когда-то были,</l>
+        <l n="12">Игральным павловским полком.</l>
+      </lg>
+      <lg type="stanza" n="3">
+        <l n="13">Все ждут — вернется повелитель,</l>
+        <l n="14">И, скинув перья свои серые,</l>
+        <l n="15">Мундиры синие наденут,</l>
+        <l n="16">Как будто горлышки у селезней.</l>
+        <l n="17">И будет он наш вечный зритель.</l>
+        <l n="18">Как скучно было в утках жить!</l>
+      </lg>
+      <date>2008</date>
+    </lg>
+  </text>
+</TEI>

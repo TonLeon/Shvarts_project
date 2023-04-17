@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Дачный дождь</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Павлова</name> и <name>Е. Хереш</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Трость скорописца, 2004. С. 70.
+                        <date type='published'>2004</date></publisher>
+                        <date type="written" when="2003">2003</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>Дачный дождь</head>
+        <lg type="stanza">
+ <l n="1">Пойдет ли дождь. Чем он хорош?</l>
+ <l n="2">Веревки вьет и шьет, и вяжет,</l>
+ <l n="3">И всё, что скажут в облаках,</l>
+ <l n="4">Траве расскажет.</l>
+ <l n="5">Хлестнули плети вдруг дорогу</l>
+ <l n="6">И закружились,</l>
+ <l n="7">Как мириады осьминогов</l>
+ <l n="8">Засеребрились.</l>
+ <l n="9">Веранда влажная шипит</l>
+ <l n="10">В дожде как сковородка,</l>
+ <l n="11">Но реже, тяжче и слабей</l>
+ <l n="12">Воды чечётка.</l>
+        </lg>
+        </lg>
+</text>
+</TEI>

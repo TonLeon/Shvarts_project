@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Покупка елки</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+                    Сенаторова</name> и <name>Е. Кулик</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>ЦСС <date type="published">2021</date></publisher>
+                    <date type="written" when="1996">1996</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>Покупка елки</head>
+            <epigraph>
+                <q>Маленькому лесу из 48 елок — с печалью</q>
+            </epigraph>
+            <lg type="quatrain" n="1">
+                <l n="1">В елочном загончике я не выбираю,</l>
+                <l n="2">Не хожу, прицениваясь, закусив губу,</l>
+                <l n="3">Из толпы поверженных за лапу поднимаю,</l>
+                <l n="4">Как себя когда-то, как судьбу.</l>
+            </lg>
+            <lg type="quatrain" n="2">
+                <l n="5">Вот ее встряхнули, измерили ей рост,</l>
+                <l n="6">Вот уже макушкой чертит среди звезд,</l>
+                <l n="7">И пока несу ее быстро чрез метель —</l>
+                <l n="8">Вся в младенца сонного обернулась ель.</l>
+            </lg>
+            <lg type="quatrain" n="3">
+                <l n="9">И, благоуханную, ставят ее в крест,</l>
+                <l n="10">И, мерцая, ночью шевелится в темени,</l>
+                <l n="11">Сколько в плечи брошено мишуры и звезд,</l>
+                <l n="12">Сколько познакомлено золота и зелени!</l>
+            </lg>
+            <date>1996</date>
+        </lg>
+    </text>
+</TEI>

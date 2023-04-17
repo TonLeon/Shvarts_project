@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Корабель</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>А. Кулакова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Вино седьмого года. 2007. С. 45.
+            <date type='published'>2007</date></publisher>
+            <date type="written" when="05/01/2007">2007</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>Корабель</head>
+      <lg type="stanza" n="1">
+        <l n="1">Вот плывет корабь по морю</l>
+        <l n="2">Корабель-корабель,</l>
+        <l n="3">По морю, морю, по безвидному Океану.</l>
+        <l n="4">По правому борту — мертвые,</l>
+        <l n="5">А по левому — мы, живые.</l>
+        <l n="6">Вот живой вдруг тихо-тихо,</l>
+        <l n="7">На нечуемых ногах,</l>
+        <l n="8">Переходит все правее,</l>
+        <l n="9">Вот уж среди мертвых он.</l>
+      </lg>
+      <lg type="stanza" n="2">
+        <l n="10">Корабель мой корабель.</l>
+        <l n="11">Мертвые — легче,</l>
+        <l n="12">Но с каждым мигом их больше.</l>
+        <l n="13">Кренится корабль, кренится.</l>
+        <l n="14">Тонет, тонет, скоро уж на дно пойдет.</l>
+        <l n="15">Жизнь еще за борт цепляется.</l>
+        <l n="16">Корабель мой, корабель.</l>
+      </lg>
+      <date>5 января 2007</date>
+    </lg>
+  </text>
+</TEI>

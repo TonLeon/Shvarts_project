@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<title>Под дождём</title>
+<author>Елена Шварц</author>
+</titleStmt>
+<respStmt>
+<resp>Редакторы:</resp>
+<name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>В. Федорова</name>
+ </respStmt>
+<respStmt>
+<resp>Издатели:</resp>
+<name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+</respStmt>
+<sourceDesc>
+<bibl>
+<publisher>Собрание сочинений. Т. 5. С. 17.
+<date type='published'>2013</date></publisher>
+ <date type="written" when='01/10/2008'>2008</date>
+</bibl>
+</sourceDesc>
+</fileDesc>
+</teiHeader>
+<text>
+<lg type="poem">
+<head>Под дождём</head>
+<lg type="stanza" n="1">
+<l n="1">В пустом саду,</l>
+<l n="2">Совсем напрасный</l>
+<l n="3">Под рябеньким, косым дождём</l>
+<l n="4">Фонтан дробит слезинки неба</l>
+<l n="5">Из струй сплетённым кулаком.</l>
+</lg>
+<lg type="stanza" n="2">
+<l n="6">Зачем водою окропляет</l>
+<l n="7">Залитые водой края?</l>
+<l n="8">Зачем он воду добавляет</l>
+<l n="9">Ко властной мокреди? Не зря —</l>
+<l n="10">Юрод, копеечкой дарящий,</l>
+<l n="11">Во внутренних слезах царя.</l>
+</lg>
+<lg type="quatrain" n="3">
+<l n="12">Произошёл раскол жестокий,</l>
+<l n="13">И Аш восстала против О?</l>
+<l n="14">Или, напротив, — все потоки</l>
+<l n="15">Поют Потопа торжество?</l>
+</lg>
+<date>1 окт. 2008</date>
+</lg>
+</text>
+</TEI>

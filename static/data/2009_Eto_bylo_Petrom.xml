@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** («Это было Петром, это было Иваном...»)</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>Е. Павлова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>ЦСС
+                        <date type='published'>2022</date></publisher>
+                        <date type="written" when="16/10/2009">2009</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+<lg type="poem">
+    <head>***</head>
+            <lg type="stanza">
+ <l n="1">Это было Петром, это было Иваном,</l>
+ <l n="2">Это жизнию было — опьяневшей, румяной.</l>
+ <l n="3">А вот нынче осталась ерунда, пустячок —</l>
+ <l n="4">Опуститься ль, подняться на века, на вершок.</l>
+ <l n="5">И всего-то остался пустячок, кошмарок —</l>
+ <l n="6">Нежной, хилой травинки вскормить корешок.</l>
+            </lg>
+        <date>16 октября 2009</date>
+    </lg>
+</text>
+<notesStmt>
+<note>Впервые в: Перелетная птица, С. 33.</note> 
+        <note>Перелетная птица, С. 33; дат.: 16 окт. 2009.
+        Собрание сочинений. Т. 5. С. 37.</note>
+</notesStmt>
+</TEI>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Зеркальце луны</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+             <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>Е. Хереш</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Перелетная птица, с. 16.
+                        <date type='published'>2011</date></publisher>
+                    <date type="written" when="15/10/2008">2008</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>Зеркальце луны</head>
+<lg type="quatrain" n="1"> 
+<l n="1">Зачем в рассеянном сиянье,</l>
+<l n="2">Как только смеркнется,</l>
+<l n="3">Над террою на расстоянье</l>
+<l n="4">Мерцает зеркальце?</l>
+</lg>
+<lg type="quatrain" n="2"> 
+<l n="5">И в этой амальгаме нежной,</l>
+<l n="6">В слоистой дымке многосложной — </l>
+<l n="7">Как трелобит в прозрачном камне —</l>
+<l n="8">Таится образ твой неложный.</l>
+</lg>
+<lg type="stanza" n="3"> 
+<l n="9">Глазастый череп, тень сосны</l>
+<l n="10">Иль бабочка — вот облик твой.</l>
+<l n="11">Глаза Земли отведены,</l>
+<l n="12">Чтобы не видеть в час глухой</l>
+<l n="13">Свой лик, проглоченый Луной.</l>
+<l n="14">Земля пылает над Землей.</l>
+</lg>
+<date>15 октября 2008</date>
+        </lg>
+    </text>
+</TEI>

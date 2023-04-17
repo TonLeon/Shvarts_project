@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** («Тебе, Творец, Тебе, Тебе...»)</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>Е. Павлова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>ЦСС
+                        <date type='published'>2022</date></publisher>
+                        <date type="written" when="26/03/2002">2002</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>***</head>
+        <lg type="stanza">
+ <l n="1">Тебе, Творец, Тебе, Тебе,</l>
+ <l n="2">Тебе, Земли вдовцу,</l>
+ <l n="3">Тебе — огню или воде,</l>
+ <l n="4">Птенцу или Отцу —</l>
+ <l n="5">С кем говорю я в длинном сне,</l>
+ <l n="6">Шепчу или кричу:</l>
+ <l n="7">Не знаю, как другим, а мне —</l>
+ <l n="8">Сей мир не по плечу.</l>
+ <l n="9">Тебе, с кем мы всегда вдвоём,</l>
+ <l n="10">Разбившись и звеня,</l>
+ <l n="11">Скажу — укрой своим крылом,</l>
+ <l n="12">Укрой крылом меня.</l>
+        </lg>
+        <date>26 марта 2002</date>
+        </lg>
+</text>
+<notesStmt>
+<note>Впервые в: Новый мир. 2003. №5. С. 8.</note>
+        <note>Трость скорописца, С. 17; б/д.
+        Сочинения, том 3. С. 15; б/д.
+        Новый мир. 2003. №5. С. 8, б/д.</note>
+</notesStmt>
+</TEI>

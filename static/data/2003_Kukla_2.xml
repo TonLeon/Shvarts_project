@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Сломанная кукла</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+             <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>Е. Хереш</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                     <publisher>Трость скорописца. С. 62.
+                        <date type='published'>2004</date></publisher>
+                    <date type="written" when="07/09/2003">2003</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>Сломанная кукла</head>
+<lg type="stanza">
+<l n="1">Нитки истлели, выцвели,</l>
+<l n="2">Рухнули марионетки.</l>
+<l n="3">Что означали на титуле</l>
+<l n="4">Легкие эти виньетки?</l>
+<l n="5">Там на семейной Библии</l>
+<l n="6">Были они, были ли?</l>
+<l n="7">Как же поломанной кукле</l>
+<l n="8">Взять себя за воротник,</l>
+<l n="9">За нитки, вернуть их в руки</l>
+<l n="10">Тому, кто к сердцу приник?</l>
+<l n="11">Мягкое ватное тельце</l>
+<l n="12">Молний не слышит любви,</l>
+<l n="13">Встанет, куда же ей деться,</l>
+<l n="14">Дёрнется — Ты позови.</l>
+</lg>
+        </lg>
+    </text>
+</TEI>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>В лисьем носу</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>В. Федорова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>ЦСС <date type="publishing">2021</date></publisher>
+                    <date type="written" when="1982">1982</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>В Лисьем Носу</head>
+            <lg type="quatrain" n="1">
+                <l n="1">Полдень стал ленивым и седым,</l>
+                <l n="2">Верно будет гроза.</l>
+                <l n="3">О парильня, о мелкий залив,</l>
+                <l n="4">Камыша завершие — дым.</l>
+            </lg>
+            <lg type="quatrain" n="2">
+                <l n="5">Бредешь по мелкой теплоте</l>
+                <l n="6">И забредешь в закат,</l>
+                <l n="7">Качнулся справа на воде</l>
+                <l n="8">Всплывшей шляпой Кронштадт.</l>
+            </lg>
+            <lg type="stanza" n="3">
+                <l n="9">Кто носил ее, был великан</l>
+                <l n="10">В этой луже кормит мальков,</l>
+                <l n="11">Вот бредем мы по телу его.</l>
+                <l n="12">Раньше было здесь глубоко.</l>
+                <l n="13">О парильня! О мелкий залив!</l>
+            </lg>
+            <date>1982</date>
+        </lg>
+    </text>
+    <notesStmt>
+        <note>Впервые в: Стихи 87, с. 16. Не переиздавалось Шварц. Стихи 87. С.16; 1982</note>
+    </notesStmt>
+</TEI>

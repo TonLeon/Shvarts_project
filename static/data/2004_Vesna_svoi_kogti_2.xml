@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>*** («Весна свои покрасит когти…»)</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>А. Кулакова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Сочинения, том 3. 2008. С. 89.
+            <date type='published'>2008</date></publisher>
+            <date type="written" when="05/2004">2004</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>***</head>
+      <lg type="stanza">
+        <l n="1">Весна свои покрасит когти</l>
+        <l n="2">Тоскливо-смутным перламутром,</l>
+        <l n="3">Чтобы царапнуть ими небо,</l>
+        <l n="4">На волю выпуская утро.</l>
+        <l n="5">И сгустком крови тяжким Солнце</l>
+        <l n="6">Качнётся вверх. В обнимку с тенью</l>
+        <l n="7">Сосна закружится тихонько</l>
+        <l n="8">До нового тьмы сотворенья.</l>
+      </lg>
+    </lg>
+  </text>
+</TEI>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>*** («Не хочется больному пони…»)</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>А. Кулакова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+         <publisher>Трость скорописца. 2004. С. 87.
+            <date type='published'>2004</date></publisher>
+            <date type="written" when="05/2003">2003</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>***</head>
+      <lg type="stanza">
+        <l n="1">Не хочется больному пони</l>
+        <l n="2">Бежать по кругу</l>
+        <l n="3">И воздух белый жрать с ладони</l>
+        <l n="4">Врага ли, друга.</l>
+        <l n="5">Не хочется мне пепел сыпать</l>
+        <l n="6">В ладонь, а сыплю.</l>
+        <l n="7">Под радио глухие сипы</l>
+        <l n="8">Под утро выпью.</l>
+        <l n="9">А хочется мне, бесприютной,</l>
+        <l n="10">Рвать путы,</l>
+        <l n="11">И прыгать с вышки парашютной</l>
+        <l n="12">Без парашюта.</l>
+      </lg>
+    </lg>
+  </text>
+</TEI>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Обряд перекрестка</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Е. Хереш</name> и <name>Д. Соболев</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Трость скорописца, С. 66
+                        <date type='published'>2004</date></publisher>
+                        <date type="written" when="20/08/2003">2003</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>Обряд перекрестка</head>
+            <div type="dedication">Б. Улановской</div>
+<lg type="quatrain" n="1">
+<l n="1">На перекрёстке двух дорог</l>
+<l n="2">В полях я свечку зажигала</l>
+<l n="3">И на коленях, на снегу,</l>
+<l n="4">Стихи безумные читала,</l>
+</lg>
+<lg type="quatrain" n="2">
+<l n="5">И глядя в гулкое звездилище,</l>
+<l n="6">Щепотку слов роняла вверх —</l>
+<l n="7">Не для себя, не для себя —</l>
+<l n="8">Для Бога, для зимы, для всех.</l>
+</lg>
+<lg type="quatrain" n="3">
+<l n="9">Слова взлетали будто рыбки</l>
+<l n="10">Златые, плавали по небу</l>
+<l n="11">И падали, как будто галька</l>
+<l n="12">Иль катышки цветные хлеба.</l>
+</lg>
+        </lg>
+</text>
+</TEI>
+</TEI>

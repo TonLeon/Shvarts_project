@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+          <titleStmt>
+            <title>Цветение зимы</title>
+            <author>Елена Шварц</author>
+          </titleStmt>
+          <respStmt>
+            <resp>Редакторы:</resp>
+            <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>Е. Гришечкина</name>
+          </respStmt>
+          <respStmt>
+            <resp>Издатели:</resp>
+            <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+          </respStmt>
+          <sourceDesc>
+            <bibl>
+              <publisher>Сочинения, том 3. С. 78.
+                <date type='published'>2008</date></publisher>
+                <date type="written" when="25/12/2003">2003</date>
+            </bibl>
+          </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+  <text>
+       <lg type="poem">
+         <head>Цветение зимы</head>
+         <lg type="quatrain" n="1">
+            <l n="1">Петербургский снег горячий</l>
+            <l n="2">Обжигает мне лицо</l>
+            <l n="3">И в глаза мои влетает</l>
+            <l n="4">Ядовитою пыльцой.</l>
+         </lg>
+         <lg type="quatrain" n="2">
+            <l n="5">Что цветёт? Скажи мне тихо.</l>   
+            <l n="6">Что так семя сеет грубо?</l>
+            <l n="7">Тонки жилы повилики</l>
+            <l n="8">На водопроводных трубах.</l>
+         </lg>
+         <lg type="quatrain" n="3">
+            <l n="9">Слышишь — лёд на реках лопнул,</l>
+            <l n="10">Видишь — древо расцвело.</l>
+            <l n="11">Это древо ледяное,</l>
+            <l n="12">Древо хрупкое зимы.</l>
+         </lg>
+         <lg type="quatrain" n="4">
+            <l n="13">Её цветы замёрзли в окнах,</l>
+            <l n="14">Её сирень с небес летит,</l>
+            <l n="15">И с розой белою январь</l>
+            <l n="16">В зубах — над городом висит.</l>
+         </lg>
+         <lg type="quatrain" n="4">
+            <l n="17">Эта роза — она стеклянная,</l>
+            <l n="18">Эта белая и промёрзлая,</l>
+            <l n="19">Раскрывается, рассыпается,</l>
+            <l n="20">И зима разверзается грозная.</l>
+         </lg>
+       </lg>
+  </text>
+</TEI>

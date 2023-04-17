@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ВАРИАЦИЯ</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>К. Кудинова</name>, <name>Е. Хереш</name>, <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name> и <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>ЦСС
+                        <date type='published'>2022</date></publisher>
+                        <date type="written" when="2003">2003</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+    <lg type="poem">
+            <head>ВАРИАЦИЯ</head>
+            <lg type="stanza">
+                <l n="1">В колодец смотришь на меня.</l>
+                <l n="2">Вот видишь — я на дне колодца,</l>
+                <l n="3">И сердце птичье моё бьётся,</l>
+                <l n="4">Ключом вскипающим звеня.</l>
+                <l n="5">Из-под воды я вижу солнце,</l>
+                <l n="6">Как зерен горсть живородящих,</l>
+                <l n="7">Да и луну я тоже вижу,</l>
+                <l n="8">Как рыбий глаз в воде кипящей,</l>
+                <l n="9">Но глаз Твоих мне не увидеть,</l>
+                <l n="10">Но — тяжесть Твоего вниманья.</l>
+                <l n="11">Я все исполнила послушно...</l>
+                <l n="12">Я помню — в чреве было душно,</l>
+                <l n="13">Когда в мою смотрел ты душу</l>
+                <l n="14">И пристально и равнодушно,</l>
+                <l n="15">Не ожидая узнаванья.</l>
+                
+           </lg>
+               <date>6 декабря 2003</date>
+        </lg>
+</text>
+<notesStmt>
+<note>Впервые в: Трость скорописца, С. 81. Датировка уточняется по рабочим файлам Шварц.
+</note>
+</notesStmt>
+</TEI>

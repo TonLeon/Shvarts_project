@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Песнь полукровки</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>А. Кулакова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Сочинения, том 3. 2008. С. 92.
+            <date type='published'>2008</date></publisher>
+            <date type="written" when="02/07/2004">2004</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>Песнь полукровки</head>
+      <lg type="stanza">
+        <l n="1">Варварской крови грубые токи</l>
+        <l n="2">В теле моём — как не быть мне жестокой</l>
+        <l n="3">К замкнутой жизни своей?</l>
+        <l n="4">Силу казачью от воли йудейской</l>
+        <l n="5">Не отгородишь в себе занавеской,</l>
+        <l n="6">Вот и сплелись в кадуцей.</l>
+        <l n="7">Вот и замкнулись как провода,</l>
+        <l n="8">Вот и сомкнулись как невода —</l>
+        <l n="9">Парою змей.</l>
+        <l n="10">Только вот жезл — наш бескровный водитель,</l>
+        <l n="11">Кровь его — свет, он — третий родитель,</l>
+        <l n="12">Он нас ведет в Эмпирей.</l>
+      </lg>
+    </lg>
+  </text>
+</TEI>

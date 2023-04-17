@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<title>Зимняя Флоренция с холма</title>
+<author>Елена Шварц</author>
+</titleStmt>
+<respStmt>
+<resp>Редакторы:</resp>
+<name>П. Успенский</name>, <name>А.Шеля</name>, <name>Л.Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>В. Федорова</name>
+ </respStmt>
+<respStmt>
+<resp>Издатели:</resp>
+<name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+</respStmt>
+<sourceDesc>
+<bibl>
+<publisher>Новый мир. 2003. №5. С. 12.
+<date type='published'>2003</date></publisher>
+<date type="written" when='2002'>2002</date>
+</bibl>
+</sourceDesc>
+</fileDesc>
+</teiHeader>
+<text>
+<lg type="poem">
+<head>Зимняя Флоренция с холма</head>
+<div type="dedication">О. Георгию Блатинскому.</div>
+<lg type="stanza">
+<l n="1">Дождь Флоренцию лупит</l>
+<l n="2">Зимнюю, безутешную,</l>
+<l n="3">Но над ней возвышается купол —</l>
+<l n="4">Цвета счастья нездешнего.</l>
+<l n="5">Битый город дрожит внизу</l>
+<l n="6">Расколотым антрацитом.</l>
+<l n="7">Богами и Музой,</l>
+<l n="8">Как бабушка, нежно-забытый,</l>
+<l n="9">Но теплится в мокрой каменоломне</l>
+<l n="10">Фиалковое сиянье,</l>
+<l n="11">Под терракотой ребрестой фиала —</l>
+<l n="12">Перевернутой чашею упованья.</l>
+</lg>
+</lg>
+</text>
+</TEI>

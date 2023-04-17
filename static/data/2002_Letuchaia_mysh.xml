@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+<fileDesc>
+<titleStmt>
+<title>Лутучая мышь</title>
+<author>Елена Шварц</author>
+</titleStmt>
+<respStmt>
+<resp>Редакторы:</resp>
+<name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>В.Федорова</name>
+ </respStmt>
+<respStmt>
+<resp>Издатели:</resp>
+<name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+</respStmt>
+<sourceDesc>
+<bibl>
+<publisher>ЦСС
+<date type='published'>2022</date></publisher>
+<date type="written" when='2002'>2002</date>
+</bibl>
+</sourceDesc>
+</fileDesc>
+</teiHeader>
+<text>
+<lg type="poem">
+<head>Летучая мышь</head>
+<lg type="stanza">
+<l n="1">Скрипнула дверь, и её качнуло.</l>
+<l n="2">Влетела тихая мышь летучая.</l>
+<l n="3">Собою в глаза стреляла, уснула</l>
+<l n="4">На потолке, липучая.</l>
+<l n="5">Повесилась вниз головой,</l>
+<l n="6">Свисая картой Таро.</l>
+<l n="7">Ничем не поводит, не дрогнет крылом,</l>
+<l n="8">Но смотрит спокойно-хитро.</l>
+<l n="9">Я думаю — жизнь мне уже не нужна,</l>
+<l n="10">Силам нужна она.</l>
+<l n="11">И тут же мышь стреляет собой,</l>
+<l n="12">Съедает её стена.</l>
+</lg>
+<date>12 июня 2002</date>
+</lg>
+</text>
+<notesStmt>
+<note>Впервые в: Трость скорописца, С. 21. Датировка уточняется по рабочим файлам Шварц (2002 z.doc).
+Трость скорописца, С. 21, б/д.
+Сочинения, том 3. С. 19; б/д.
+Архив: 474
+</note>
+</notesStmt>
+</TEI>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Под тучами</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+             <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>Е. Хереш</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>ЦСС
+                        <date type='published'>2021</date></publisher>
+                    <date type="written" when="26/06/2002">2002</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>Под тучами</head>
+<lg type="stanza">
+<l n="1">День волооких туч,</l>
+<l n="1">Набитых синим пухом,</l>
+<l n="1">Промчался, будто луч,</l>
+<l n="1">Ворча громами глухо.</l>
+<l n="1">Стремительные, синие,</l>
+<l n="1">К цветам припадая в полях —</l>
+<l n="1">Как бархатные акулы</l>
+<l n="1">С большими глазами в боках.</l>
+<l n="1">Я, глядя в них с травы, была</l>
+<l n="1">Жемчужиной, на дне лежащей,</l>
+<l n="1">Из-под воздушного стекла</l>
+<l n="1">Сияньем жалобно кричащей.</l>
+</lg>
+            <date>26 июня 2002</date>
+        </lg>
+    </text>
+        <notesStmt>
+    <note>Впервые в: Новый мир. 2003. №5. С.  10. Датировка уточняется по рабочим файлам Шварц.
+
+        Трость скорописца, С. 25, б/д.
+        Сочинения, том 3. С. 24; б/д.
+        Новый мир. 2003. №5. С.  10, б/д.</note>
+  </notesStmt>
+</TEI>

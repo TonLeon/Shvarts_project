@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Луна и даоский мудрец</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Д. Соболев</name>, и <name>Е. Хереш</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Новый мир. 2003. №5. С. 7-8
+                        <date type='published'>2003</date></publisher>
+                        <date type="written" when="03/2002">2002</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>Луна и даоский мудрец</head>
+ <lg type="stanza" n="1">
+ <l n="1">Во вдохновении пьяном</l>
+<l n="2">Танцует в выси Луна.</l>
+<l n="3">Пахнет она</l>
+<l n="4">Несвежим бельем и тимьяном.</l>
+<l n="5">Все же нежна.</l>
+ </lg>
+ <lg type="stanza" n="2">
+ <l n="6">В болотистом мелком пруду</l>
+<l n="7">Болеет она чесоткой,</l>
+<l n="8">Пахнет китайской водкой,</l>
+<l n="9">Мучима, будто в аду,</l>
+<l n="10">Смертью короткой.</l>
+    </lg>
+ <lg type="quatrain" n="3">
+    <l n="11">Из грязи быстро идет</l>
+<l n="12">И вешается на ветке,</l>
+<l n="13">Над пропастью вздернутой ветке,</l>
+<l n="14">Как покаянья плод.</l>
+ </lg>
+<l><sp>Пьяный мудрец:</sp></l>
+ <lg type="stanza"  n="4">
+    <l n="15">Это была не Луна,</l>
+<l n="16">Это был перевод</l>
+<l n="17">Луны на грубый наш план,</l>
+<l n="18">Из водопада миров</l>
+<l n="19">Принес ее ураган.</l>
+ </lg>
+        </lg>
+</text>
+</TEI>

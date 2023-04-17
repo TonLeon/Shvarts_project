@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>КОФЕ Г-А</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>Е. Кулик</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Вино седьмого года, С. 42.
+                        <date type='published'>2007</date></publisher>
+                        <date type="written" when="2006">2006</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+    <lg type="poem">
+    <head>КОФЕ Г-А</head>
+    <lg type="quatrain" n="1">
+    <l n="1">Зерном среди зерен толкаясь</l>
+    <l n="2">В воронку мельницы плыть,</l>
+    <l n="3">Чтобы твердую свою твердость</l>
+    <l n="4">И черный свой блеск избыть.</l>
+    </lg>
+    <lg type="quatrain" n="2">
+    <l n="5">Узнает ли меня мой ангел</l>
+    <l n="6">В измолотой во прах муке?</l>
+    <l n="7">И мечется песок, стеная —</l>
+    <l n="8">Мельчась, дробясь в слепой тоске.</l>
+    </lg>
+        <lg type="quatrain" n="3">
+    <l n="9">И всех вас сварят, подадут...</l>
+    <l n="10">Ужель, душа, к тому тружусь,</l>
+    <l n="11">Чтоб в этом горестном напитке</l>
+    <l n="12">Чуть-чуть, но изменился вкус?</l>
+    </lg>
+    <date>10 ноября 2006</date>
+    </lg>
+   </text>
+</TEI>

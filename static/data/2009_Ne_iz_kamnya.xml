@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** ("Не из камня, не из древа...")</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Е. Хереш</name> и <name>Д. Соболев</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>ЦСС
+                        <date type='published'>2022</date></publisher>
+                        <date type="written" when="2009">2009</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>*** ("Не из камня, не из древа...")</head>
+ <lg type="stanza">
+<l n="1">Не из камня, не из древа —</l>
+<l n="2">Из живой волны слова,</l>
+<l n="3">Выдуваемого как стекло,</l>
+<l n="4">Переливчатого, текучего,</l>
+<l n="5">Пылающего,</l>
+<l n="6">Храм возвести —</l>
+<l n="7">Дело жизни —</l>
+<l n="8">Словесная церковь.</l>
+ </lg>
+<date>2009</date>
+        </lg> 
+</text>
+<notesStmt>
+<note>Впервые в: Перелетная птица, С. 35.</note>
+</notesStmt>
+</TEI>

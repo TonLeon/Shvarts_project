@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>О тщете запахов</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Е. Хереш</name> и <name>Д. Соболев</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Новый мир. 2005. №7. С. 9
+                        <date type='published'>2005</date></publisher>
+                        <date type="written" when="2004">2004</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>О тщете запахов</head>
+        <lg type="quatrain" n="1">
+<l n="1">Юга цветы на звезды дышат</l>
+<l n="2">У какой-то иллюзии в лапах.</l>
+<l n="3">Не в силах излить душу —</l>
+<l n="4">Они источают запах.</l>
+</lg>
+<lg type="quatrain" n="2">
+<l n="5">Мелкий кустарник дышит причудливо —</l>
+<l n="6">Будто в течке облили его кошкоптицы.</l>
+<l n="7">Каждый цветочек хочет излиться</l>
+<l n="8">И выболтать суть свою звездам иудливо.</l>
+</lg>
+        </lg>
+</text>
+</TEI>

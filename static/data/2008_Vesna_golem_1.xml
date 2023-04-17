@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Весна — Голем</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Е. Хереш</name> и <name>Д. Соболев</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Знамя. 2009. №5. С. 6-7
+                        <date type='published'>2009</date></publisher>
+                        <date type="written" when="19/04/2008">2008</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>Весна — Голем</head>
+  <lg type="quatrain" n="1">
+<l n="1">Коробочками серенького хлопка</l>
+<l n="2">Воробьи усыпали голову куста,</l>
+<l n="3">А весна улыбалась мокрыми устами,</l>
+<l n="4">Недалёко стоя — метрах в ста.</l>
+ </lg>
+<lg type="quatrain" n="2">
+<l n="5">Как девушка из винной лавки</l>
+<l n="6">Или скорее — тихий Голем,</l>
+<l n="7">И небо синее дышало</l>
+<l n="8">Льдяным и синим алкоголем.</l>
+ </lg>
+<lg type="quatrain" n="3">
+<l n="9">И налилась тогда на прутьях</l>
+<l n="10">Зелёных россыпь бородавок</l>
+<l n="11">И мириады ярых почек,</l>
+<l n="12">Что листья из утробы давят.</l>
+ </lg>
+<lg type="quatrain" n="4">
+<l n="13">Они неслышимо вопили,</l>
+<l n="14">Рожая клейких близнецов</l>
+<l n="15">И травкой — нежною щетиной</l>
+<l n="16">поросло весны холодное лицо.</l>
+ </lg>
+ <lg type="quatrain" n="5">
+<l n="17">Из грязи, из весенней смети</l>
+<l n="18">Был слеплен двоеполый голем</l>
+<l n="19">И зеленеющие сети</l>
+<l n="20">Метал на город с колоколен</l>
+ </lg>
+        </lg>
+</text>
+</TEI>

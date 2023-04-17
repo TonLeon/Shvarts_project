@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** («Разрослой клубникой...»)</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Е. Хереш</name> и <name>Д. Соболев</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>ЦСС
+                        <date type='published'>2022</date></publisher>
+                        <date type="written" when="12/01/2005">2005</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>*** («Разрослой клубникой...»)</head>
+<lg type="quatrain" n="1">
+<l n="1">Разрослой клубникой</l>
+<l n="2">Сердце сладеет,</l>
+<l n="3">Или проглоченным угольком</l>
+<l n="4">Тихо в углу своём тлеет.</l>
+</lg>
+<lg type="stanza" n="2">
+<l n="5">Сердце то будто тихий дождь идёт,</l>
+<l n="6">То рассыплется связкою порванных бус,</l>
+<l n="7">То барабанною дробью</l>
+<l n="8">Зайдётся,</l>
+<l n="9">Под которую</l>
+<l n="10">Смертный номер</l>
+<l n="11">Сделает даже трус.</l>
+</lg>
+<lg type="stanza" n="3">
+<l n="12">Это — подрёберная чечётка.</l>
+<l n="13">Крохотные чьи-то пятки чётко</l>
+<l n="14">Стучат, степ кто-то живой бьёт.</l>
+<l n="15">Идёт под него человек веселей</l>
+<l n="16">И на голгофы госпиталей</l>
+<l n="17">И старости эшафот.</l>
+</lg>
+<date>12 января 2005</date>
+        </lg>
+</text>
+<notesStmt>
+<note>Впервые в: Новый мир. 2005. №7. С. 10.</note>
+</notesStmt>
+</TEI>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>*** («Мы — перелетный птицы с этого света на тот…»)</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>А. Кулакова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Сочинения, том 5. 2013. С. 33.
+            <date type='published'>2013</date></publisher>
+            <date type="written" when="12/06/2009">2009</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>***</head>
+      <lg type="stanza">
+        <l n="1">Мы — перелётные птицы с этого света на тот.</l>
+        <l n="2">(Тот — по-немецки так грубо — tot.)</l>
+        <l n="3">И когда наступает наш час</l>
+        <l n="4">И кончается наше лето,</l>
+        <l n="5">Внутри пробуждается верный компа́с</l>
+        <l n="6">И указует пятую сторону света.</l>
+        <l n="7">Невидимые крылья нервно трепещут,</l>
+        <l n="8">И обращается внутренний взгляд</l>
+        <l n="9">В тоске своей горькой и вещей</l>
+        <l n="10">На знакомый и дивный сад.</l>
+        <l n="11">Двойною тоскою тоскуя</l>
+        <l n="12">Туда караваны летят.</l>
+      </lg>
+      <date>12 июн. 2009</date>
+    </lg>
+  </text>
+</TEI>

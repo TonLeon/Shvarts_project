@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>АНГЕЛ-ХРАНИТЕЛЬ</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Н. Игнатьева</name> и <name>Е. Хереш</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+  <publisher>Трость скорописца. С.16
+     <date type='published'>2004</date></publisher>
+                    <date type="written" when="2000">2002</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>АНГЕЛ-ХРАНИТЕЛЬ</head>
+            <lg type="stanza" n="1">
+                <l n="1">Мук моих зритель,</l>
+<l n="2">Ангел-хранитель,</l>
+<l n="3">Ты ведь устал.</l>
+<l n="4">Сколько смятенья,</l>
+<l n="5">Сколько сомненья,</l>
+<l n="6">Слез наводненье —</l>
+<l n="7">Ты их считал.</l>
+</lg>
+<lg type="quatrain" n="2">
+    <l n="8">Бедный мой, белый,</l>
+<l n="9">Весь как в снегу,</l>
+<l n="10">Ты мне поможешь.</l>
+<l n="11">Тебе — не смогу.</l>
+</lg>
+<lg type="quatrain" n="3">
+    <l n="12">Скоро расстанемся.</l>
+<l n="13">Бедный мой, что ж!</l>
+<l n="14">Ты среди смертных</l>
+<l n="15">За гробом пойдёшь.</l>
+</lg>
+</lg>
+</text>
+</TEI>

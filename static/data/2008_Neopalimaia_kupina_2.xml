@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Неопалимая Купина</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Е. Хереш</name> и <name>Д. Соболев</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Перелетная птица, С. 10.
+                        <date type='published'>2011</date></publisher>
+                        <date type="written" when="26/04/2008">2008</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>Неопалимая Купина</head>
+  <lg type="quatrain" n="1">
+<l n="1">Нет, не зачах он, не иссох,</l>
+<l n="2">Его не съела смерть сама,</l>
+<l n="3">Его нам выцарапал Бог</l>
+<l n="4">На яблоке глазном ума.</l>
+ </lg>
+<lg type="quatrain" n="2">
+<l n="5">То образ есть души негрубый —</l>
+<l n="6">Втесняясь, объяв состав телесный,</l>
+<l n="7">Всё сожигает, но не губит</l>
+<l n="8">Огонь небесный.</l>
+ </lg>
+<lg type="quatrain" n="3">
+<l n="9">В неопалимой купине</l>
+<l n="10">Провижу уголь уст.</l>
+<l n="11">Распят, распят и человек,</l>
+<l n="12">И ты — терновый куст.</l>
+        </lg>
+<date>26 апр.2008,
+пасхальная ночь</date>
+</lg>
+</text>
+</TEI>

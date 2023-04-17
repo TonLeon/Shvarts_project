@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Затмение Луны и зеркало</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>Е. Павлова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Новый мир. 2005. №7. С. 9.
+                        <date type='published'>2005</date></publisher>
+                        <date type="written" when="2004">2004</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>Затмение Луны и зеркало</head>
+        <lg type="stanza">
+ <l n="1">Опять вуаль заволокла</l>
+ <l n="2">Ночное зеркало Земли,</l>
+ <l n="3">И все земные зеркала</l>
+ <l n="4">На миг померкли изнутри.</l>
+ <l n="5">Как будто легкой  быстрой шерсткой</l>
+ <l n="6">Провеяло внутри стекла,</l>
+ <l n="7">Лицо же в нем белей известки</l>
+ <l n="8">Висело будто бы Луна.</l>
+ <l n="9">И в этот миг как будто дрогнули</l>
+ <l n="10">Все отблески и отраженья,</l>
+ <l n="11">И зеркало в лицо смотрело</l>
+ <l n="12">В настойчивом оцепененье.</l>
+        </lg>
+        </lg>
+</text>
+</TEI>

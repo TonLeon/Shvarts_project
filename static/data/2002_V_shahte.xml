@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>В шахте</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>А. Ворошилова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+<publisher>ЦСС
+            <date type='published'>2022</date></publisher>
+            <date type="written" when="19/09/2002">2002</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>В шахте</head>
+      <lg type="stanza" n="1">
+        <l n="1">Весь этот мир — рудник</l>
+        <l n="2">Для добыванья боли.</l>
+        <l n="3">Спаситель наш — шахтер,</l>
+        <l n="4">И все мы — поневоле.</l>
+        <l n="5">На чёрную работу,</l>
+        <l n="6">На шёпот бедной твари</l>
+        <l n="7">Склонился он к забою —</l>
+        <l n="8">Во лбу горел фонарик.</l>
+        <l n="9">Он шёл средь блеска, мрака,</l>
+        <l n="10">Пот с кровью пополам,</l>
+        <l n="11">Чтоб было больше света</l>
+        <l n="12">Небесным городам.</l>
+      </lg>
+      <lg type="stanza" n="2">
+        <l n="13">И мы, в слезах и муке</l>
+        <l n="14">Стареясь, умирая,</l>
+        <l n="15">Возлюбленных теряя,</l>
+        <l n="16">Рудой кровяня руки,</l>
+        <l n="17">Кромешный уголь добывая,</l>
+        <l n="18">Для топки погибаем рая.</l>
+      </lg>
+      <date>19 сентября 2002</date>
+    </lg>
+  </text>
+  <notesStmt>
+    <note>Впервые в: Знамя. 2003. № 6. С. 4. Датировка уточняется по рабочим файлам Шварц (2002 z.doc).</note>
+  </notesStmt>
+</TEI>

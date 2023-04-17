@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Космическое причастие</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>Е. Павлова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Вино седьмого года, 2007. С. 52.
+                        <date type='published'>2007</date></publisher>
+                        <date type="written" when="09/05/2007">2007</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+    <lg type="poem">
+    <head>Космическое причастие</head>
+        <lg type="quatrain" n="1">
+ <l n="1">Там, за звездами дышит крылатый</l>
+ <l n="2">Одноглазый ребенок-старик.</l>
+ <l n="3">Он просфору горячую солнца</l>
+ <l n="4">Умирая кладет под язык.</l>
+        </lg>
+        <lg type="quatrain" n="2">
+ <l n="5">И пока выпекается снова,</l>
+ <l n="6">В небе тихо, печально, темно.</l>
+ <l n="7">Отдает человеческой кровью</l>
+ <l n="8">Безвоздушных бутылок вино.</l>
+        </lg>
+        <date>9 мая 2007</date>
+        </lg>
+</text>
+</TEI>

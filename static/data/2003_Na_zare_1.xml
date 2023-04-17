@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>На заре</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>Е. Павлова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Звезда. 2003. №12. С. 4.
+                        <date type='published'>2003</date></publisher>
+                        <date type="written" when="2003">2003</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>На заре</head>
+        <lg type="stanza">
+ <l n="1">Когда над тазом умывальным</l>
+ <l n="2">Встает, кровавится восход,</l>
+ <l n="3">Когда в поход уходит дальний</l>
+ <l n="4">Воздушный, пышный, ватный флот,</l>
+ <l n="5">Когда ты плачем погребальным</l>
+ <l n="6">Встречаешь каждый новый день</l>
+ <l n="7">И разговариваешь с тенью,</l>
+ <l n="8">И сам — чуть-чуть плотнее тень,</l>
+ <l n="9">Тогда мне кажется — над бором</l>
+ <l n="10">Встаёт последняя заря,</l>
+ <l n="11">Хвост разомкнулся уробора,</l>
+ <l n="12">Чтоб из избы не вынесть сора,</l>
+ <l n="13">Мир поджигают три царя.</l>
+        </lg>
+        </lg>
+</text>
+</TEI>

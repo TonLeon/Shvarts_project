@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** («Ключ серебристый, ключ точёный»)</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е.
+                    Сенаторова</name>, <name>Е. Хереш</name> и <name>Е. Кулик</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Сочинения, том 3. С. 90. <date type="published"
+                        >2008</date></publisher>
+                    <date type="written" when="2004">2004</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>***</head>
+            <lg type="stanza">
+                <l n="1">Ключ серебристый, ключ точёный,</l>
+                <l n="2">Упавший в яму выгребную —</l>
+                <l n="3">Вот так и разум золочёный...</l>
+                <l n="4">Но я его не критикую.</l>
+                <l n="5">Действительно, он чистый, ясный,</l>
+                <l n="6">Вращается как шар прекрасный</l>
+                <l n="7">Во тьме и скован крепкой костью,</l>
+                <l n="8">Двойник несчастный Демиурга.</l>
+                <l n="9">Зачем сюда пришёл он в гости,</l>
+                <l n="10">Спадая по цепи атласной.</l>
+            </lg>
+        </lg>
+    </text>
+</TEI>
