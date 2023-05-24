@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Саламандра</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>А. Ворошилова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>Новый мир. 2000. № 7. С. 8.
+            <date type='published'>2000</date></publisher>
+            <date type="written" when="26/04/1999">1999</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>Саламандра</head>
+      <lg type="stanza">
+        <l n="1">Саламандра нежится в огне,</l>
+        <l n="2">Дымом дышит,</l>
+        <l n="3">Пьет золу.</l>
+        <l n="4">Жарко ей и больно ей в воде,</l>
+        <l n="5">В воздухе ей душно —</l>
+        <l n="6">На земле ей скучно.</l>
+        <l n="7">Ты одна — насельница огня,</l>
+        <l n="8">Ты живешь и в сердце у меня.</l>
+        <l n="9">Кровь мою закатно золотит,</l>
+        <l n="10">Память мою пепельную ест.</l>
+        <l n="11">Поживи еще — душа горит,</l>
+        <l n="12">И горит и не сгорает крест.</l>
+      </lg>
+    </lg>
+  </text>
+</TEI>
