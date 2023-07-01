@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** ("Черно-белая снежинка...")</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Н. Игнатьева</name> и <name>Е. Хереш</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+<publisher>Дикопись последнего времени. С.16
+     <date type='publishing'>2001</date></publisher>
+                    <date type="written" when="1990">1999</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>***</head>
+            <lg type="stanza" n="1">
+                <l n="1">Черно-белая снежинка</l>
+<l n="2">В голове моей лежит...</l>
+<l n="3">Или это паутинка?</l>
+<l n="4">Кругло-острая крупинка</l>
+<l n="5">Веко правое свербит.</l>
+</lg>
+<lg type="quatrain" n="2">
+    <l n="6">Вот умру я — уже скоро —</l>
+<l n="7">И мохнатый снег пойдет,</l>
+<l n="8">Черно-белая снежинка</l>
+<l n="9">Тебе в ухо упадет.</l>
+</lg>
+<lg type="quatrain" n="3">
+    <l n="10">И пойдет она кружиться,</l>
+<l n="11">И пойдет она расти,</l>
+<l n="12">Но тогда уже с тобою</l>
+<l n="13">Будет нам не по пути.</l>
+</lg>
+</lg>
+</text>
+</TEI>

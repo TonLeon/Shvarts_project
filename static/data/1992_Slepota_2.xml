@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Слепота</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>Е. Павлова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                   <publisher>Сочинения, том 1. 2002. С. 278.
+                        <date type='published'>2002</date></publisher>
+                        <date type="written" when="1992">1992</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>Слепота</head>
+                <lg type="stanza">
+ <l n="1">Больше смотреть не хотят,</l>
+ <l n="2">Иссмотрелись глаза.</l>
+ <l n="3">Сквозь прозрачные глазные яблоки</l>
+ <l n="4">Светят сами глазницы,</l>
+ <l n="5">Не пустые и костяные,</l>
+ <l n="6">А страшные белые звезды,</l>
+ <l n="7">Которыми запечатан разум.</l>
+ <l n="8">Не вбирает, а излучает зренье</l>
+ <l n="9">Все, что высмотрело, —</l>
+ <l n="10">Лица, дома,</l>
+ <l n="11">И рождает из себя звезды.</l>
+ <l n="12">Светящиеся пауки,</l>
+ <l n="13">На дне глазниц лежащие,</l>
+ <l n="14">Другим мирам, чужим глазам</l>
+ <l n="15">Уже принадлежащие.</l>
+                  </lg>
+        </lg>
+</text>
+</TEI>

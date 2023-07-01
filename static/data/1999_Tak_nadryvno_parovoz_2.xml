@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** ("Так надрывно и длинно вопил паровоз...")</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Н. Игнатьева</name> и <name>Е. Хереш</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+  <publisher>Дикопись последнего времени. С.18
+     <date type='publishing'>2001</date></publisher>
+                    <date type="written" when="1990">1999</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>***</head>
+            <lg type="stanza">
+                <l n="1">Так надрывно и длинно вопил паровоз</l>
+<l n="2">(Он по небу развозит пар).</l>
+<l n="3">Он промчался, взвывая, чрез сердце мое,</l>
+<l n="4">Чрез его опустевший вокзал.</l>
+<l n="5">И потом он так долго кричал в полях,</l>
+<l n="6">Источая с одышкой пар,</l>
+<l n="7">Только волк за болотом подхватил этот вой,</l>
+<l n="8">Потому что он зол и стар.</l>
+<l n="9">И всю ночь я душила душу свою,</l>
+<l n="10">Как снимают со свечек нагар,</l>
+<l n="11">Представляя дрожащие рельсы и даль</l>
+<l n="12">И к Хабаровску мчащийся пар.</l>
+</lg>
+</lg>
+</text>
+</TEI>

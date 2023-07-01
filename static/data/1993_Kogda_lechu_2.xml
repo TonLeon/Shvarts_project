@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** ("Когда лечу над темною водой...")</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Е. Хереш</name> и <name>Д. Соболев</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Стихотворения и поэмы. С. 221
+                        <date type='published'>1999</date></publisher>
+                        <date type="written" when="26/10/1993">1993</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>*** ("Когда лечу над темною водой...")</head>
+        <lg type="quatrain" n="1">
+<l n="1">Когда лечу над темною водой</l>
+<l n="2">И проношусь над черными лесами,</l>
+<l n="3">Нет у меня в карманах ничего —</l>
+<l n="4">Табак в раз мешку с русскими стихами.</l>
+</lg>
+<lg type="quatrain" n="2">
+<l n="5">Когда же ангел душу понесет,</l>
+<l n="6">Ее обняв в тумане — и во пламя,</l>
+<l n="7">Нет тела у меня и нету слез,</l>
+<l n="8">А только торба в сердце со стихами.</l>
+</lg>
+<lg type="quatrain" n="3">
+<l n="9">Но прежде, чем влететь в распахнутый огонь:</l>
+<l n="10">Не жги — молю — оставь мне эту малость,</l>
+<l n="11">И ангел говорит: оставь ее, не тронь,</l>
+<l n="12">Она вся светлым ядом напиталась.</l>
+</lg>
+<date>1993</date>
+        </lg>
+</text>
+<notesStmt>
+<note>Впервые в: Песня птицы на дне морском. С. 54.</note>
+</notesStmt>
+</TEI>

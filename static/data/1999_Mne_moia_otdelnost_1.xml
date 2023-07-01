@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+          <titleStmt>
+            <title>***("Мне моя отдельность надоела...")</title>
+            <author>Елена Шварц</author>
+          </titleStmt>
+          <respStmt>
+            <resp>Редакторы:</resp>
+            <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>Е. Гришечкина</name>
+          </respStmt>
+          <respStmt>
+            <resp>Издатели:</resp>
+            <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+          </respStmt>
+          <sourceDesc>
+            <bibl>
+               <publisher>Новый мир. 2000. №7. С. 12.
+                <date type='published'>2000</date></publisher>
+                <date type="written" when="1999">1999</date>
+            </bibl>
+          </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+  <text>
+       <lg type="poem">
+         <head>***</head>
+         <lg type="quatrain" n="1">
+            <l n="1">Мне моя отдельность надоела.</l>
+            <l n="2">Раствориться б шипучей таблеткой в воде!</l>
+            <l n="3">Бросить нелепо-двуногое тело,</l>
+            <l n="4">Быть везде и нигде,</l>
+         </lg>
+         <lg type="quatrain" n="2">
+            <l n="5">Всем и никем — а не одной из этих,</l>
+            <l n="6">Похожих на корешки мандрагор,</l>
+            <l n="7">И не лететь, тормозя, как дети</l>
+            <l n="8">Ногой, с невысоких гор.</l>
+         </lg>
+         <lg type="quatrain" n="3">   
+            <l n="9">Не смотреть из костяного шара в зеленые щели,</l>
+            <l n="10">Не любиться с воздухом через ноздрю,</l>
+            <l n="11">Не крутиться на огненной карусели:</l>
+            <l n="12">То закатом в затылок, то мордой в зарю.</l>
+         </lg>
+       </lg>
+  </text>
+</TEI>

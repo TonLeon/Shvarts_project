@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** ("Грустно смотрю я под крылья тяжелые...")</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Е. Хереш</name> и <name>Д. Соболев</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Звезда. 1997. №6. С. 48
+                        <date type='published'>1997</date></publisher>
+                        <date type="written" when="11/04/1993">1993</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>В самолете</head>
+        <lg type="stanza" n="1">
+<l n="1">Грустно смотрю я под крылья тяжелые:</l>
+<l n="2">Море уходит в невидимый лаз,</l>
+<l n="3">Степи и горы сбегают от нас.</l>
+<l n="4">Что же? Проводим слезою веселою</l>
+<l n="5">Незамиренный Кавказ.</l>
+</lg>
+<lg type="stanza" n="2">
+<l n="6">Грустно смотрю я сквозь облако мутное.</l>
+<l n="7">Отрока нет, чтобы выжить в пещи.</l>
+<l n="8">Меч исступился, заржавевший щит…</l>
+<l n="9">Шуба российская, слабо лоскутная,</l>
+<l n="10">На плече Диониса трещит.</l>
+</lg>
+<date>1993</date>
+        </lg>
+</text>
+<notesStmt>
+<note>Опубликовано в: Звезда. 1997. №6. С. 48.</note>
+</notesStmt>
+</TEI>

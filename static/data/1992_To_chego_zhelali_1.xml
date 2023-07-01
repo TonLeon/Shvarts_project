@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** («То, чего желали души…»)</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Павлова</name> и <name>Е. Хереш</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Вестник новой литературы. СПб., 1993. Вып. 5. С. 112.
+                        <date type='published'>1993</date></publisher>
+                        <date type="written" when="1992">1992</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>***</head>
+                <lg type="stanza">
+ <l n="1">То, чего желали души —</l>
+ <l n="2">То сбылось —</l>
+ <l n="3">Морем крови прямо в уши</l>
+ <l n="4">Пролилось.</l>
+ <l n="5">Жизнь стала тоньше, дуновенней</l>
+ <l n="6">И невозможней, чем была,</l>
+ <l n="7">Чтоб хаоса не испугалась</l>
+ <l n="8">Кругом стояли зеркала,</l>
+ <l n="9">В них отражались мрак и пламень,</l>
+ <l n="10">Над мертвой пропастью полет,</l>
+ <l n="11">Но бездна бездну не узнает,</l>
+ <l n="12">Как человек не узнает.</l>
+                  </lg>
+    <date>1992</date>
+        </lg>
+</text>
+</TEI>

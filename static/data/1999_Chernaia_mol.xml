@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Черная моль</title>
+        <author>Елена Шварц</author>
+      </titleStmt>
+      <respStmt>
+        <resp>Редакторы:</resp>
+        <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>, <name>Е. Хереш</name> и <name>А. Ворошилова</name>
+      </respStmt>
+      <respStmt>
+        <resp>Издатели:</resp>
+        <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+      </respStmt>
+      <sourceDesc>
+        <bibl>
+          <publisher>ЦСС
+            <date type='published'>2022</date></publisher>
+            <date type="written" when="29/04/1999">1999</date>
+        </bibl>
+      </sourceDesc>
+    </fileDesc>
+  </teiHeader>
+  <text>
+    <lg type="poem">
+      <head>Черная моль</head>
+      <lg type="quatrain" n="1">
+        <l n="1">Книгу жизни в середине открыть,</l>
+        <l n="2">Если боль — там чудесная боль,</l>
+        <l n="3">Но уже в корешке затаилась</l>
+        <l n="4">Черная жирная моль.</l>
+      </lg>
+      <lg type="quatrain" n="2">
+        <l n="5">Лучше бы в море ее бросали,</l>
+        <l n="6">Лучше б разъела едкая соль,</l>
+        <l n="7">Чем эта — жрущая с конца и начала,</l>
+        <l n="8">Ненасытимая моль.</l>
+      </lg>
+      <lg type="quatrain" n="3">
+        <l n="9">О, теперь я узнала тебя!</l>
+        <l n="10">Это ты торжествуешь, проклятый, —</l>
+        <l n="11">Ангел смерти, тупой Самаэль,</l>
+        <l n="12">И твои слепые солдаты.</l>
+      </lg>
+      <date>[29 апреля] 1999</date>
+    </lg>
+  </text>
+  <notesStmt>
+    <note>Впервые в: Новый мир. 2000. № 7. С. 11. Датировка уточняется по листу компьютерного набора (а-961).</note>
+  </notesStmt>
+</TEI>

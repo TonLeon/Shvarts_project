@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ТРАКТАТ О НЕРАЗДЕЛЬНОСТИ ЛЮБВИ И СТРАХА</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>К. Кудинова</name>, <name>Л. Родичева</name>, <name>Е. Хереш</name> и <name>Е. Сенаторова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name> и <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Новый мир. 2000. №7. С. 9
+                        <date type='published'>2000</date></publisher>
+                        <date type="written" when="1999">1999</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+    <lg type="poem">
+            <head>ТРАКТАТ О НЕРАЗДЕЛЬНОСТИ ЛЮБВИ И СТРАХА</head>
+            <lg type="stanza" n="1">
+                <l n="1">Глухой: Бомба ли разорвется,</l>
+                <l n="2">Подумаешь: «Я оглох».</l>
+                <l n="3">(Не входи в темную комнату,</l>
+                <l n="4">Не зажигай света,</l>
+                <l n="5">Там может быть Бог.)</l>
+                    </lg>
+            <lg type="stanza" n="2">    
+                <l n="6">Слепой: Если вдруг что-то вспыхнет,</l>
+                <l n="7">Подумаешь: «Я ослеп».</l>
+                <l n="8">И превратишься в сияющий,</l>
+                <l n="9">Но заколоченный склеп.</l>
+                <l n="10">Тогда и входи в комнату,</l>
+                <l n="11">Зажигай оранжевый свет,</l>       
+                <l n="12">Бога там больше нет.</l>
+                    </lg>
+            <lg type="triplet" n="3">   
+                <l n="13">Он теперь весь внутри.</l>
+                <l n="14">Вы одни в темноте,</l>
+                <l n="15">Нищете, тесноте.</l>
+           </lg>
+        </lg>
+</text>
+</TEI>
