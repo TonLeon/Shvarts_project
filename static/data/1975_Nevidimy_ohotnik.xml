@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>НЕВИДИМЫЙ ОХОТНИК</title>
+                <title>Невидимый охотник</title>
                 <author>Елена Шварц </author>
             </titleStmt>
             <respStmt>
@@ -25,7 +25,7 @@
     </teiHeader>
     <text>
         <lg type="poem">
-            <head>НЕВИДИМЫЙ ОХОТНИК</head>
+            <head>Невидимый охотник</head>
             <lg type="stanza">
                 <l n="1">Может быть — к счастью или позору —</l>
                 <l n="2">Вся моя ценность только в узоре</l>

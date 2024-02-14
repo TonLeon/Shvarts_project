@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>СОНАТА ТЕМНОТЫ</title>
+                <title>Соната темноты</title>
                 <author>Елена Шварц </author>
             </titleStmt>
             <respStmt>
@@ -25,7 +25,7 @@
     </teiHeader>
     <text>
         <lg type="poem">
-            <head>СОНАТА ТЕМНОТЫ</head>
+            <head>Соната темноты</head>
             <lg type="paragraph" n="1">
                 <head>I</head>
                 <lg type="quatrain" n="1">

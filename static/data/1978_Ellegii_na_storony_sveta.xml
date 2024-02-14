@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>ЭЛЕГИИ НА СТОРОНЫ СВЕТА</title>
+                <title>Элегии на стороны света</title>
                 <author>Елена Шварц</author>
             </titleStmt>
             <respStmt>
@@ -25,7 +25,7 @@
     </teiHeader>
     <text>
         <lg type="cycle">
-            <head>ЭЛЕГИИ НА СТОРОНЫ СВЕТА</head>
+            <head>Элегии на стороны света</head>
 
             <lg type="poem">
                 <head> I (северная)</head>

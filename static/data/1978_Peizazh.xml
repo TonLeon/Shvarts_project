@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>ПЕЙЗАЖ</title>
+                <title>Пейзаж</title>
                 <author>Елена Шварц</author>
             </titleStmt>
             <respStmt>
@@ -25,7 +25,7 @@
     </teiHeader>
     <text>
         <lg type="poem">
-            <head>ПЕЙЗАЖ</head>
+            <head>Пейзаж</head>
             <lg type="stanza">
                 <l n="1">Пылилась Кинешма у ног,</l>
                 <l n="2">Изъеденная едкой Волгой,</l>

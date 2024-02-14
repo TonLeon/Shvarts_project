@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>НЕВИДНАЯ ЗВЕЗДА (запоздалое)</title>
+                <title>Невидная звезда (запоздалое)</title>
                 <author>Елена Шварц </author>
             </titleStmt>
             <respStmt>
@@ -25,7 +25,7 @@
     </teiHeader>
     <text>
         <lg type="poem">
-            <head>НЕВИДНАЯ ЗВЕЗДА (запоздалое)</head>
+            <head>Невидная звезда (запоздалое)</head>
             <l n="1">Звезда под сердцем все горит,</l>
             <l n="2">С годами все приметнее,</l>
             <l n="3">Она то яростно блестит,</l>

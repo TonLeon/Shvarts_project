@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>МОГИЛА ОТЦА (которого никогда не видела)</title>
+                <title>Могила отца (которого никогда не видела)</title>
                 <author>Елена Шварц </author>
             </titleStmt>
             <respStmt>
@@ -25,7 +25,7 @@
     </teiHeader>
     <text>
         <lg type="poem">
-            <head>МОГИЛА ОТЦА (которого никогда не видела)</head>
+            <head>Могила отца (которого никогда не видела)</head>
             <lg type="stanza">  
                 <l n="1">Я, как отбившийся волчонок,</l>
                 <l n="2"> Волчонок или медвежонок,</l>

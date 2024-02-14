@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>АВРААМ И ТРОИЦА</title>
+                <title>Авраам и Троица</title>
                 <author>Елена Шварц</author>
             </titleStmt>
             <respStmt>
@@ -27,7 +27,7 @@
     </teiHeader>
     <text>
         <lg type="poem">
-            <head>АВРААМ И ТРОИЦА</head>
+            <head>Авраам и Троица</head>
             <lg type="stanza" n="1">
                 <l n="1">Нет, не тому я удивляюсь,</l>
                 <l n="2">Что в полдень у шатра валяясь,</l>

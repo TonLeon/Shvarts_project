@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>В отставке </title>
+                <title>В отставке</title>
                 <author>Елена Шварц</author>
             </titleStmt>
             <respStmt>
@@ -26,7 +26,7 @@
     </teiHeader>
     <text>
         <lg type="poem">
-            <head>В отставкеВ отставке </head>
+            <head>В отставке</head>
             <lg type="stanza">
                 <l n="1">Идет гвардеец, как на битву.</l>
                 <l n="2">Судьба дрожит, манит — иди!</l>

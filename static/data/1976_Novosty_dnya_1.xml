@@ -4,7 +4,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>НОВОСТИ ДНЯ</title>
+                <title>Новости дня</title>
                 <author>Елена Шварц </author>
             </titleStmt>
             <respStmt>
@@ -26,7 +26,7 @@
     </teiHeader>
     <text>
         <lg type="poem">
-            <head>НОВОСТИ ДНЯ</head>
+            <head>Новости дня</head>
             <lg type="stanza">
                 <l n="1">На Спасской полночь бьет,</l>
                 <l n="2">В России день прошел,</l>

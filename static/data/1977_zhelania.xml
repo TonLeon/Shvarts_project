@@ -2,7 +2,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title> ЖЕЛАНИЯ(цыганские стихи)</title>
+                <title> Желания (цыганские стихи)</title>
                 <author>Елена Шварц </author>
             </titleStmt>
             <respStmt>
@@ -24,7 +24,7 @@
     </teiHeader>
     <text>
         <lg type="poem">
-            <head>ЖЕЛАНИЯ (цыганские стихи) </head>
+            <head>Желания (цыганские стихи) </head>
             <lg type="paragraph" n="1"> 1 <lg type="quatrain" n="1">
                     <l n="1">О, е́сли б для табора малой обузой</l>
                     <l n="2">Завернутой в шаль на телеге катить,</l>

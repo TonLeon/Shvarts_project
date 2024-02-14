@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>ДЕВА ВЕРХОМ НА ВЕНЕЦИИ, И Я У НЕЕ НА ПЛЕЧЕДЕВА ВЕРХОМ НА ВЕНЕЦИИ, И Я У НЕЕ НА ПЛЕЧЕ</title>
+                <title>Дева верхом на Венеции, и я у неё на плече</title>
                 <author>Елена Шварц</author>
             </titleStmt>
             <respStmt>
@@ -16,7 +16,7 @@
             </respStmt>
             <sourceDesc>
                 <bibl>
-                    <publisher> Танцующий Давид. С.81-83 <date type="published">1985</date>
+                    <publisher> Танцующий Давид. С.81-83. <date type="published">1985</date>
                     </publisher>
                     <date type="written" when="1979">1979</date>
                 </bibl>
@@ -25,7 +25,7 @@
     </teiHeader>
     <text>
         <lg type="poem">
-            <head>ДЕВА ВЕРХОМ НА ВЕНЕЦИИ, И Я У НЕЕ НА ПЛЕЧЕДЕВА ВЕРХОМ НА ВЕНЕЦИИ, И Я У НЕЕ НА ПЛЕЧЕ</head>
+            <head>Дева верхом на Венеции, и я у неё на плече</head>
             <lg type = "quatrain">
                 <l n="1">И склады по краям, и Альпы вдалеке,</l>
                 <l n="2"> В дождь, льющий слезы обожанья,</l>

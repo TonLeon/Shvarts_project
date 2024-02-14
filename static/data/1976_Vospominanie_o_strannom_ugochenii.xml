@@ -4,7 +4,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>ВОСПОМИНАНИЕ О СТРАННОМ УГОЩЕНИИ</title>
+                <title>Воспоминание о странном угощении</title>
                 <author>Елена Шварц </author>
             </titleStmt>
             <respStmt>
@@ -26,7 +26,7 @@
     </teiHeader>
     <text>
         <lg type="poem">
-            <head>ВОСПОМИНАНИЕ О СТРАННОМ УГОЩЕНИИ</head>
+            <head>Воспоминание о странном угощении</head>
             <lg type="stanza">
                 <l n="1">Я отведала однажды</l>
                 <l n="2">Молока своей подруги,</l>

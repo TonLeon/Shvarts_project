@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>АФРОДИТА УЛЕТАЕТ В НОЧЬ НА СУББОТУ</title>
+                <title>Афродита улетает в ночь на субботу</title>
                 <author>Елена Шварц</author>
             </titleStmt>
             <respStmt>
@@ -27,7 +27,7 @@
     </teiHeader>
     <text>
         <lg type="poem">
-            <head>АФРОДИТА УЛЕТАЕТ В НОЧЬ НА СУББОТУ</head>
+            <head>Афродита улетает в ночь на субботу</head>
             <lg type="stanza">
                 <l n="1">Бледная полночь,</l>
                 <l n="2">Фарфоровая сирень,</l>
