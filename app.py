@@ -5,8 +5,8 @@ import re
 
 app = Flask(__name__)
 def get_poems_titles():
-    # client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
-    client = pymongo.MongoClient('localhost', 27017)
+    client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
+    # client = pymongo.MongoClient('localhost', 27017)
     db = client['admin']
     all_collections = db.list_collection_names()
     
@@ -37,8 +37,8 @@ def get_poems_titles():
 
 
 def get_poems_texts(ID):
-    # client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
-    client = pymongo.MongoClient('localhost', 27017)
+    client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
+    # client = pymongo.MongoClient('localhost', 27017)
     db = client['admin']
     all_collections = db.list_collection_names()
     
@@ -76,8 +76,8 @@ def get_poems_texts(ID):
 #     return titles, duplicates, non_dup_id_2_next_nondup, non_dup_id_2_previous_nondup
 
 def get_files_by_edition(edition, ID = None):
-    # client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
-    client = pymongo.MongoClient('localhost', 27017)
+    client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
+    # client = pymongo.MongoClient('localhost', 27017)
     db = client['admin']
     all_collections = db.list_collection_names()
     
@@ -111,8 +111,8 @@ def get_files_by_edition(edition, ID = None):
 
 
 def search_result(word):
-    # client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
-    client = pymongo.MongoClient('localhost', 27017)
+    client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
+    # client = pymongo.MongoClient('localhost', 27017)
     db = client['admin']
     all_collections = db.list_collection_names()
     
@@ -139,8 +139,8 @@ def search_result(word):
 
 
 def show_all_poems():
-    # client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
-    client = pymongo.MongoClient('localhost', 27017)
+    client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
+    # client = pymongo.MongoClient('localhost', 27017)
     db = client['admin']
     all_collections = db.list_collection_names()
     
@@ -167,8 +167,8 @@ def show_all_poems():
 
 
 def filter_poems_by_year(name_of_db, start_year, end_year):
-    # client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
-    client = pymongo.MongoClient('localhost', 27017)
+    client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
+    # client = pymongo.MongoClient('localhost', 27017)
     db = client['admin']
     collection = db[name_of_db]
     texts_of_exact_period = []
