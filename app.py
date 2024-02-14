@@ -63,18 +63,6 @@ def get_poems_texts(ID):
     return all_poem_texts, all_duplicates, all_counts 
 
 
-
-# def get_collection_titles(name_of_db):
-#     # client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
-#     client = pymongo.MongoClient('localhost', 27017)
-#     db = client['admin']
-#     collection= db[name_of_db]
-#     titles = [title for title in collection.find({"root": []})]
-#     duplicates = [title for title in collection.find({"root": {'$ne':[]}})]
-#     non_dup_id_2_next_nondup = {titles[i]['ID']: titles[i + 1]['ID'] for i in range(len(titles) - 1)}
-#     non_dup_id_2_previous_nondup = {titles[i]['ID']: titles[i - 1]['ID'] for i in range(1, len(titles))}
-#     return titles, duplicates, non_dup_id_2_next_nondup, non_dup_id_2_previous_nondup
-
 def get_files_by_edition(edition, ID = None):
     client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
     # client = pymongo.MongoClient('localhost', 27017)
@@ -90,16 +78,28 @@ def get_files_by_edition(edition, ID = None):
 #         if collection.startswith('Shvarts'):
         collection = db['{}'.format(collection)]
         orig_texts = collection.find({"poem_text": {"$exists": True}}) if ID is None else collection.find({"poem_text": {"$exists": True}, "ID":ID})
+        
+        
         files = [file for file in orig_texts if edition in file['meta']['edition']] 
 
         all_files = all_files + files
         duplicates = [file for file in collection.find({"root": {'$ne':[]}})]
-        all_duplicates = all_duplicates + duplicates           
-            
-    all_files = sorted(all_files, key = lambda x: x['ID'] if isinstance(x['ID'], int) 
-       else int(re.findall('\d{4}', str(x['ID']))[0]))
+        all_duplicates = all_duplicates + duplicates 
 
-    count = len(files)
+    for index, item in enumerate(all_files):
+        bibliography = all_files[index]['meta']['edition']
+        page = re.findall('[С|с|C|c]..\d+', bibliography)
+        if len(page) != 0:
+            page = re.findall('\d+', page[0])
+            page = int(page[0])
+        else:
+            page = 0
+        item['meta']["page"] = page
+
+    all_files = sorted(all_files, key=lambda k: k['meta']['page'], reverse=False)
+
+    count = len(all_files)
+    
     non_dup_id_2_next_nondup = {all_files[i]['ID']: all_files[i + 1]['ID'] for i in range(len(all_files) - 1)}
     all_non_dup_id_2_next_nondup.update(non_dup_id_2_next_nondup)
 
@@ -107,7 +107,6 @@ def get_files_by_edition(edition, ID = None):
     all_non_dup_id_2_previous_nondup.update(non_dup_id_2_previous_nondup)
             
     return all_files, all_duplicates, all_non_dup_id_2_next_nondup, all_non_dup_id_2_previous_nondup, count
-
 
 
 def search_result(word):
@@ -302,6 +301,7 @@ def tanz_david_text(ID):
     titles, _, next_ID_dict, prev_ID_dict, _ = get_files_by_edition("Давид")
     first_ID = titles[0]["ID"] 
     last_ID = titles[-1]["ID"]
+
     if ID in next_ID_dict:
         next_ID = next_ID_dict[ID]
     else:
@@ -327,6 +327,7 @@ def soch_v_1_content():
 def soch_v_1_text(ID):
     poem_text, duplicates, _, _, count = get_files_by_edition("том 1", ID)
     titles, _, next_ID_dict, prev_ID_dict, _ = get_files_by_edition("том 1")
+
     first_ID = titles[0]["ID"] 
     last_ID = titles[-1]["ID"]
     if ID in next_ID_dict:
@@ -337,6 +338,8 @@ def soch_v_1_text(ID):
         prev_ID = prev_ID_dict[ID]
     else:
         prev_ID = None
+
+
     return render_template('soch_v_1_text.html', page_name='texts', 
                            first_ID=first_ID, last_ID=last_ID, next_ID=next_ID, prev_ID=prev_ID,
 							poem_text=poem_text, duplicates=duplicates, count=count, titles=titles)
