@@ -1,7 +1,9 @@
 from flask import Flask, render_template, request, jsonify
+from markupsafe import Markup
 import pymongo
 import json
 import re
+
 
 app = Flask(__name__)
 def get_poems_titles():
@@ -207,8 +209,13 @@ def get_text_sixties(ID):
     previous_id = non_dup_id_2_previous_nondup[ID] if ID in non_dup_id_2_previous_nondup.keys() else None
     next_id = non_dup_id_2_next_nondup[ID] if ID in non_dup_id_2_next_nondup.keys() else None
     poem_texts, duplicates, _ = get_poems_texts(ID)
+    if poem_texts[0]["genre"] == "cycle":
+        cycle_text = Markup(poem_texts[0]["poem_text"])
+    else:
+        cycle_text = None
+
     return render_template('text.html', page_name='texts', 
-							poem_texts=poem_texts, duplicates=duplicates, next_id=next_id, previous_id=previous_id)
+							poem_texts=poem_texts, cycle_text=cycle_text, duplicates=duplicates, next_id=next_id, previous_id=previous_id)
 
 @app.route('/show_all_poems')
 def all_poems():
@@ -273,6 +280,11 @@ def zel_tet_text(ID):
     poem_text, duplicates, _, _, count = get_files_by_edition("Стихи из", ID)
     titles, _, next_ID_dict, prev_ID_dict, _ = get_files_by_edition("Стихи из")
 
+    if poem_text[0]["genre"] == "cycle":
+        cycle_text = Markup(poem_text[0]["poem_text"])
+    else:
+        cycle_text = None
+
     first_ID = titles[0]["ID"] 
     last_ID = titles[-1]["ID"] 
     if ID in next_ID_dict:
@@ -283,7 +295,7 @@ def zel_tet_text(ID):
         prev_ID = prev_ID_dict[ID]
     else:
         prev_ID = None
-    return render_template('zel_tet_text.html', page_name='texts', 
+    return render_template('zel_tet_text.html', page_name='texts',  cycle_text= cycle_text,
                            first_ID=first_ID, last_ID=last_ID, next_ID=next_ID, prev_ID=prev_ID,
 							poem_text=poem_text, duplicates=duplicates, count=count, titles=titles)
 
@@ -299,6 +311,12 @@ def tanz_david_content():
 def tanz_david_text(ID):
     poem_text, duplicates, _, _, count = get_files_by_edition("Давид", ID)
     titles, _, next_ID_dict, prev_ID_dict, _ = get_files_by_edition("Давид")
+
+    if poem_text[0]["genre"] == "cycle":
+        cycle_text = Markup(poem_text[0]["poem_text"])
+    else:
+        cycle_text = None
+
     first_ID = titles[0]["ID"] 
     last_ID = titles[-1]["ID"]
 
@@ -310,7 +328,7 @@ def tanz_david_text(ID):
         prev_ID = prev_ID_dict[ID]
     else:
         prev_ID = None
-    return render_template('tanz_david_text.html', page_name='texts', 
+    return render_template('tanz_david_text.html', page_name='texts', cycle_text=cycle_text,
                            first_ID=first_ID, last_ID=last_ID, next_ID=next_ID, prev_ID=prev_ID,
 							poem_text=poem_text, duplicates=duplicates, count=count, titles=titles)
 
@@ -328,6 +346,11 @@ def soch_v_1_text(ID):
     poem_text, duplicates, _, _, count = get_files_by_edition("том 1", ID)
     titles, _, next_ID_dict, prev_ID_dict, _ = get_files_by_edition("том 1")
 
+    if poem_text[0]["genre"] == "cycle":
+        cycle_text = Markup(poem_text[0]["poem_text"])
+    else:
+        cycle_text = None
+
     first_ID = titles[0]["ID"] 
     last_ID = titles[-1]["ID"]
     if ID in next_ID_dict:
@@ -340,7 +363,7 @@ def soch_v_1_text(ID):
         prev_ID = None
 
 
-    return render_template('soch_v_1_text.html', page_name='texts', 
+    return render_template('soch_v_1_text.html', page_name='texts', cycle_text=cycle_text,
                            first_ID=first_ID, last_ID=last_ID, next_ID=next_ID, prev_ID=prev_ID,
 							poem_text=poem_text, duplicates=duplicates, count=count, titles=titles)
 
@@ -356,6 +379,12 @@ def soch_v_3_content():
 def soch_v_3_text(ID):
     poem_text, duplicates, _, _, count = get_files_by_edition("том 3", ID)
     titles, _, next_ID_dict, prev_ID_dict, _ = get_files_by_edition("том 3")
+
+    if poem_text[0]["genre"] == "cycle":
+        cycle_text = Markup(poem_text[0]["poem_text"])
+    else:
+        cycle_text = None
+
     first_ID = titles[0]["ID"] 
     last_ID = titles[-1]["ID"]
     if ID in next_ID_dict:
@@ -366,7 +395,7 @@ def soch_v_3_text(ID):
         prev_ID = prev_ID_dict[ID]
     else:
         prev_ID = None
-    return render_template('soch_v_3_text.html', page_name='texts', 
+    return render_template('soch_v_3_text.html', page_name='texts', cycle_text=cycle_text,
                            first_ID=first_ID, last_ID=last_ID, next_ID=next_ID, prev_ID=prev_ID,
 							poem_text=poem_text, duplicates=duplicates, count=count, titles=titles)
 
@@ -382,6 +411,12 @@ def soch_v_5_content():
 def soch_v_5_text(ID):
     poem_text, duplicates, _, _, count = get_files_by_edition("том 5", ID)
     titles, _, next_ID_dict, prev_ID_dict, _ = get_files_by_edition("том 5")
+
+    if poem_text[0]["genre"] == "cycle":
+        cycle_text = Markup(poem_text[0]["poem_text"])
+    else:
+        cycle_text = None
+
     first_ID = titles[0]["ID"] 
     last_ID = titles[-1]["ID"]
     if ID in next_ID_dict:
@@ -392,7 +427,7 @@ def soch_v_5_text(ID):
         prev_ID = prev_ID_dict[ID]
     else:
         prev_ID = None
-    return render_template('soch_v_5_text.html', page_name='texts', 
+    return render_template('soch_v_5_text.html', page_name='texts', cycle_text=cycle_text,
                            first_ID=first_ID, last_ID=last_ID, next_ID=next_ID, prev_ID=prev_ID,
 							poem_text=poem_text, duplicates=duplicates, count=count, titles=titles)
 
@@ -411,6 +446,12 @@ def perelet_ptitsa_content():
 def perelet_ptitsa_text(ID):
     poem_text, duplicates, _, _, count = get_files_by_edition("Перелетная птица", ID)
     titles, _, next_ID_dict, prev_ID_dict, _ = get_files_by_edition("Перелетная птица")
+
+    if poem_text[0]["genre"] == "cycle":
+        cycle_text = Markup(poem_text[0]["poem_text"])
+    else:
+        cycle_text = None
+
     first_ID = titles[0]["ID"] 
     last_ID = titles[-1]["ID"]
     if ID in next_ID_dict:
@@ -421,7 +462,7 @@ def perelet_ptitsa_text(ID):
         prev_ID = prev_ID_dict[ID]
     else:
         prev_ID = None
-    return render_template('perelet_ptitsa_text.html', page_name='texts', 
+    return render_template('perelet_ptitsa_text.html', page_name='texts', cycle_text=cycle_text,
                            first_ID=first_ID, last_ID=last_ID, next_ID=next_ID, prev_ID=prev_ID,
 							poem_text=poem_text, duplicates=duplicates, count=count, titles=titles)
 

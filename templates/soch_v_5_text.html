@@ -84,16 +84,25 @@
             </ul>
 
 
-            <p class ="head">{{item.head}}</p>
-            
-            {% if item.epigraph is not none %}
-                <pre class="epigraph">{{item.epigraph}}</pre>
-                <pre class="text">{{item.poem_text}}</pre>
-            {% elif item.dedication is not none %}
-                <pre class="dedication">{{item.dedication}}</pre>
-                <pre class="text">{{item.poem_text}}</pre>
+            {% if item.genre == "cycle" %}
+            <!-- <p class ="head">{{ item.meta.title }}</p> -->
+                  {{ cycle_text }}
+
             {% else %}
-                <pre class="text">{{item.poem_text}}</pre>
+
+
+                <p class ="head">{{item.head}}</p>
+                
+                {% if item.epigraph is not none %}
+                    <pre class="epigraph">{{item.epigraph}}</pre>
+                    <pre class="text">{{item.poem_text}}</pre>
+                {% elif item.dedication is not none %}
+                    <pre class="dedication">{{item.dedication}}</pre>
+                    <pre class="text">{{item.poem_text}}</pre>
+                {% else %}
+                    <pre class="text">{{item.poem_text}}</pre>
+                {% endif %}
+
             {% endif %}
 
             <div class ="meta"> 

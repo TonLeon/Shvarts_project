@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>Распродажа библиотеки историка</title>
+                <title>Соловей спасающий</title>
                 <author>Елена Шварц, 1948-2010</author>
             </titleStmt>
             <respStmt>
@@ -25,7 +25,7 @@
     </teiHeader>
     <text>
         <lg type="poem">
-            <head>СОЛОВЕЙ СПАСАЮЩИЙ</head>
+            <head>Соловей спасающий</head>
             <sub>(стихотворение-двойник)</sub>
 
             <lg type="stanza" n="1">

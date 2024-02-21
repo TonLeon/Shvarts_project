@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** («Стамбул не пал, не пал Константинополь...»)</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>Е. Павлова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Сочинения, том 1. 2002. С. 324.
+                        <date type='published'>2002</date></publisher>
+                        <date type="written" when="1996">1996</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+        <lg type="poem">
+            <head>***</head>
+        <lg type="stanza" n="1">
+ <l n="1">Стамбул не пал, не пал Константинополь,</l>
+ <l n="2">А с грохотом расшибся третий Рим,</l>
+ <l n="3">На дне морей, под изумрудной коркой</l>
+ <l n="4">В его развалинах, в золе горим.</l>
+ <l n="5">Проливов не видать, теперь уж это ясно,</l>
+ <l n="6">На что они? На что мне Рим?</l>
+ <l n="7">Мне мира мало, да и он опасен,</l>
+ <l n="8">Он рухнул весь, мы в головне дрожим.</l>
+ <l n="9">На что мне мир? Мне нужно только,</l>
+ <l n="10">Чтоб ангелы не слышали меня,</l>
+ <l n="11">Все ж слушая, и всхлипывали горько,</l>
+ <l n="12">Подглазья синевою затемня.</l>
+        </lg>
+    <date>1996</date>
+        </lg>
+</text>
+</TEI>

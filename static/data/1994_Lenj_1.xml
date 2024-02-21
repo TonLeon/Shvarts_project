@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ЛЕНЬ</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>,<name>Н. Игнатьева</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+  <publisher>Песня птицы на дне морском. С.59.
+     <date type='published'>1995</date></publisher>
+                    <date type="written" when="1994">1994</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>ЛЕНЬ</head>
+            <lg type="quatrain" n="1">
+                <l n="1">Блаженная лень! Томящая лень!</l>
+<l n="2">Так сладостно кровь цепенеет!</l>
+<l n="3">Ресницами так невозможно взмахнуть,</l>
+<l n="4">Язык, распухая, коснеет.</l>
+</lg>
+<lg type="quatrain" n="2">
+    <l n="5">Не выходить, не петь, не знать отличий,</l>
+<l n="6">Не стряхивать ни липких сна оков,</l>
+<l n="7">Ни упоительную муку параличных,</l>
+<l n="8">Сухих растений, сверженных богов.</l>
+</lg>
+<date>1994</date>
+</lg>
+</text>
+</TEI>
+
+
+

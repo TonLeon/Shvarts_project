@@ -3,7 +3,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>ДВА АСПЕКТА</title>
+                <title>Два аспекта</title>
                 <author>Елена Шварц</author>
             </titleStmt>
             <respStmt>
@@ -25,10 +25,9 @@
     </teiHeader>
     <text>
         <lg type="poem">
-            <head>ДВА АСПЕКТА</head>
+            <head>Два аспекта</head>
             <lg>I</lg>
             <lg type="couplet">
-
                 <l n="1"> Вот не думала, что доживу, дожду</l>
                 <l n="2"> До подгнивших слив в дрожжевом саду,</l>
             </lg>

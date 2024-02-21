@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>*** ("Все три мои макушки смотрят вверх...")</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>,<name>Н. Игнатьева</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+  <publisher>Песня птицы на дне морском. С. 50.
+     <date type='published'>1995</date></publisher>
+                    <date type="written" when="1994">1994</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>*** ("Все три мои макушки смотрят вверх...")</head>
+            <lg type="quatrain" n="1">
+                <l n="1">Все три мои макушки смотрят вверх,</l>
+<l n="2">Трехглазье кроткое главу венчает,</l>
+<l n="3">И острые небесные лучи</l>
+<l n="4">В них кто-то медленно вращает.</l>
+</lg>
+<lg type="quatrain" n="2">
+    <l n="5">Они как три колодца, и водой</l>
+<l n="6">Вдруг заплывают до краев мятежной,</l>
+<l n="7">И если ведра опускают в них –</l>
+<l n="8">То очень осторожно, очень нежно.</l>
+</lg>
+<date>1994</date>
+</lg>
+</text>
+</TEI>
+

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ДЕВОЧКА И КРЫСА</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>Л. Родичева</name>, <name>Е. Сенаторова</name>,<name>Н. Игнатьева</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name>, <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+  <publisher>Песня птицы на дне морском. С.66.
+     <date type='published'>1995</date></publisher>
+                    <date type="written" when="1994">1994</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <lg type="poem">
+            <head>ДЕВОЧКА И КРЫСА</head>
+            <lg type="stanza">
+                <l n="1">Девочка шла с крысой на плече,</l>
+<l n="2">Крыса распласталась, как погон.</l>
+<l n="3">Этому никто не удивлялся,</l>
+<l n="4">Потому что это — древний сон.</l>
+<l n="5">Крыса живо-живо посмотрела,</l>
+<l n="6">Гладит девочка ей корнеплодный хвост,</l>
+<l n="7">А сама — серее, чем картошка,</l>
+<l n="8">Не пошла еще ни в цвет, ни в рост.</l>
+<l n="9">Снег их кроет сереньким пушком,</l>
+<l n="10">Удивляясь древности союза.</l>
+<l n="11">Крыса дышит в тонкое ушко —</l>
+<l n="12">(Но напрасно) — как немая Муза.</l>
+</lg>
+<date>1994</date>
+</lg>
+</text>
+</TEI>
+

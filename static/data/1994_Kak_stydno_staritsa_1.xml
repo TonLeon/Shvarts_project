@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+    <teiHeader>
+        <fileDesc>
+          <titleStmt>
+            <title>***("Как стыдно стариться...")</title>
+            <author>Елена Шварц</author>
+          </titleStmt>
+          <respStmt>
+            <resp>Редакторы:</resp>
+            <name>П. Успенский</name>, <name>А. Шеля</name>,  <name>Л. Родичева</name>, <name>Е. Сенаторова</name> и <name>Е. Гришечкина</name>
+          </respStmt>
+          <respStmt>
+            <resp>Издатели:</resp>
+            <name>Л. Родичева</name>, <name>Е. Сенаторова</name>
+          </respStmt>
+          <sourceDesc>
+            <bibl>
+              <publisher>Песня птицы на дне морском. С. 63.
+                <date type='published'>1995</date></publisher>
+                <date type="written" when="1994">1994</date>
+            </bibl>
+          </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+  <text>
+       <lg type="poem">
+         <head>***</head>
+         <lg type="stanza">
+          	<l n="1">Как стыдно стариться —</l>
+          	<l n="2">Не знаю почему,</l>
+          	<l n="3">Ведь я зарока не давала</l>
+          	<l n="4">Не уходить в ночную тьму,</l>
+            <l n="5">Не ускользать во мрак подвала,</l>
+            <l n="6">Себе сединами светя,</l>
+            <l n="7">Я и себе не обещала,</l>
+            <l n="8">Что буду вечное дитя.</l>
+            <l n="9">Но все ж неловко мне невольно,</l>
+            <l n="10">Всем увяданье очевидно.</l>
+            <l n="11">Я знаю — почему так больно,</l>
+            <l n="12">Но почему так стыдно, стыдно?</l>
+         </lg>
+         <date>1994</date>
+       </lg>
+  </text>
+</TEI>

@@ -33,11 +33,13 @@ html{
 /* ХЭДЕР ВСЕХ СТРАНИЦ В base.html */
 
 .header {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    background: white;
-    /* margin: 0 0 50px 0; */
+        /* background-image:  url('../../static/photo/027.jpg') ;
+        background-repeat: no-repeat; */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background: white;
+        /* margin: 0 0 50px 0; */
 }
 .header_name {
     font-family: 'Oswald', sans-serif;
@@ -372,7 +374,8 @@ a{
 
 #back, #forward{
     padding-right: 30px;
-    border-style:none !important;
+    margin-top: 16px;
+    /* border-style:none !important; */
 }
 
 

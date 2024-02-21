@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+<teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>ЗАБРОШЕННАЯ ИЗБУШКА</title>
+                <author>Елена Шварц</author>
+            </titleStmt>
+            <respStmt>
+                <resp>Редакторы:</resp>
+                <name>П. Успенский</name>, <name>А. Шеля</name>, <name>К. Кудинова</name>, <name>Л. Родичева</name> и <name>Е. Сенаторова</name>
+            </respStmt>
+            <respStmt>
+                <resp>Издатели:</resp>
+                <name>Л. Родичева</name> и <name>Е. Сенаторова</name> 
+            </respStmt>
+            <sourceDesc>
+                <bibl>
+                    <publisher>Песня птицы на дне морском. С.70
+                        <date type='published'>1995</date></publisher>
+                        <date type="written" when="1994">1994</date>
+                </bibl>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+<text>
+    <lg type="poem">
+            <head>ЗАБРОШЕННАЯ ИЗБУШКА</head>
+            <lg type="couplet" n="1">
+                <l n="1">Печален старичок, допив настой на травке,</l>
+                <l n="2">И думает коту, лежащему на лавке:</l>
+				</lg>
+			<lg type="couplet" n="2">
+                <l n="3">Ты знаешь, деточка, зверек пушистый,</l>
+                <l n="4">Что вечер настает февральский, скорый, мглистый?</l>
+				</lg>
+			<lg type="couplet" n="3">
+                <l n="5">Что все давно недвижны, кто помнили о нас,</l>
+				<l n="6">Забудем же и мы их в ночной и снежный час.</l>
+				</lg>
+			<lg type="couplet" n="4">
+                <l n="7">Последняя чекушка допита, и теперь</l>
+                <l n="8">Заклеена морозом, насмерть зальдела дверь,</l>
+				</lg>
+			<lg type="couplet" n="5">
+                <l n="9">И в окна льется синева, вразмешку с пеной.</l>
+                <l n="10">Мы будем так лежать — и разомкнутся стены,</l>
+				</lg>
+			<lg type="couplet" n="6">
+	            <l n="11">Покуда потолок не отворит нам путь,</l>
+                <l n="12">По льдистой колее куда-нибудь,</l>
+				</lg>
+			<lg type="couplet" n="7">
+                <l n="13">Промерзлый домовой нас поцелует в лоб.</l>
+                <l n="14">И сыплет снег не в гроб и не в сугроб.</l>         
+           </lg>
+               <date>1994</date>
+        </lg>
+</text>
+</TEI>
