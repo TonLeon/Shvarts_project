@@ -375,7 +375,8 @@ a{
 #back, #forward{
     padding-right: 30px;
     margin-top: 16px;
-    /* border-style:none !important; */
+    border-style:none !important;
+    background: #f2f1ef;
 }
 
 
