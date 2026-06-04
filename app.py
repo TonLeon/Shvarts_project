@@ -1,8 +1,7 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect, url_for, abort
 from markupsafe import Markup
 import os
 import pymongo
-import json
 import re
 
 
@@ -12,172 +11,160 @@ app = Flask(__name__)
 # Configure via env vars; defaults match the local Docker setup.
 client = pymongo.MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017'))
 db = client[os.environ.get('MONGO_DB', 'admin')]
+
+
+# Printed editions: slug -> substring that identifies the edition in
+# meta.edition, plus the labels used on the index and text pages.
+EDITIONS = {
+    'zel_tet': {
+        'match': 'Стихи из',
+        'title': 'Стихи из «Зелёной Тетради»',
+        'text_title': 'Стихи из «Зелёной тетради»',
+        'intro': True,
+    },
+    'tanz_david': {
+        'match': 'Танцующий',
+        'title': 'Танцующий Давид',
+        'text_title': 'Стихи из сборника «Танцующий Давид»',
+    },
+    'soch_v_1': {
+        'match': 'том 1',
+        'title': 'Собрание сочинений, том I',
+        'text_title': 'Стихи из I тома Собрания сочинений',
+    },
+    'soch_v_3': {
+        'match': 'том 3',
+        'title': 'Собрание сочинений, том III',
+        'text_title': 'Стихи из III тома Собрания сочинений',
+    },
+    'soch_v_5': {
+        'match': 'том 5',
+        'title': 'Собрание сочинений, том V',
+        'text_title': 'Стихи из V тома Собрания сочинений',
+    },
+    'perelet_ptitsa': {
+        'match': 'Перелетная птица',
+        'title': 'Перелётная птица',
+        'text_title': 'Стихи из сборника «Перелётная птица»',
+    },
+}
+
+
+def written_year(date_written):
+    """meta.date_written is either an int year or free text containing one;
+    extract a sortable year, falling back to 0 for undatable texts."""
+    if isinstance(date_written, int):
+        return date_written
+    match = re.search(r'\d{4}', str(date_written))
+    return int(match.group()) if match else 0
+
+
+def shvarts_collections():
+    return [name for name in db.list_collection_names() if name.startswith('Shvarts')]
+
+
 def get_poems_titles():
-    all_collections = db.list_collection_names()
-    
     all_titles = []
     all_duplicates = []
-    all_non_dup_id_2_next_nondup = {}
-    all_non_dup_id_2_previous_nondup = {}
-    
-    for collection in all_collections:
-        if collection.startswith('Shvarts'):
-            collection = db['{}'.format(collection)]
-            titles = [title for title in collection.find({"root": []})]
-            all_titles = all_titles + titles
-            
-            duplicates = [title for title in collection.find({"root": {'$ne':[]}})]
-            all_duplicates = all_duplicates + duplicates
-            
-    titles = sorted(all_titles, key = lambda x: x['meta']['date_written'] if isinstance(x['meta']['date_written'], int) 
-       else int(re.findall('\d{4}', str(x['meta']['date_written']))[0]))
-            
-    non_dup_id_2_next_nondup = {titles[i]['ID']: titles[i + 1]['ID'] for i in range(len(titles) - 1)}
-    all_non_dup_id_2_next_nondup.update(non_dup_id_2_next_nondup)
 
-    non_dup_id_2_previous_nondup = {titles[i]['ID']: titles[i - 1]['ID'] for i in range(1, len(titles))}
-    all_non_dup_id_2_previous_nondup.update(non_dup_id_2_previous_nondup)
-            
-    return all_titles, all_duplicates, all_non_dup_id_2_next_nondup, all_non_dup_id_2_previous_nondup
+    for name in shvarts_collections():
+        collection = db[name]
+        all_titles += list(collection.find({"root": []}))
+        all_duplicates += list(collection.find({"root": {'$ne': []}}))
+
+    # Chronological order drives only the prev/next navigation;
+    # the returned title list keeps collection order (as it always has).
+    titles = sorted(all_titles, key=lambda x: written_year(x['meta']['date_written']))
+
+    next_nondup = {titles[i]['ID']: titles[i + 1]['ID'] for i in range(len(titles) - 1)}
+    previous_nondup = {titles[i]['ID']: titles[i - 1]['ID'] for i in range(1, len(titles))}
+
+    return all_titles, all_duplicates, next_nondup, previous_nondup
 
 
 def get_poems_texts(ID):
-    all_collections = db.list_collection_names()
-    
-    all_counts = []
     all_poem_texts = []
     all_duplicates = []
-    
-    
-    for collection in all_collections:
-        if collection.startswith('Shvarts'):
-            collection = db['{}'.format(collection)]
-            count = collection.count_documents({})
-            all_counts.append(count)
-            
 
-            poem_texts = [text for text in collection.find({"poem_text": {"$exists": True}, "ID":ID})] 
-            all_poem_texts = all_poem_texts + poem_texts
-            
-            duplicates = [title for title in collection.find({"root": {'$ne':[]}})]
-            all_duplicates = all_duplicates + duplicates
-            
-    return all_poem_texts, all_duplicates, all_counts 
+    for name in shvarts_collections():
+        collection = db[name]
+        all_poem_texts += list(collection.find({"poem_text": {"$exists": True}, "ID": ID}))
+        all_duplicates += list(collection.find({"root": {'$ne': []}}))
+
+    return all_poem_texts, all_duplicates
 
 
-def get_files_by_edition(edition, ID = None):
-    all_collections = db.list_collection_names()
-    
+def get_files_by_edition(edition, ID=None):
     all_files = []
     all_duplicates = []
-    all_non_dup_id_2_next_nondup = {}
-    all_non_dup_id_2_previous_nondup = {}
-    
-    for collection in all_collections:
-#         if collection.startswith('Shvarts'):
-        collection = db['{}'.format(collection)]
-        orig_texts = collection.find({"poem_text": {"$exists": True}}) if ID is None else collection.find({"poem_text": {"$exists": True}, "ID":ID})
-        
-        
-        files = [file for file in orig_texts if edition in file['meta']['edition']] 
 
-        all_files = all_files + files
-        duplicates = [file for file in collection.find({"root": {'$ne':[]}})]
-        all_duplicates = all_duplicates + duplicates 
+    for name in shvarts_collections():
+        collection = db[name]
+        query = {"poem_text": {"$exists": True}}
+        if ID is not None:
+            query["ID"] = ID
+        orig_texts = collection.find(query)
 
-    for index, item in enumerate(all_files):
-        bibliography = all_files[index]['meta']['edition']
-        page = re.findall('[С|с|C|c]..\d+', bibliography)
-        if len(page) != 0:
-            page = re.findall('\d+', page[0])
-            page = int(page[0])
-        else:
-            page = 0
-        item['meta']["page"] = page
+        all_files += [file for file in orig_texts if edition in file['meta']['edition']]
+        all_duplicates += list(collection.find({"root": {'$ne': []}}))
 
-    all_files = sorted(all_files, key=lambda k: k['meta']['page'], reverse=False)
+    # Sort by the page number embedded in the bibliography string ("С. 47").
+    for item in all_files:
+        page = re.findall(r'[С|с|C|c]..\d+', item['meta']['edition'])
+        item['meta']['page'] = int(re.findall(r'\d+', page[0])[0]) if page else 0
+
+    all_files = sorted(all_files, key=lambda k: k['meta']['page'])
 
     count = len(all_files)
-    
-    non_dup_id_2_next_nondup = {all_files[i]['ID']: all_files[i + 1]['ID'] for i in range(len(all_files) - 1)}
-    all_non_dup_id_2_next_nondup.update(non_dup_id_2_next_nondup)
+    next_id = {all_files[i]['ID']: all_files[i + 1]['ID'] for i in range(len(all_files) - 1)}
+    previous_id = {all_files[i]['ID']: all_files[i - 1]['ID'] for i in range(1, len(all_files))}
 
-    non_dup_id_2_previous_nondup = {all_files[i]['ID']: all_files[i - 1]['ID'] for i in range(1, len(all_files))}
-    all_non_dup_id_2_previous_nondup.update(non_dup_id_2_previous_nondup)
-            
-    return all_files, all_duplicates, all_non_dup_id_2_next_nondup, all_non_dup_id_2_previous_nondup, count
+    return all_files, all_duplicates, next_id, previous_id, count
 
 
 def search_result(word):
-    all_collections = db.list_collection_names()
-    
     all_texts = []
-    
-    for collection in all_collections:
-        if collection.startswith('Shvarts'):
-            collection = db['{}'.format(collection)]
-            texts_in_collection = [text for text in collection.find({"$text": {"$search": word}, "root": []}, 
-                     projection={'_id':False}).sort('meta.date_written')]
-            all_texts = all_texts + texts_in_collection
 
-    poems = []
+    for name in shvarts_collections():
+        collection = db[name]
+        all_texts += list(collection.find(
+            {"$text": {"$search": word}, "root": []},
+            projection={'_id': False}).sort('meta.date_written'))
 
-    for text in all_texts:
-        lst = []
-        lst.append(text.get('ID'))
-        lst.append(text.get('title'))
-        lst.append(text.get('meta').get('edition'))
-        lst.append(text.get('meta').get('date_written'))
-        poems.append(lst)
+    poems = [[text.get('ID'), text.get('title'),
+              text.get('meta').get('edition'), text.get('meta').get('date_written')]
+             for text in all_texts]
 
     return sorted(poems, key=lambda x: x[1])
 
 
 def show_all_poems():
-    all_collections = db.list_collection_names()
-    
     all_texts = []
-    
-    for collection in all_collections:
-        if collection.startswith('Shvarts'):
-            collection = db['{}'.format(collection)]
-            for text in collection.find({"root": []}).sort('meta.date_written', pymongo.ASCENDING):
-                all_texts.append(text)
 
-    poems = []
+    for name in shvarts_collections():
+        collection = db[name]
+        all_texts += list(collection.find({"root": []}).sort('meta.date_written', pymongo.ASCENDING))
 
-    for text in all_texts:
-        lst = []
-        lst.append(text.get('ID'))
-        lst.append(text.get('title'))
-        lst.append(text.get('meta').get('date_written'))
-        poems.append(lst)
-        
-    poems = sorted(poems, key=lambda x: x[2] if isinstance(x[2], int) else int(re.findall('\d{4}', str(x[2]))[0]))
+    poems = [[text.get('ID'), text.get('title'), text.get('meta').get('date_written')]
+             for text in all_texts]
 
-    return poems
+    return sorted(poems, key=lambda x: written_year(x[2]))
 
 
 def filter_poems_by_year(name_of_db, start_year, end_year):
     collection = db[name_of_db]
-    texts_of_exact_period = []
-    for text in collection.find({'meta.date_written':{'$gte':start_year, '$lte':end_year}, "root": []}).sort('meta.date_written', pymongo.ASCENDING):
-        texts_of_exact_period.append(text)
+    texts = collection.find(
+        {'meta.date_written': {'$gte': start_year, '$lte': end_year}, "root": []}
+    ).sort('meta.date_written', pymongo.ASCENDING)
 
-    poems = []
+    return [[text.get('ID'), text.get('title'), text.get('meta').get('date_written')]
+            for text in texts]
 
-    for text in texts_of_exact_period:
-        lst = []
-        lst.append(text.get('ID'))
-        lst.append(text.get('title'))
-        lst.append(text.get('meta').get('date_written'))
-        poems.append(lst)
-
-    return poems
 
 @app.route('/')
 def base():
     return render_template('index.html', page_name="shvarts")
+
 
 @app.route('/about/')
 def index():
@@ -186,24 +173,23 @@ def index():
 
 @app.route('/list_of_texts/')
 def get_list_of_texts():
-	titles, duplicates, _, _ = get_poems_titles()
-	return render_template('titles.html', page_name='list_of_texts', 
-							titles=titles, duplicates=duplicates)
+    titles, duplicates, _, _ = get_poems_titles()
+    return render_template('titles.html', page_name='list_of_texts',
+                           titles=titles, duplicates=duplicates)
 
 
 @app.route('/texts_<int:ID>/')
-def get_text_sixties(ID):
-    _, _, non_dup_id_2_next_nondup, non_dup_id_2_previous_nondup = get_poems_titles()
-    previous_id = non_dup_id_2_previous_nondup[ID] if ID in non_dup_id_2_previous_nondup.keys() else None
-    next_id = non_dup_id_2_next_nondup[ID] if ID in non_dup_id_2_next_nondup.keys() else None
-    poem_texts, duplicates, _ = get_poems_texts(ID)
-    if poem_texts[0]["genre"] == "cycle":
-        cycle_text = Markup(poem_texts[0]["poem_text"])
-    else:
-        cycle_text = None
+def get_text(ID):
+    poem_texts, duplicates = get_poems_texts(ID)
+    if not poem_texts:
+        abort(404)
+    _, _, next_nondup, previous_nondup = get_poems_titles()
+    cycle_text = Markup(poem_texts[0]["poem_text"]) if poem_texts[0]["genre"] == "cycle" else None
 
-    return render_template('text.html', page_name='texts', 
-							poem_texts=poem_texts, cycle_text=cycle_text, duplicates=duplicates, next_id=next_id, previous_id=previous_id)
+    return render_template('text.html', page_name='texts',
+                           poem_texts=poem_texts, cycle_text=cycle_text, duplicates=duplicates,
+                           next_id=next_nondup.get(ID), previous_id=previous_nondup.get(ID))
+
 
 @app.route('/show_all_poems')
 def all_poems():
@@ -213,7 +199,8 @@ def all_poems():
 @app.route('/filter_poems_by_period_sixties')
 def filter_poems_sixties():
     return jsonify(result=filter_poems_by_year('Shvarts_60', 1960, 1969))
-    
+
+
 @app.route('/filter_poems_by_period_seventies')
 def filter_poems_seventies():
     return jsonify(result=filter_poems_by_year('Shvarts_70', 1970, 1979))
@@ -227,214 +214,61 @@ def filter_poems_eighties():
 @app.route('/filter_poems_by_period_nineties')
 def filter_poems_nineties():
     return jsonify(result=filter_poems_by_year('Shvarts_90', 1990, 1999))
-    
+
+
 @app.route('/filter_poems_by_period_millenial')
 def filter_poems_millenial():
     return jsonify(result=filter_poems_by_year('Shvarts_20', 2000, 2010))
 
-#СБОРНИКИ
-# Зелёная Тетрадь
-@app.route('/zel_tet/') 
-def zel_tet_content():
-	titles, duplicates, _, _, _, = get_files_by_edition("Стихи из")
-	return render_template('zel_tet.html', page_name='texts_from_printed_editions', 
-							titles=titles, duplicates=duplicates)
-@app.route('/zel_tet_text_<int:ID>/') 
-def zel_tet_text(ID):
-    poem_text, duplicates, _, _, count = get_files_by_edition("Стихи из", ID)
-    titles, _, next_ID_dict, prev_ID_dict, _ = get_files_by_edition("Стихи из")
 
-    if poem_text[0]["genre"] == "cycle":
-        cycle_text = Markup(poem_text[0]["poem_text"])
-    else:
-        cycle_text = None
-
-    first_ID = titles[0]["ID"] 
-    last_ID = titles[-1]["ID"] 
-    if ID in next_ID_dict:
-        next_ID = next_ID_dict[ID]
-    else:
-        next_ID = None
-    if ID in prev_ID_dict:
-        prev_ID = prev_ID_dict[ID]
-    else:
-        prev_ID = None
-    return render_template('zel_tet_text.html', page_name='texts',  cycle_text= cycle_text,
-                           first_ID=first_ID, last_ID=last_ID, next_ID=next_ID, prev_ID=prev_ID,
-							poem_text=poem_text, duplicates=duplicates, count=count, titles=titles)
-
-#Танцующий Давид
-@app.route('/tanz_david/') 
-def tanz_david_content():
-	titles, duplicates, _, _, _ = get_files_by_edition("Танцующий")
-	return render_template('tanz_david.html', page_name='texts_from_printed_editions', 
-							titles=titles, duplicates=duplicates)
+@app.route('/edition/<slug>/')
+def edition_content(slug):
+    edition = EDITIONS.get(slug)
+    if edition is None:
+        abort(404)
+    titles, duplicates, _, _, _ = get_files_by_edition(edition['match'])
+    return render_template('edition.html', page_name='texts_from_printed_editions',
+                           edition=edition, slug=slug, titles=titles, duplicates=duplicates)
 
 
-@app.route('/tanz_david_text_<int:ID>/') 
-def tanz_david_text(ID):
-    poem_text, duplicates, _, _, count = get_files_by_edition("Давид", ID)
-    titles, _, next_ID_dict, prev_ID_dict, _ = get_files_by_edition("Давид")
+@app.route('/edition/<slug>/text_<int:ID>/')
+def edition_text(slug, ID):
+    edition = EDITIONS.get(slug)
+    if edition is None:
+        abort(404)
+    poem_text, duplicates, _, _, count = get_files_by_edition(edition['match'], ID)
+    if not poem_text:
+        abort(404)
+    titles, _, next_id, previous_id, _ = get_files_by_edition(edition['match'])
+    cycle_text = Markup(poem_text[0]["poem_text"]) if poem_text[0]["genre"] == "cycle" else None
 
-    if poem_text[0]["genre"] == "cycle":
-        cycle_text = Markup(poem_text[0]["poem_text"])
-    else:
-        cycle_text = None
-
-    first_ID = titles[0]["ID"] 
-    last_ID = titles[-1]["ID"]
-
-    if ID in next_ID_dict:
-        next_ID = next_ID_dict[ID]
-    else:
-        next_ID = None
-    if ID in prev_ID_dict:
-        prev_ID = prev_ID_dict[ID]
-    else:
-        prev_ID = None
-    return render_template('tanz_david_text.html', page_name='texts', cycle_text=cycle_text,
-                           first_ID=first_ID, last_ID=last_ID, next_ID=next_ID, prev_ID=prev_ID,
-							poem_text=poem_text, duplicates=duplicates, count=count, titles=titles)
+    return render_template('edition_text.html', page_name='texts',
+                           edition=edition, slug=slug, cycle_text=cycle_text,
+                           first_ID=titles[0]["ID"], last_ID=titles[-1]["ID"],
+                           next_ID=next_id.get(ID), prev_ID=previous_id.get(ID),
+                           poem_text=poem_text, duplicates=duplicates, count=count, titles=titles)
 
 
-# Собрание сочинений, том 1
-@app.route('/soch_v_1/') 
-def soch_v_1_content():
-	titles, duplicates, _, _, _ = get_files_by_edition("том 1")
-	return render_template('soch_v_1.html', page_name='texts_from_printed_editions', 
-							titles=titles, duplicates=duplicates)
+# The six editions used to live at /<slug>/ and /<slug>_text_<ID>/; those URLs
+# are indexed and bookmarked, so redirect them permanently to the new scheme.
+def _register_legacy_redirects():
+    for slug in EDITIONS:
+        app.add_url_rule(
+            '/{}/'.format(slug), 'legacy_{}'.format(slug),
+            lambda slug=slug: redirect(url_for('edition_content', slug=slug), 301))
+        app.add_url_rule(
+            '/{}_text_<int:ID>/'.format(slug), 'legacy_{}_text'.format(slug),
+            lambda ID, slug=slug: redirect(url_for('edition_text', slug=slug, ID=ID), 301))
 
 
-@app.route('/soch_v_1_text_<int:ID>/') 
-def soch_v_1_text(ID):
-    poem_text, duplicates, _, _, count = get_files_by_edition("том 1", ID)
-    titles, _, next_ID_dict, prev_ID_dict, _ = get_files_by_edition("том 1")
-
-    if poem_text[0]["genre"] == "cycle":
-        cycle_text = Markup(poem_text[0]["poem_text"])
-    else:
-        cycle_text = None
-
-    first_ID = titles[0]["ID"] 
-    last_ID = titles[-1]["ID"]
-    if ID in next_ID_dict:
-        next_ID = next_ID_dict[ID]
-    else:
-        next_ID = None
-    if ID in prev_ID_dict:
-        prev_ID = prev_ID_dict[ID]
-    else:
-        prev_ID = None
-
-
-    return render_template('soch_v_1_text.html', page_name='texts', cycle_text=cycle_text,
-                           first_ID=first_ID, last_ID=last_ID, next_ID=next_ID, prev_ID=prev_ID,
-							poem_text=poem_text, duplicates=duplicates, count=count, titles=titles)
-
-# Собрание сочинений, том 3
-@app.route('/soch_v_3/') 
-def soch_v_3_content():
-	titles, duplicates, _, _, _ = get_files_by_edition("том 3")
-	return render_template('soch_v_3.html', page_name='texts_from_printed_editions', 
-							titles=titles, duplicates=duplicates)
-
-
-@app.route('/soch_v_3_text_<int:ID>/') 
-def soch_v_3_text(ID):
-    poem_text, duplicates, _, _, count = get_files_by_edition("том 3", ID)
-    titles, _, next_ID_dict, prev_ID_dict, _ = get_files_by_edition("том 3")
-
-    if poem_text[0]["genre"] == "cycle":
-        cycle_text = Markup(poem_text[0]["poem_text"])
-    else:
-        cycle_text = None
-
-    first_ID = titles[0]["ID"] 
-    last_ID = titles[-1]["ID"]
-    if ID in next_ID_dict:
-        next_ID = next_ID_dict[ID]
-    else:
-        next_ID = None
-    if ID in prev_ID_dict:
-        prev_ID = prev_ID_dict[ID]
-    else:
-        prev_ID = None
-    return render_template('soch_v_3_text.html', page_name='texts', cycle_text=cycle_text,
-                           first_ID=first_ID, last_ID=last_ID, next_ID=next_ID, prev_ID=prev_ID,
-							poem_text=poem_text, duplicates=duplicates, count=count, titles=titles)
-
-# Собрание сочинений, том 5
-@app.route('/soch_v_5/') 
-def soch_v_5_content():
-	titles, duplicates, _, _, _ = get_files_by_edition("том 5")
-	return render_template('soch_v_5.html', page_name='texts_from_printed_editions', 
-							titles=titles, duplicates=duplicates)
-
-
-@app.route('/soch_v_5_text_<int:ID>/') 
-def soch_v_5_text(ID):
-    poem_text, duplicates, _, _, count = get_files_by_edition("том 5", ID)
-    titles, _, next_ID_dict, prev_ID_dict, _ = get_files_by_edition("том 5")
-
-    if poem_text[0]["genre"] == "cycle":
-        cycle_text = Markup(poem_text[0]["poem_text"])
-    else:
-        cycle_text = None
-
-    first_ID = titles[0]["ID"] 
-    last_ID = titles[-1]["ID"]
-    if ID in next_ID_dict:
-        next_ID = next_ID_dict[ID]
-    else:
-        next_ID = None
-    if ID in prev_ID_dict:
-        prev_ID = prev_ID_dict[ID]
-    else:
-        prev_ID = None
-    return render_template('soch_v_5_text.html', page_name='texts', cycle_text=cycle_text,
-                           first_ID=first_ID, last_ID=last_ID, next_ID=next_ID, prev_ID=prev_ID,
-							poem_text=poem_text, duplicates=duplicates, count=count, titles=titles)
-
-
-
-# Перелётная птица
-
-@app.route('/perelet_ptitsa/') 
-def perelet_ptitsa_content():
-	titles, duplicates, _, _, _ = get_files_by_edition("Перелетная птица")
-	return render_template('perelet_ptitsa.html', page_name='texts_from_printed_editions', 
-							titles=titles, duplicates=duplicates)
-
-
-@app.route('/perelet_ptitsa_text_<int:ID>/') 
-def perelet_ptitsa_text(ID):
-    poem_text, duplicates, _, _, count = get_files_by_edition("Перелетная птица", ID)
-    titles, _, next_ID_dict, prev_ID_dict, _ = get_files_by_edition("Перелетная птица")
-
-    if poem_text[0]["genre"] == "cycle":
-        cycle_text = Markup(poem_text[0]["poem_text"])
-    else:
-        cycle_text = None
-
-    first_ID = titles[0]["ID"] 
-    last_ID = titles[-1]["ID"]
-    if ID in next_ID_dict:
-        next_ID = next_ID_dict[ID]
-    else:
-        next_ID = None
-    if ID in prev_ID_dict:
-        prev_ID = prev_ID_dict[ID]
-    else:
-        prev_ID = None
-    return render_template('perelet_ptitsa_text.html', page_name='texts', cycle_text=cycle_text,
-                           first_ID=first_ID, last_ID=last_ID, next_ID=next_ID, prev_ID=prev_ID,
-							poem_text=poem_text, duplicates=duplicates, count=count, titles=titles)
-
+_register_legacy_redirects()
 
 
 @app.route('/background_process')
 def background_process():
-    word = request.args.get('search', 'text', type=str)
+    word = request.args.get('search', '', type=str)
+    if not word.strip():
+        return jsonify(result=[])
     return jsonify(result=search_result(word))
 
 
@@ -452,9 +286,12 @@ def other():
 def bibl():
     return render_template('bibl.html', page_name="bibl")
 
+
 @app.route('/comparison_<int:ID>/')
 def compare_poems(ID):
-    poem_texts, duplicates, _ = get_poems_texts(ID)
+    poem_texts, duplicates = get_poems_texts(ID)
+    if not poem_texts:
+        abort(404)
     return render_template('comparison.html', poem_texts=poem_texts, duplicates=duplicates)
 
 
@@ -462,5 +299,6 @@ def compare_poems(ID):
 def trial():
     return render_template('trial.html', page_name="trial")
 
-if __name__=='__main__':
-	app.run()
+
+if __name__ == '__main__':
+    app.run()
