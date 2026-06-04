@@ -1,15 +1,18 @@
 from flask import Flask, render_template, request, jsonify
 from markupsafe import Markup
+import os
 import pymongo
 import json
 import re
 
 
 app = Flask(__name__)
+
+# Single shared client: MongoClient is thread-safe and pools connections.
+# Configure via env vars; defaults match the local Docker setup.
+client = pymongo.MongoClient(os.environ.get('MONGO_URI', 'mongodb://localhost:27017'))
+db = client[os.environ.get('MONGO_DB', 'admin')]
 def get_poems_titles():
-    client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
-    # client = pymongo.MongoClient('localhost', 27017)
-    db = client['admin']
     all_collections = db.list_collection_names()
     
     all_titles = []
@@ -39,9 +42,6 @@ def get_poems_titles():
 
 
 def get_poems_texts(ID):
-    client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
-    # client = pymongo.MongoClient('localhost', 27017)
-    db = client['admin']
     all_collections = db.list_collection_names()
     
     all_counts = []
@@ -66,9 +66,6 @@ def get_poems_texts(ID):
 
 
 def get_files_by_edition(edition, ID = None):
-    client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
-    # client = pymongo.MongoClient('localhost', 27017)
-    db = client['admin']
     all_collections = db.list_collection_names()
     
     all_files = []
@@ -112,9 +109,6 @@ def get_files_by_edition(edition, ID = None):
 
 
 def search_result(word):
-    client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
-    # client = pymongo.MongoClient('localhost', 27017)
-    db = client['admin']
     all_collections = db.list_collection_names()
     
     all_texts = []
@@ -140,9 +134,6 @@ def search_result(word):
 
 
 def show_all_poems():
-    client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
-    # client = pymongo.MongoClient('localhost', 27017)
-    db = client['admin']
     all_collections = db.list_collection_names()
     
     all_texts = []
@@ -168,9 +159,6 @@ def show_all_poems():
 
 
 def filter_poems_by_year(name_of_db, start_year, end_year):
-    client = pymongo.MongoClient('mongodb://admin:solaerice@142.93.242.162')
-    # client = pymongo.MongoClient('localhost', 27017)
-    db = client['admin']
     collection = db[name_of_db]
     texts_of_exact_period = []
     for text in collection.find({'meta.date_written':{'$gte':start_year, '$lte':end_year}, "root": []}).sort('meta.date_written', pymongo.ASCENDING):
@@ -219,54 +207,30 @@ def get_text_sixties(ID):
 
 @app.route('/show_all_poems')
 def all_poems():
-    try:
-        result = show_all_poems()
-        return jsonify(result=result)
-    except Exception as e:
-        return str(e)
+    return jsonify(result=show_all_poems())
 
 
 @app.route('/filter_poems_by_period_sixties')
 def filter_poems_sixties():
-    try:
-        result = filter_poems_by_year('Shvarts_60', 1960, 1969)
-        return jsonify(result=result)
-    except Exception as e:
-        return str(e)
+    return jsonify(result=filter_poems_by_year('Shvarts_60', 1960, 1969))
     
 @app.route('/filter_poems_by_period_seventies')
 def filter_poems_seventies():
-    try:
-        result = filter_poems_by_year('Shvarts_70', 1970, 1979)
-        return jsonify(result=result)
-    except Exception as e:
-        return str(e)
+    return jsonify(result=filter_poems_by_year('Shvarts_70', 1970, 1979))
 
 
 @app.route('/filter_poems_by_period_eighties')
 def filter_poems_eighties():
-    try:
-        result = filter_poems_by_year('Shvarts_80', 1980, 1989)
-        return jsonify(result=result)
-    except Exception as e:
-        return str(e)
+    return jsonify(result=filter_poems_by_year('Shvarts_80', 1980, 1989))
 
 
 @app.route('/filter_poems_by_period_nineties')
 def filter_poems_nineties():
-    try:
-        result = filter_poems_by_year('Shvarts_90', 1990, 1999)
-        return jsonify(result=result)
-    except Exception as e:
-        return str(e)
+    return jsonify(result=filter_poems_by_year('Shvarts_90', 1990, 1999))
     
 @app.route('/filter_poems_by_period_millenial')
 def filter_poems_millenial():
-    try:
-        result = filter_poems_by_year('Shvarts_20', 2000, 2010)
-        return jsonify(result=result)
-    except Exception as e:
-        return str(e)
+    return jsonify(result=filter_poems_by_year('Shvarts_20', 2000, 2010))
 
 #СБОРНИКИ
 # Зелёная Тетрадь
@@ -468,15 +432,10 @@ def perelet_ptitsa_text(ID):
 
 
 
-@app.route('/background_process', methods=['GET', 'POST', 'DELETE', 'PATCH'])
+@app.route('/background_process')
 def background_process():
-    try:
-        word = request.args.get('search', 'text', type=str)
-        result = search_result(word)
-        print(result)
-        return jsonify(result=result)
-    except Exception as e:
-        return str(e)
+    word = request.args.get('search', 'text', type=str)
+    return jsonify(result=search_result(word))
 
 
 @app.route('/contrib/')
@@ -504,4 +463,4 @@ def trial():
     return render_template('trial.html', page_name="trial")
 
 if __name__=='__main__':
-	app.run(debug=True)
+	app.run()
