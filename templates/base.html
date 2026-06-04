@@ -1,62 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" href="{{ url_for('static', filename= 'img/favicon2.png')}}" type="image/x-icon">
-    <meta charset="utf-8">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}">
 
-    <title>Главная страница</title>
-
+    <title>Цифровое собрание сочинений Елены Шварц</title>
   </head>
 
   <body>
     <header class="header">
-    	<div class ="row">
+      <div class="row">
         <div class="col">
-          <!-- <img class="header__name-image" src="../static/photo/027.jpg" alt="ES"> -->
-      <img class="header__name-image" src="../static/img/paint6.png" alt="ES">
-</div>
- <div class="col">
-       <div class="header_name">
-         <br>Цифровое собрание сочинений
-         <br>Елены Шварц</div>
-     </div>
-      <nav class="header__nav">
-        <ul class="header__nav-list">
-          <li class="header__nav-list-item">
-            <a class="btn" class="header__nav-link" href="/">О проекте</a>
-          </li>
-          <li class="header__nav-list-item">
-            <a class="btn" class="header__nav-link" href="/list_of_texts/" id='works'>Произведения</a>
-          </li>
-          <li class="header__nav-list-item">
-            <a class="btn" class="header__nav-link" href="/bibl/">Библиотека</a>
-          </li>
-          <li class="header__nav-list-item">
-            <a class="btn" class="header__nav-link" href="/contrib/">Материалы</a>
-          </li>
-        </ul>
-      </nav>
+          <img class="header__name-image" src="{{ url_for('static', filename='img/paint6.png') }}" alt="ES">
+        </div>
+        <div class="col">
+          <div class="header_name">
+            <br>Цифровое собрание сочинений
+            <br>Елены Шварц</div>
+        </div>
+        <nav class="header__nav">
+          <ul class="header__nav-list">
+            <li class="header__nav-list-item">
+              <a class="btn header__nav-link" href="/">О проекте</a>
+            </li>
+            <li class="header__nav-list-item">
+              <a class="btn header__nav-link" href="/list_of_texts/" id="works">Произведения</a>
+            </li>
+            <li class="header__nav-list-item">
+              <a class="btn header__nav-link" href="/bibl/">Библиотека</a>
+            </li>
+            <li class="header__nav-list-item">
+              <a class="btn header__nav-link" href="/contrib/">Материалы</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
-{%block content%}
- 
-{%endblock%}
+{% block content %}
 
-<script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
-<script src="{{url_for('static', filename='js/main.js')}}"></script>
-<script src="{{url_for('static', filename='js/bootstrap.bundle.min.js')}}"></script>
-<footer class="footer"> 
-  <p>---</p>
-  <p>Центр цифровых гуманитарных исследований НИУ ВШЭ</p>
-  <p>ver. 0. 9. 1</p>
-</footer>
-</body>
+{% endblock %}
 
+    <footer class="footer">
+      <p>---</p>
+      <p>Центр цифровых гуманитарных исследований НИУ ВШЭ</p>
+      <p>ver. 0. 9. 1</p>
+    </footer>
 
+    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+  </body>
 </html>

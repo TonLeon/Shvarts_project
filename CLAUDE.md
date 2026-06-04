@@ -18,7 +18,7 @@ FLASK_APP=app .venv/bin/flask run
 
 Connection is configured by env vars `MONGO_URI` (default `mongodb://localhost:27017`) and `MONGO_DB` (default `admin` — yes, the data really lives in the `admin` database).
 
-There is no test suite or linter yet. Quick smoke test: `curl localhost:5000/list_of_texts/` (DB-backed) and `curl localhost:5000/texts_21/` (single poem).
+Tests (require the Docker DB to be up): `pip install -r requirements-dev.txt && python -m pytest tests/`. The suite smoke-tests every route type, the legacy-URL redirects, and 404 behavior.
 
 Backup/restore: `docker exec mongodb mongodump --db admin --archive > backup.archive`. A verified backup from 2026-06-04 exists at `~/Documents/Shvarts_backups/`.
 
@@ -36,20 +36,22 @@ Backup/restore: `docker exec mongodb mongodump --db admin --archive > backup.arc
 
 **Routes in `app.py`** come in three groups:
 1. Chronological browsing: `/list_of_texts/`, `/texts_<ID>/`, plus JSON endpoints (`/show_all_poems`, `/filter_poems_by_period_*`, `/background_process?search=` for Mongo `$text` search) consumed by jQuery in `static/js/main.js`
-2. Edition browsing: six structurally identical route pairs (`/zel_tet/` + `/zel_tet_text_<ID>/`, same for `tanz_david`, `soch_v_1`, `soch_v_3`, `soch_v_5`, `perelet_ptitsa`), each with its own near-duplicate template pair — a change to one usually needs to be applied to all six
+2. Edition browsing: `/edition/<slug>/` + `/edition/<slug>/text_<ID>/`, driven by the `EDITIONS` dict in `app.py` (slug → `meta.edition` match substring + page labels) and rendered by `edition.html` / `edition_text.html`. The pre-2026 per-edition URLs (`/zel_tet/`, `/zel_tet_text_<ID>/`, etc.) 301-redirect to the new scheme — keep those redirects, the old URLs are indexed and cited
 3. Static pages: about, bibliography, contributors
 
 **Templates:** `base.html` is the shared shell; `comparison.html` + the diff highlighter in `main.js` implement side-by-side variant comparison. Frontend stack is Bootstrap 4 + jQuery (vendored via npm into `node_modules`, untracked).
 
 ## Current modernization effort (2026)
 
-The project is being updated in phases; Phases 0–1 are done (slim requirements, env-var DB config, single shared Mongo client, no `debug=True`/error-leaking handlers). Pending:
-- **Phase 2:** consolidate the six edition route/template pairs into one parameterized pair; `abort(404)` on unknown IDs (currently `IndexError` → 500); restore the commented-out `Shvarts` prefix filter in `get_files_by_edition` (a stray `Club 21` collection currently gets scanned); harden `date_written` parsing; normalize mixed tabs/spaces in `app.py`; add route tests; fix base.html correctness bugs (no viewport meta → broken on mobile; `lang="en"` on a Russian site; duplicate `class` attributes so nav styling never applies; bootstrap JS loaded once as a dead `<link>` and once as a script)
-- **Phase 3:** UI redesign with accessibility (consolidate first so visual decisions are made once); merge the three overlapping stylesheets (`style.css`, `main.css`, `style-sasha.css`, ~1,900 lines with 27+ `!important`); dedupe `main.js` (the same decade-render function is pasted five times); add aria/alt throughout
+The project is being updated in phases; Phases 0–2 are done:
+- **Phase 0–1:** slim requirements, env-var DB config, single shared Mongo client, no `debug=True`/error-leaking handlers
+- **Phase 2:** edition routes/templates consolidated (see above); `abort(404)` on unknown IDs; `Shvarts` collection-prefix filter enforced everywhere; tolerant `date_written` parsing (`written_year()`); `app.py` normalized to 4-space indents; pytest route suite; base.html fixed (viewport meta, `lang="ru"`, merged duplicate `class` attributes, removed dead bootstrap `<link>`)
+
+Pending:
+- **Phase 3:** UI redesign with accessibility; merge the three overlapping stylesheets (`style.css`, `main.css`, `style-sasha.css`, ~1,900 lines with 27+ `!important`); dedupe `main.js` (the same decade-render function is pasted five times); add aria/alt throughout
 - **Phase 4:** deploy — blocked on recovering SSH/console access to the droplet, whose mongod is down (production DB pages currently 500)
 
 ## Gotchas
 
 - Old MongoDB credentials are burned into git history; rotate before ever re-exposing Mongo publicly.
-- `app.py` mixes tabs and spaces between functions — match the indentation of the function you're editing until Phase 2 normalizes it.
 - Poem text rendering relies on `<pre>`/preserved whitespace; line breaks are semantically significant (it's poetry).
