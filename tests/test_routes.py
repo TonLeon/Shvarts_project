@@ -117,6 +117,16 @@ def test_search_shows_kwic_snippet(client):
     assert b'<mark>' in response.data
 
 
+def test_search_covers_variants_with_edition_note(client):
+    # «томная вода» exists only in the Звезда 2001 variant of
+    # «Антропологическое страноведение», not in its canonical text
+    from app import search_poems
+    hits = [p for p in search_poems('томная') if p.get('variants')]
+    assert hits, 'variant-only hit not surfaced'
+    assert any('Звезда' in v['edition'] for p in hits for v in p['variants'])
+    assert 'в варианте'.encode() in client.get('/list_of_texts/?q=томная').data
+
+
 def test_pagination(client):
     page1 = client.get('/list_of_texts/?page=1')
     page2 = client.get('/list_of_texts/?page=2')

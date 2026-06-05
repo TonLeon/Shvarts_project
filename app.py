@@ -182,23 +182,44 @@ def search_poems(q=None, year_from=None, year_to=None, edition_slug=None):
     the poem's own source or any of its variants). The corpus is small
     (~430 canonical texts), so year/edition filtering happens in Python
     where written_year() can handle string dates."""
-    docs = []
-    dup_editions = {}
     lemmas = query_lemmas(q) if q else set()
+    canonical = {}            # _id -> canonical doc to show
+    matched_ids = set()       # canonical docs the query matched directly
+    matched_variants = []     # variant docs the query matched
+    dup_editions = {}
 
     for name in shvarts_collections():
         collection = db[name]
-        query = {"root": []}
         if q:
-            # the index stores lemmas; search with the query's lemmas
-            query["$text"] = {"$search": ' '.join(lemmas) or q}
-        docs += list(collection.find(query))
+            # the index stores lemmas; variants are searched too, then
+            # folded into their canonical poem with an edition note
+            search = {"$text": {"$search": ' '.join(lemmas) or q}}
+            for doc in collection.find(search):
+                if doc['root'] == []:
+                    canonical[doc['_id']] = doc
+                    matched_ids.add(doc['_id'])
+                else:
+                    matched_variants.append(doc)
+        else:
+            for doc in collection.find({"root": []}):
+                canonical[doc['_id']] = doc
         for dup in collection.find({"root": {'$ne': []}}, {"meta.edition": 1}):
             dup_editions[dup['_id']] = dup['meta']['edition']
 
+    # poems whose only hit is in a variant: fetch their canonical doc
+    missing = {v['root'][0] for v in matched_variants} - set(canonical)
+    if missing:
+        for name in shvarts_collections():
+            for doc in db[name].find({'_id': {'$in': list(missing)}}):
+                canonical[doc['_id']] = doc
+
+    variants_of = {}
+    for variant in matched_variants:
+        variants_of.setdefault(variant['root'][0], []).append(variant)
+
     match = EDITIONS[edition_slug]['match'] if edition_slug else None
     poems = []
-    for doc in docs:
+    for doc in canonical.values():
         year = written_year(doc['meta']['date_written'])
         if year_from is not None and (year == 0 or year < year_from):
             continue
@@ -211,7 +232,18 @@ def search_poems(q=None, year_from=None, year_to=None, edition_slug=None):
                 continue
         poem = {'ID': doc['ID'], 'title': doc['title'], 'year': year}
         if q:
-            poem['snippet'] = find_snippet(doc, lemmas)
+            snippet = find_snippet(doc, lemmas) if doc['_id'] in matched_ids else None
+            poem['snippet'] = snippet
+            # variant hits whose line differs from the canonical one get
+            # a comment naming the edition the reading comes from
+            poem['variants'] = []
+            for variant in variants_of.get(doc['_id'], []):
+                v_snippet = find_snippet(variant, lemmas)
+                if v_snippet and str(v_snippet) != str(snippet or ''):
+                    poem['variants'].append({
+                        'snippet': v_snippet,
+                        'edition': variant['meta']['edition'],
+                    })
         poems.append(poem)
 
     # chronological; undatable texts go last

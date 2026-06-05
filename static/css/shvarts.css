@@ -530,6 +530,13 @@ select.field {
   margin: 0.15rem 0 0.2rem;
 }
 
+.catalog__variant-note {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-style: normal;
+  color: var(--ink-soft);
+}
+
 mark {
   background: var(--highlight);
   color: inherit;
