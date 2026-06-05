@@ -8,49 +8,33 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=PT+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/shvarts.css') }}">
 
     <title>Цифровое собрание сочинений Елены Шварц</title>
   </head>
 
   <body>
-    <header class="header">
-      <div class="row">
-        <div class="col">
-          <img class="header__name-image" src="{{ url_for('static', filename='img/paint6.png') }}" alt="ES">
-        </div>
-        <div class="col">
-          <div class="header_name">
-            <br>Цифровое собрание сочинений
-            <br>Елены Шварц</div>
-        </div>
-        <nav class="header__nav">
-          <ul class="header__nav-list">
-            <li class="header__nav-list-item">
-              <a class="btn header__nav-link" href="/">О проекте</a>
-            </li>
-            <li class="header__nav-list-item">
-              <a class="btn header__nav-link" href="/list_of_texts/" id="works">Произведения</a>
-            </li>
-            <li class="header__nav-list-item">
-              <a class="btn header__nav-link" href="/bibl/">Библиотека</a>
-            </li>
-            <li class="header__nav-list-item">
-              <a class="btn header__nav-link" href="/contrib/">Материалы</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
+    <header class="site-header">
+      <a class="site-header__brand" href="/">
+        <img src="{{ url_for('static', filename='img/paint6.png') }}" alt="Елена Шварц — подпись">
+        <span class="site-header__subtitle">Цифровое собрание сочинений</span>
+      </a>
+      <nav class="site-header__nav" aria-label="Основная навигация">
+        <a href="/" {% if page_name in ('shvarts', 'project') %}aria-current="page"{% endif %}>О проекте</a>
+        <a href="/list_of_texts/" id="works" {% if page_name == 'list_of_texts' %}aria-current="page"{% endif %}>Произведения</a>
+        <a href="/bibl/" {% if page_name == 'bibl' %}aria-current="page"{% endif %}>Библиотека</a>
+        <a href="/contrib/" {% if page_name == 'photos' %}aria-current="page"{% endif %}>Материалы</a>
+      </nav>
     </header>
 
 {% block content %}
 
 {% endblock %}
 
-    <footer class="footer">
-      <p>---</p>
+    <footer class="site-footer">
       <p>Центр цифровых гуманитарных исследований НИУ ВШЭ</p>
-      <p>ver. 0. 9. 1</p>
+      <p>ver. 0.9.1</p>
     </footer>
 
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>

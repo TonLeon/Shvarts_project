@@ -1,0 +1,202 @@
+/* ============================================================
+   Цифровое собрание сочинений Елены Шварц — design foundation
+   Phase 3a: tokens, base typography, header/footer shell.
+   Loaded after the legacy stylesheets; overrides them during the
+   page-by-page migration. When every page is migrated, the legacy
+   sheets (style.css, main.css, style-sasha.css, bootstrap) go away.
+   ============================================================ */
+
+:root {
+  /* Warm paper palette */
+  --paper:        #faf6ee;
+  --paper-deep:   #f1ead9;   /* panels, drawers, hover fills      */
+  --ink:          #26211b;   /* primary text                      */
+  --ink-soft:     #6f675c;   /* secondary text, captions          */
+  --accent:       #5f6549;   /* dusty green, AA on paper — links  */
+  --accent-soft:  #8e917e;   /* decorative only (kept from old palette) */
+  --rule:         #e0d7c4;   /* hairlines                         */
+  --highlight:    #f3e4c2;   /* variant-diff marking, selection   */
+
+  /* Type */
+  --font-serif: 'Literata', 'PT Serif', Georgia, serif;
+  --font-mono:  'PT Mono', 'Courier New', monospace;
+
+  --measure: 38rem;          /* comfortable reading column        */
+}
+
+/* ---------- Base ------------------------------------------------ */
+
+html {
+  font-size: 17px;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  /* overrides legacy fixed width (main.css) and grey bg (style.css) */
+  width: auto;
+  min-width: 0;
+  max-width: none;
+  margin: 0;
+  background-color: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-serif);
+  line-height: 1.6;
+}
+
+::selection {
+  background: var(--highlight);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--ink);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  transition: color 120ms ease;
+}
+
+a:hover {
+  color: var(--ink);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Site header ----------------------------------------- */
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  padding: 1.4rem clamp(1rem, 5vw, 4rem);
+  border-bottom: 1px solid var(--rule);
+  background: var(--paper);
+}
+
+.site-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.site-header__brand img {
+  height: 46px;
+  width: auto;
+  /* the signature scan sits on white; blend onto paper */
+  mix-blend-mode: multiply;
+}
+
+.site-header__subtitle {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  max-width: 14em;
+  line-height: 1.45;
+}
+
+.site-header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem 1.8rem;
+}
+
+.site-header__nav a {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  letter-spacing: 0.05em;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 0.35rem 0;
+  border-bottom: 1px solid transparent;
+}
+
+.site-header__nav a:hover,
+.site-header__nav a[aria-current="page"] {
+  border-bottom-color: var(--accent);
+  color: var(--accent);
+}
+
+@media (max-width: 640px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* ---------- Site footer ----------------------------------------- */
+
+.site-footer {
+  margin-top: 4rem;
+  padding: 1.6rem clamp(1rem, 5vw, 4rem) 2.2rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--ink-soft);
+}
+
+.site-footer p {
+  margin: 0.15rem 0;
+}
+
+/* ---------- Poems: immediate typographic wins -------------------- */
+/* These legacy classes are used on every poem page; restyling them
+   here lets the new type system land before each page is rebuilt.  */
+
+pre.text,
+pre.epigraph,
+pre.dedication,
+pre.cycle_text {
+  font-family: var(--font-serif);
+  font-size: 1.12rem;
+  line-height: 1.72;
+  color: var(--ink);
+  white-space: pre-wrap;       /* long lines wrap instead of scrolling */
+  margin-left: 0;
+}
+
+pre.epigraph,
+pre.dedication {
+  font-style: italic;
+  color: var(--ink-soft);
+}
+
+p.head {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.45rem;
+  color: var(--ink);
+}
+
+/* Scholarly apparatus in samizdat mono: dates, sources, downloads */
+.meta,
+.meta p,
+.meta .text,
+.bibliography {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
