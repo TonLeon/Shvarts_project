@@ -106,7 +106,7 @@
         var min = filters.elements.year_from.min;
         var max = filters.elements.year_from.max;
         showYearPopup('Елена Шварц писала с ' + min + ' по ' + max +
-                      ' год — таких дат в архиве нет. Пожалуйста, поправьте годы поиска.');
+                      ' год — введенных вами дат в архиве нет. Пожалуйста, измените годы поиска.');
       }
     });
   }

@@ -57,8 +57,8 @@ EDITIONS = {
 # validates against them (server-side here, mirrored in site.js).
 YEAR_MIN, YEAR_MAX = 1962, 2010
 
-YEAR_ERROR = ('Елена Шварц писала с {} по {} год — таких дат в архиве нет. '
-              'Пожалуйста, поправьте годы поиска.').format(YEAR_MIN, YEAR_MAX)
+YEAR_ERROR = ('Елена Шварц писала с {} по {} год — введенных вами дат в архиве нет. '
+              'Пожалуйста, измените годы поиска.').format(YEAR_MIN, YEAR_MAX)
 
 
 def written_year(date_written):
@@ -448,11 +448,6 @@ def compare_poems(ID):
                 dup['title'], dup['meta'].get('edition', ''))))
 
     return render_template('comparison.html', item=item, versions=versions)
-
-
-@app.route('/trial/')
-def trial():
-    return render_template('trial.html', page_name="trial")
 
 
 if __name__ == '__main__':

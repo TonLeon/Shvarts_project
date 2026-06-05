@@ -12,7 +12,7 @@ def client():
         yield c
 
 
-@pytest.mark.parametrize('url', ['/', '/about/', '/contrib/', '/other/', '/bibl/', '/trial/'])
+@pytest.mark.parametrize('url', ['/', '/about/', '/contrib/', '/other/', '/bibl/'])
 def test_static_pages(client, url):
     assert client.get(url).status_code == 200
 
@@ -132,10 +132,10 @@ def test_out_of_range_years_show_error_and_ignore_filter(client):
     total = len(search_poems())
     response = client.get('/list_of_texts/?year_from=1700')
     assert response.status_code == 200
-    assert 'таких дат в архиве нет'.encode() in response.data
+    assert 'дат в архиве нет'.encode() in response.data
     assert str(total).encode() in response.data   # filter ignored, full list
     response = client.get('/list_of_texts/?year_to=2525')
-    assert 'таких дат в архиве нет'.encode() in response.data
+    assert 'дат в архиве нет'.encode() in response.data
 
 
 def test_pagination(client):
