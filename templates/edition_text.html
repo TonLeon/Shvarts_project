@@ -1,94 +1,70 @@
 {% extends "base.html" %}
 
+{% block title %}{{ poem_text[0].title }} — {{ edition.title }} — Елена Шварц{% endblock %}
+
 {% block content %}
 {% for item in poem_text %}
-<main class="main">
-  <nav class="main__nav">
-    <div class="edition_name">{{ edition.text_title }}</div>
-    <div class="collection_contents">
-      <ul class="main__nav-list_content">
-        {% for title in titles %}
-          {% if title.ID == item.ID %}
-          <li class="main__nav-list-item">
-            <a class="chosen_text_of_edition" href="{{ url_for('edition_text', slug=slug, ID=title.ID) }}">{{ title.title }}</a>
-          </li>
-          {% else %}
-          <li class="main__nav-list-item">
-            <a class="text_of_edition" href="{{ url_for('edition_text', slug=slug, ID=title.ID) }}">{{ title.title }}</a>
-          </li>
-          <li class="main__nav-list-item">
-            <a href="#" title="Вернуться к началу страницы" id="up_content"></a>
-          </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
-    </div>
+<article class="poem-page">
+  <nav class="poem-nav" aria-label="Навигация по сборнику">
+    {% if item.ID != first_ID and prev_ID is not none %}
+    <a href="{{ url_for('edition_text', slug=slug, ID=prev_ID) }}" rel="prev">&larr; предыдущее</a>
+    {% else %}<span></span>{% endif %}
+    <a href="{{ url_for('edition_content', slug=slug) }}">{{ edition.title }}</a>
+    {% if item.ID != last_ID and next_ID is not none %}
+    <a href="{{ url_for('edition_text', slug=slug, ID=next_ID) }}" rel="next">следующее &rarr;</a>
+    {% else %}<span></span>{% endif %}
   </nav>
 
-  <section class="move_over_poems">
-    <ul class="movement">
-      <li class="main__nav-list-item">
-        {% if item.ID != first_ID %}
-        <a class="poems" href="{{ url_for('edition_text', slug=slug, ID=prev_ID) }}">
-          <button class="other_buttons" id="back">&lt;&lt;</button>
-        </a>
+  <details class="drawer">
+    <summary>Оглавление</summary>
+    <ol class="drawer__list">
+      {% for title in titles %}
+      <li>
+        {% if title.ID == item.ID %}
+        <a aria-current="page" href="{{ url_for('edition_text', slug=slug, ID=title.ID) }}">{{ title.title }}</a>
+        {% else %}
+        <a href="{{ url_for('edition_text', slug=slug, ID=title.ID) }}">{{ title.title }}</a>
         {% endif %}
       </li>
+      {% endfor %}
+    </ol>
+  </details>
 
-      <li class="main__nav-list-item">
-        <a class="main__nav-link" id="content" href="{{ url_for('edition_content', slug=slug) }}">К описанию сборника</a>
-      </li>
+  {% if item.genre == "cycle" %}
+    {{ cycle_text }}
+  {% else %}
+    <h1 class="poem-title">{{ item.head }}</h1>
+    <div class="poem-body">
+      {% if item.epigraph is not none %}<pre class="epigraph">{{ item.epigraph }}</pre>{% endif %}
+      {% if item.dedication is not none %}<pre class="dedication">{{ item.dedication }}</pre>{% endif %}
+      <pre class="text">{{ item.poem_text }}</pre>
+    </div>
+  {% endif %}
 
-      <li class="main__nav-list-item">
-        {% if item.ID != last_ID %}
-        <a class="poems" href="{{ url_for('edition_text', slug=slug, ID=next_ID) }}">
-          <button class="other_buttons" id="forward">&gt;&gt;</button>
-        </a>
-        {% endif %}
-      </li>
-    </ul>
-
-    {% if item.genre == "cycle" %}
-      {{ cycle_text }}
-    {% else %}
-      <p class="head">{{ item.head }}</p>
-
-      {% if item.epigraph is not none %}
-        <pre class="epigraph">{{ item.epigraph }}</pre>
-        <pre class="text">{{ item.poem_text }}</pre>
-      {% elif item.dedication is not none %}
-        <pre class="dedication">{{ item.dedication }}</pre>
-        <pre class="text">{{ item.poem_text }}</pre>
-      {% else %}
-        <pre class="text">{{ item.poem_text }}</pre>
-      {% endif %}
-    {% endif %}
-
-    <footer class="colophon">
-      <dl>
-        <dt>Год написания</dt>
-        <dd>{{ item.meta.date_written }}</dd>
-        <dt>Опубликовано в</dt>
-        <dd>
-          <p>{{ item.meta.edition }}</p>
-          {% for element in item.children %}
-            {% for poem in duplicates %}
-              {% if element == poem._id %}
-              <p>{{ poem.meta.edition }}</p>
-              {% endif %}
-            {% endfor %}
+  <footer class="colophon">
+    <dl>
+      <dt>Год написания</dt>
+      <dd>{{ item.meta.date_written }}</dd>
+      <dt>Опубликовано в</dt>
+      <dd>
+        <p>{{ item.meta.edition }}</p>
+        {% for element in item.children %}
+          {% for poem in duplicates %}
+            {% if element == poem._id %}
+            <p>{{ poem.meta.edition }}</p>
+            {% endif %}
           {% endfor %}
-        </dd>
-      </dl>
-      <div class="colophon__actions">
-        {% if item.children|length > 0 %}
-        <a href="/comparison_{{ item.ID }}/">Сравнить версии</a>
-        <span aria-hidden="true">&middot;</span>
-        {% endif %}
-        <a href="{{ url_for('static', filename='data/' + item.file) }}" download>Скачать TEI &darr;</a>
-      </div>
-    </footer>
-  </section>
-</main>
+        {% endfor %}
+      </dd>
+    </dl>
+    <div class="colophon__actions">
+      {% if item.children|length > 0 %}
+      <a href="/comparison_{{ item.ID }}/">Сравнить версии</a>
+      <span aria-hidden="true">&middot;</span>
+      {% endif %}
+      <a href="{{ url_for('static', filename='data/' + item.file) }}" download>Скачать TEI &darr;</a>
+    </div>
+  </footer>
+</article>
 {% endfor %}
 {% endblock %}

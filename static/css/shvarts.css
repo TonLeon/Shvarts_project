@@ -261,6 +261,125 @@ p.head {
   margin: 0 0 1.4rem;
 }
 
+/* ---------- Оглавление drawer (edition poem pages) --------------- */
+
+.drawer {
+  margin: -1.6rem 0 2.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.drawer summary {
+  display: inline-block;
+  cursor: pointer;
+  color: var(--ink-soft);
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+  list-style: none;            /* no native triangle */
+}
+
+.drawer summary::-webkit-details-marker {
+  display: none;
+}
+
+.drawer summary::after {
+  content: " ▾";
+  color: var(--accent-soft);
+}
+
+.drawer[open] summary::after {
+  content: " ▴";
+}
+
+.drawer summary:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.drawer__list {
+  margin: 1.2rem auto 0;
+  padding: 1.2rem 1.4rem;
+  max-width: 34rem;
+  max-height: 19rem;
+  overflow-y: auto;
+  text-align: left;
+  background: var(--paper-deep);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  list-style-position: inside;
+  color: var(--ink-soft);
+}
+
+.drawer__list li {
+  margin: 0.3rem 0;
+}
+
+.drawer__list a {
+  font-family: var(--font-serif);
+  font-size: 0.98rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.drawer__list a:hover {
+  color: var(--accent);
+}
+
+.drawer__list a[aria-current="page"] {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ---------- Edition index page ------------------------------------ */
+
+.edition-page {
+  max-width: 44rem;
+  margin: 2.5rem auto 0;
+  padding: 0 1.2rem;
+}
+
+.section-title {
+  font-size: 1.25rem;
+  margin: 2.4rem 0 1.2rem;
+}
+
+.prose p {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  margin: 0 0 1rem;
+  max-width: var(--measure);
+}
+
+.prose__signature {
+  font-style: italic;
+  color: var(--ink-soft);
+  text-align: right;
+}
+
+.edition-contents {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  columns: 2 16rem;
+  column-gap: 3rem;
+}
+
+.edition-contents li {
+  margin: 0 0 0.45rem;
+  break-inside: avoid;
+}
+
+.edition-contents a {
+  font-size: 1.05rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.edition-contents a:hover {
+  color: var(--accent);
+}
+
 /* ---------- Colophon (год написания, источник, действия) -------- */
 
 .colophon {
