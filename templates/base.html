@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=PT+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Lora:ital,wght@0,400;0,600;1,400&family=PT+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/shvarts.css') }}">
 
     <title>{% block title %}Цифровое собрание сочинений Елены Шварц{% endblock %}</title>
@@ -17,8 +17,11 @@
   <body>
     <header class="site-header">
       <a class="site-header__brand" href="/">
-        <img src="{{ url_for('static', filename='img/paint6.png') }}" alt="Елена Шварц — подпись">
-        <span class="site-header__subtitle">Цифровое собрание сочинений</span>
+        <img src="{{ url_for('static', filename='img/paint3.png') }}" alt="">
+        <span class="site-header__titles">
+          <span class="site-header__name">Елена Шварц</span>
+          <span class="site-header__subtitle">Цифровое собрание сочинений</span>
+        </span>
       </a>
       <nav class="site-header__nav" aria-label="Основная навигация">
         <a href="/" {% if page_name in ('shvarts', 'project') %}aria-current="page"{% endif %}>О проекте</a>

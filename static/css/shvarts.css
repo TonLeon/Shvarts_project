@@ -17,8 +17,10 @@
   --rule:         #e0d7c4;   /* hairlines                         */
   --highlight:    #f3e4c2;   /* variant-diff marking, selection   */
 
-  /* Type */
-  --font-serif: 'Literata', 'PT Serif', Georgia, serif;
+  /* Type — exactly two voices:
+     serif (Lora)   = the literature: poems, titles, prose
+     mono (PT Mono) = the apparatus: nav, labels, metadata, UI */
+  --font-serif: 'Lora', 'PT Serif', Georgia, serif;
   --font-mono:  'PT Mono', 'Courier New', monospace;
 
   --measure: 38rem;          /* comfortable reading column        */
@@ -102,20 +104,33 @@ a:hover {
 }
 
 .site-header__brand img {
-  height: 46px;
+  height: 60px;
   width: auto;
-  /* the signature scan sits on white; blend onto paper */
+  /* the ink sketch sits on white; blend onto paper */
   mix-blend-mode: multiply;
+}
+
+.site-header__titles {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.site-header__name {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+  color: var(--ink);
 }
 
 .site-header__subtitle {
   font-family: var(--font-mono);
-  font-size: 1.02rem;
+  font-size: 0.82rem;
   letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--ink);
-  max-width: 16em;
-  line-height: 1.5;
+  color: var(--ink-soft);
+  line-height: 1.45;
 }
 
 .site-header__nav {
