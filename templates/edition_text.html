@@ -19,13 +19,15 @@
     <summary>Оглавление</summary>
     <ol class="drawer__list">
       {% for title in titles %}
-      <li>
-        {% if title.ID == item.ID %}
+      {% if title.ID == item.ID %}
+      <li class="current">
         <a aria-current="page" href="{{ url_for('edition_text', slug=slug, ID=title.ID) }}">{{ title.title }}</a>
-        {% else %}
-        <a href="{{ url_for('edition_text', slug=slug, ID=title.ID) }}">{{ title.title }}</a>
-        {% endif %}
       </li>
+      {% else %}
+      <li>
+        <a href="{{ url_for('edition_text', slug=slug, ID=title.ID) }}">{{ title.title }}</a>
+      </li>
+      {% endif %}
       {% endfor %}
     </ol>
   </details>
