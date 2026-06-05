@@ -1,70 +1,55 @@
-<!DOCTYPE html>
 {% extends "base.html" %}
 
+{% block title %}Произведения — Елена Шварц{% endblock %}
+
 {% block content %}
-<html>
-  <head><title>Произведения</title></head>
-    <body>
-      <main class="main">
-        
-        <nav class="main__nav">
-          <ul class="main__nav-list">
-            <li class="main__nav-list-item">
-              <a class="main__nav-link" href="/list_of_texts">Стихотворения</a>
-            </li>
-            <li class="main__nav-list-item">
-              <a class="main__nav-link" href="/other">Поэмы</a>
-            </li>
-            <li class="main__nav-list-item">
-              <a class="main__nav-link" href="/other">Проза</a>
-            </li>
-            <li class="main__nav-list-item">
-              <a class="main__nav-link" href="/other">Переводы</a>
-            </li>
+<div class="catalog">
+  <h1 class="page-title">Произведения</h1>
 
-              <a href="#" title="Вернуться к началу страницы" id="up">&#8679</a>
-          </ul>
-        </nav>
+  <form class="catalog__filters" method="get" action="/list_of_texts/">
+    <input class="field field--search" type="search" name="q" value="{{ q }}"
+           placeholder="Поиск по текстам и названиям…" aria-label="Поиск по текстам и названиям">
 
-    <section class="main__content">
-      <h1 class="main__title" id='time_period'>Стихотворения</h1>
+    <fieldset class="catalog__years">
+      <legend class="visually-hidden">Годы написания</legend>
+      <label>с <input class="field field--year" type="number" name="year_from"
+             min="1962" max="2010" value="{{ year_from or '' }}" aria-label="Год написания, с"></label>
+      <label>по <input class="field field--year" type="number" name="year_to"
+             min="1962" max="2010" value="{{ year_to or '' }}" aria-label="Год написания, по"></label>
+    </fieldset>
 
-      <form class='search-box'>
-        <input id='search-input' class="for_search" type='text' name='search' id='inlineFormInputGroupUsername5' placeholder='Поиск по слову'/>
-        <button type='submit' class='other_buttons' id='process_input'>Искать</button>
-      </form>
-      
-      <ul class="titles__periods">
-        <li class="main__nav-list-item">
-          <a class="main__nav-link" id="all" href="#">Все тексты</a>
-        </li>
-        <li class="main__nav-list-item">
-          <a class="main__nav-link" id="sixties" href="#">1960-е</a>
-        </li>
-        <li class="main__nav-list-item">
-          <a class="main__nav-link" id="seventies" href="#">1970-е</a>
-        </li>
-        <li class="main__nav-list-item">
-          <a class="main__nav-link" id='eighties' href="#">1980-е</a>
-        </li>
-        <li class="main__nav-list-item">
-          <a class="main__nav-link" id='nineties' href="#">1990-е</a>
-        </li>
-        <li class="main__nav-list-item">
-          <a class="main__nav-link" id='millenial' href="#">2000-е</a>
-        </li>
-      </ul>
-  
-      <div class="titles__poems">
-          <div id=result>
+    <select class="field" name="edition" aria-label="Издание">
+      <option value="">Все издания</option>
+      {% for slug, e in editions.items() %}
+      <option value="{{ slug }}" {% if edition == slug %}selected{% endif %}>{{ e.title }}</option>
+      {% endfor %}
+    </select>
 
-            <h3 class='year'></h3>
-                <pre><a class="titles__poem" href='/texts_/'></a></pre>
-          </ul>
-      </div>
-    </section>
-  </main>
+    <button class="button" type="submit">Найти</button>
+    {% if filtered %}<a class="catalog__reset" href="/list_of_texts/">Сбросить</a>{% endif %}
+  </form>
 
-</body>
-</html>
+  <nav class="catalog__decades" aria-label="Быстрый выбор десятилетия">
+    <a href="/list_of_texts/?year_from=1960&amp;year_to=1969">1960-е</a>
+    <a href="/list_of_texts/?year_from=1970&amp;year_to=1979">1970-е</a>
+    <a href="/list_of_texts/?year_from=1980&amp;year_to=1989">1980-е</a>
+    <a href="/list_of_texts/?year_from=1990&amp;year_to=1999">1990-е</a>
+    <a href="/list_of_texts/?year_from=2000&amp;year_to=2010">2000-е</a>
+  </nav>
+
+  <p class="catalog__count">{% if filtered %}Найдено: {{ count }}{% else %}Всего произведений: {{ count }}{% endif %}</p>
+
+  {% for year, poems in groups %}
+  <section class="catalog__year">
+    <h2 class="catalog__year-label">{% if year %}{{ year }}{% else %}Без даты{% endif %}</h2>
+    <ul class="catalog__poems">
+      {% for poem in poems %}
+      <li><a href="/texts_{{ poem.ID }}/">{{ poem.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </section>
+  {% else %}
+  <p class="catalog__empty">По вашему запросу ничего не найдено. Попробуйте другое слово или снимите фильтры.</p>
+  {% endfor %}
+</div>
 {% endblock %}

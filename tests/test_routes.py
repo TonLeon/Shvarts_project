@@ -61,31 +61,45 @@ def test_legacy_edition_urls_redirect(client, slug):
     assert response.headers['Location'].endswith('/edition/{}/text_5/'.format(slug))
 
 
-@pytest.mark.parametrize('url', [
-    '/show_all_poems',
-    '/filter_poems_by_period_sixties',
-    '/filter_poems_by_period_seventies',
-    '/filter_poems_by_period_eighties',
-    '/filter_poems_by_period_nineties',
-    '/filter_poems_by_period_millenial',
-])
-def test_json_endpoints(client, url):
-    response = client.get(url)
+def result_ids(poems):
+    return {p['ID'] for p in poems}
+
+
+def test_search_finds_titles_and_texts(client):
+    from app import search_poems
+    # by title, declined form
+    assert 'мигрени'.encode() in client.get('/list_of_texts/?q=мигрень').data.lower()
+    assert 'Найдено'.encode() in client.get('/list_of_texts/?q=мигрень').data
+    # case-insensitive + declension: ДЕРЕВО finds деревьев
+    assert result_ids(search_poems('ДЕРЕВО')) == result_ids(search_poems('деревьев'))
+
+
+def test_search_treats_yo_and_ye_alike():
+    from app import search_poems
+    assert result_ids(search_poems('чёрный')) == result_ids(search_poems('черный'))
+    assert result_ids(search_poems('слёзы')) == result_ids(search_poems('слезы'))
+
+
+def test_year_filter(client):
+    from app import search_poems
+    poems = search_poems(year_from=1970, year_to=1979)
+    assert poems
+    assert all(1970 <= p['year'] <= 1979 for p in poems)
+    response = client.get('/list_of_texts/?year_from=1970&year_to=1979')
     assert response.status_code == 200
-    assert isinstance(response.get_json()['result'], list)
-    assert len(response.get_json()['result']) > 0
+    assert str(len(poems)).encode() in response.data
 
 
-def test_search(client):
-    response = client.get('/background_process?search=луна')
-    assert response.status_code == 200
-    assert isinstance(response.get_json()['result'], list)
+def test_edition_filter(client):
+    from app import search_poems
+    for slug in EDITIONS:
+        assert search_poems(edition_slug=slug), 'edition filter {} empty'.format(slug)
+    assert client.get('/list_of_texts/?edition=zel_tet').status_code == 200
 
 
-def test_empty_search_returns_no_results(client):
-    response = client.get('/background_process?search=')
-    assert response.status_code == 200
-    assert response.get_json()['result'] == []
+def test_search_no_results_message(client):
+    response = client.get('/list_of_texts/?q=кзылординский')
+    assert 'ничего не найдено'.encode() in response.data
 
 
 @pytest.mark.parametrize('url', [

@@ -1,195 +1,18 @@
-// Поиск на странице titles.html
-
-
-$(function() {
-  $('button#process_input').bind('click', function() {
-    $.getJSON('/background_process', {
-      search: $('input[name="search"]').val(),
-      }, function(data) {
-              $("div#result").empty();
-              var element = document.getElementById("time_period");
-              element.innerHTML = "Результаты поиска:"; 
-              if (data.result.length !== 0){
-              $(data.result).each(function (index, value) { console.log(value)
-                $("div#result").append('<pre class="search_result"><a class="titles__poem" href="../texts_' +
-                      value[0] + '/">' + 
-                    value[1]+ '</a>'+ '<p class="bibliography">Год написания: '+ value[3] + 
-                    '</p><p class="bibliography">Опубликовано в: '+ value[2] + '</p></pre>');
-          });
-        }
-              else{
-                $("div#result").append('<pre style="margin-left:25px; margin-top:50px;">По Вашему запросу ничего не обнаружено. Попробуйте еще раз.</pre>')
-              };
-        });
-        return false;
-        });
-      });
-
-// Загрузка всех текстов на странице
-$(function() {
-  $('a#all').bind('click', function() { 
-    $.getJSON('/show_all_poems', function(data) {
-      $("div#result").empty();
-      var element = document.getElementById("time_period");
-      element.innerHTML = "Стихотворения";
-      var result = data.result
-      let year = result[0][2]
-      $(data.result).each(function (index, value) {console.log(value)
-        if(index > 0){
-          if (value[2] === year){
-        $("div#result").append('<pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-      }
-          else{
-            year = value[2]
-            $("div#result").append('<h3 class="year">'+ value[2] +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-          };
-  }
-        else{$("div#result").append('<h3 class="year">'+ year +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-    }})
-  })
-})});
-
-// Выдача стихотворений 60-х по годам на titles.html
-
-$(function() {
-  $('a#sixties').bind('click', function() {
-    $.getJSON('/filter_poems_by_period_sixties', function(data) {
-      $("div#result").empty();
-      var element = document.getElementById("time_period");
-      element.innerHTML = "Стихотворения 1960-х годов";
-      var result = data.result
-      let year = result[0][2]
-      $(data.result).each(function (index, value) {
-        if(index > 0){
-          if (value[2] === year){
-        $("div#result").append('<pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-      }
-          else{
-            year = value[2]
-            $("div#result").append('<h3 class="year">'+ value[2] +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-          };
-  }
-        else{$("div#result").append('<h3 class="year">'+ year +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-    }})
-  })
-})});
-    // $.getJSON('/background_process', {console.log(1)})
-
-//Выдача стихотворений 70-x
-$(function() {
-  $('a#seventies').bind('click', function() {
-    $.getJSON('/filter_poems_by_period_seventies', function(data) {
-      $("div#result").empty();
-      var element = document.getElementById("time_period");
-      element.innerHTML = "Стихотворения 1970-х годов";
-      var result = data.result
-      let year = result[0][2]
-      $(data.result).each(function (index, value) {
-        if(index > 0){
-          if (value[2] === year){
-        $("div#result").append('<pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-      }
-          else{
-            year = value[2]
-            $("div#result").append('<h3 class="year">'+ value[2] +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-          };
-  }
-        else{$("div#result").append('<h3 class="year">'+ year +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-    }})
-  })
-})});
-
-
-// Выдача стихотворений 80-х
-
-$(function() {
-  $('a#eighties').bind('click', function() {
-    $.getJSON('/filter_poems_by_period_eighties', function(data) {
-      $("div#result").empty();
-      var element = document.getElementById("time_period");
-      element.innerHTML = "Стихотворения 1980-х годов";
-      var result = data.result
-      let year = result[0][2]
-      $(data.result).each(function (index, value) {
-        if(index > 0){
-          if (value[2] === year){
-        $("div#result").append('<pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-      }
-          else{
-            year = value[2]
-            $("div#result").append('<h3 class="year">'+ value[2] +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-          };
-  }
-        else{$("div#result").append('<h3 class="year">'+ year +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-    }})
-  })
-})});
-
-// Выдача стихотворений 90-х
-
-$(function() {
-  $('a#nineties').bind('click', function() {
-    $.getJSON('/filter_poems_by_period_nineties', function(data) {
-      $("div#result").empty();
-      var element = document.getElementById("time_period");
-      element.innerHTML = "Стихотворения 1990-х годов";
-      var result = data.result
-      let year = result[0][2]
-      $(data.result).each(function (index, value) {
-        if(index > 0){
-          if (value[2] === year){
-        $("div#result").append('<pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-      }
-          else{
-            year = value[2]
-            $("div#result").append('<h3 class="year">'+ value[2] +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-          };
-  }
-        else{$("div#result").append('<h3 class="year">'+ year +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-    }})
-  })
-})});
-
-// Выдача стихотворений 2000-х
-
-$(function() {
-  $('a#millenial').bind('click', function() {
-    $.getJSON('/filter_poems_by_period_millenial', function(data) {
-      $("div#result").empty();
-      var element = document.getElementById("time_period");
-      element.innerHTML = "Стихотворения 2000-х годов";
-      var result = data.result
-      let year = result[0][2]
-      $(data.result).each(function (index, value) {
-        if(index > 0){
-          if (value[2] === year){
-        $("div#result").append('<pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-      }
-          else{
-            year = value[2]
-            $("div#result").append('<h3 class="year">'+ value[2] +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-          };
-  }
-        else{$("div#result").append('<h3 class="year">'+ year +'</h3><pre><a class="titles__poem" href="../texts_' + value[0]+ '/">' + value[1] + '</a></pre>');
-    }})
-  })
-})});
-
 // Сравнение стихотворений в comparison.html
+// (Поиск и фильтры на странице «Произведения» теперь работают без JS —
+// обычной GET-формой; см. titles.html.)
 
-$('#mySelect_1').change(function(){ 
+$('#mySelect_1').change(function(){
                 var value = $(this).val()
                 $("div#first_poem").empty()
-                $("div#first_poem").append(value); 
+                $("div#first_poem").append(value);
                 var meta = $(this).find('option:selected').attr('meta')
                 $("div#first_meta").empty()
                 $("div#first_meta").append(meta)
 
               });
-                
-                    
 
-$('#mySelect_2').change(function(){ 
+$('#mySelect_2').change(function(){
                 var value = $(this).val()
                 $("div#second_poem").empty()
                 $("div#second_poem").append(value);
@@ -215,13 +38,13 @@ function highlight(second_poemElem, first_poemElem){
   var second_text = '';
   var oldText = first_poemElem.text().split('\n');
   var newText = second_poemElem.text().split('\n');
-  
+
   while (first < oldText.length && second < newText.length) {
 
   if (oldText[first].length === 0) {
     first_text += oldText[first] + '\n';
     first = first + 1;
-   } 
+   }
    else if (newText[second].length === 0) {
     second_text += newText[second] + '\n';
     second = second + 1;
@@ -231,15 +54,15 @@ function highlight(second_poemElem, first_poemElem){
           second_text += "<span class='highlight_new'>"+ newText[second] +"</span>\n";
     first = first + 1;
     second = second + 1;
-   } 
+   }
    else {
     first_text += oldText[first] + '\n';
     second_text += newText[second] + '\n';
     first = first + 1;
     second = second + 1;
    }}
-   
-  
+
+
   for (var i = first; i < oldText.length; i++) {
    if (oldText[i] !== newText[second]) {
     first_text += "<span class='highlight_old'>"+ oldText[i] +"</span>\n";
@@ -247,7 +70,7 @@ function highlight(second_poemElem, first_poemElem){
     first_text += oldText[i] + '\n';
    }
   }
-  
+
   for (var i = second; i < newText.length; i++) {
    if (oldText[first] !== newText[i]) {
     second_text += "<span class='highlight_new'>"+ newText[i] +"</span>\n";
@@ -255,8 +78,8 @@ function highlight(second_poemElem, first_poemElem){
     second_text  += newText[i] + '\n';
    }
   }
-  
+
   first_poemElem.html(first_text);
   second_poemElem.html(second_text);
-}; 
+};
 })});

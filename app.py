@@ -122,43 +122,48 @@ def get_files_by_edition(edition, ID=None):
     return all_files, all_duplicates, next_id, previous_id, count
 
 
-def search_result(word):
-    all_texts = []
+def normalize_query(q):
+    """The search_text field is ё→е normalized (see scripts/
+    build_search_index.py); queries must be normalized the same way."""
+    return q.replace('ё', 'е').replace('Ё', 'Е')
+
+
+def search_poems(q=None, year_from=None, year_to=None, edition_slug=None):
+    """Canonical poems filtered by full-text query (titles + texts, Russian
+    stemming, ё/е-insensitive), year-written range, and edition (matching
+    the poem's own source or any of its variants). The corpus is small
+    (~430 canonical texts), so year/edition filtering happens in Python
+    where written_year() can handle string dates."""
+    docs = []
+    dup_editions = {}
 
     for name in shvarts_collections():
         collection = db[name]
-        all_texts += list(collection.find(
-            {"$text": {"$search": word}, "root": []},
-            projection={'_id': False}).sort('meta.date_written'))
+        query = {"root": []}
+        if q:
+            query["$text"] = {"$search": normalize_query(q)}
+        docs += list(collection.find(query))
+        for dup in collection.find({"root": {'$ne': []}}, {"meta.edition": 1}):
+            dup_editions[dup['_id']] = dup['meta']['edition']
 
-    poems = [[text.get('ID'), text.get('title'),
-              text.get('meta').get('edition'), text.get('meta').get('date_written')]
-             for text in all_texts]
+    match = EDITIONS[edition_slug]['match'] if edition_slug else None
+    poems = []
+    for doc in docs:
+        year = written_year(doc['meta']['date_written'])
+        if year_from is not None and (year == 0 or year < year_from):
+            continue
+        if year_to is not None and (year == 0 or year > year_to):
+            continue
+        if match is not None:
+            editions = [doc['meta']['edition']]
+            editions += [dup_editions.get(child, '') for child in doc.get('children', [])]
+            if not any(match in e for e in editions):
+                continue
+        poems.append({'ID': doc['ID'], 'title': doc['title'], 'year': year})
 
-    return sorted(poems, key=lambda x: x[1])
-
-
-def show_all_poems():
-    all_texts = []
-
-    for name in shvarts_collections():
-        collection = db[name]
-        all_texts += list(collection.find({"root": []}).sort('meta.date_written', pymongo.ASCENDING))
-
-    poems = [[text.get('ID'), text.get('title'), text.get('meta').get('date_written')]
-             for text in all_texts]
-
-    return sorted(poems, key=lambda x: written_year(x[2]))
-
-
-def filter_poems_by_year(name_of_db, start_year, end_year):
-    collection = db[name_of_db]
-    texts = collection.find(
-        {'meta.date_written': {'$gte': start_year, '$lte': end_year}, "root": []}
-    ).sort('meta.date_written', pymongo.ASCENDING)
-
-    return [[text.get('ID'), text.get('title'), text.get('meta').get('date_written')]
-            for text in texts]
+    # chronological; undatable texts go last
+    poems.sort(key=lambda p: (p['year'] == 0, p['year'], p['ID']))
+    return poems
 
 
 @app.route('/')
@@ -173,9 +178,33 @@ def index():
 
 @app.route('/list_of_texts/')
 def get_list_of_texts():
-    titles, duplicates, _, _ = get_poems_titles()
+    q = request.args.get('q', '').strip()
+
+    def int_arg(name):
+        value = request.args.get(name, '').strip()
+        return int(value) if value.isdigit() else None
+
+    year_from = int_arg('year_from')
+    year_to = int_arg('year_to')
+    edition = request.args.get('edition', '').strip()
+    if edition not in EDITIONS:
+        edition = ''
+
+    poems = search_poems(q or None, year_from, year_to, edition or None)
+
+    # group consecutive poems by year for the timeline
+    groups = []
+    for poem in poems:
+        if groups and groups[-1][0] == poem['year']:
+            groups[-1][1].append(poem)
+        else:
+            groups.append((poem['year'], [poem]))
+
     return render_template('titles.html', page_name='list_of_texts',
-                           titles=titles, duplicates=duplicates)
+                           groups=groups, count=len(poems),
+                           q=q, year_from=year_from, year_to=year_to,
+                           edition=edition, editions=EDITIONS,
+                           filtered=bool(q or year_from or year_to or edition))
 
 
 @app.route('/texts_<int:ID>/')
@@ -191,34 +220,10 @@ def get_text(ID):
                            next_id=next_nondup.get(ID), previous_id=previous_nondup.get(ID))
 
 
-@app.route('/show_all_poems')
-def all_poems():
-    return jsonify(result=show_all_poems())
-
-
-@app.route('/filter_poems_by_period_sixties')
-def filter_poems_sixties():
-    return jsonify(result=filter_poems_by_year('Shvarts_60', 1960, 1969))
-
-
-@app.route('/filter_poems_by_period_seventies')
-def filter_poems_seventies():
-    return jsonify(result=filter_poems_by_year('Shvarts_70', 1970, 1979))
-
-
-@app.route('/filter_poems_by_period_eighties')
-def filter_poems_eighties():
-    return jsonify(result=filter_poems_by_year('Shvarts_80', 1980, 1989))
-
-
-@app.route('/filter_poems_by_period_nineties')
-def filter_poems_nineties():
-    return jsonify(result=filter_poems_by_year('Shvarts_90', 1990, 1999))
-
-
-@app.route('/filter_poems_by_period_millenial')
-def filter_poems_millenial():
-    return jsonify(result=filter_poems_by_year('Shvarts_20', 2000, 2010))
+# The decade-filter and search JSON endpoints (/show_all_poems,
+# /filter_poems_by_period_*, /background_process) were jQuery-only
+# internals of the old titles page; /list_of_texts/ now serves
+# filtered, server-rendered, citable URLs instead.
 
 
 @app.route('/edition/<slug>/')
@@ -262,14 +267,6 @@ def _register_legacy_redirects():
 
 
 _register_legacy_redirects()
-
-
-@app.route('/background_process')
-def background_process():
-    word = request.args.get('search', '', type=str)
-    if not word.strip():
-        return jsonify(result=[])
-    return jsonify(result=search_result(word))
 
 
 @app.route('/contrib/')
