@@ -53,6 +53,14 @@ EDITIONS = {
 }
 
 
+# The corpus spans these writing years; the catalog's year filter
+# validates against them (server-side here, mirrored in site.js).
+YEAR_MIN, YEAR_MAX = 1962, 2010
+
+YEAR_ERROR = ('Елена Шварц писала с {} по {} год — таких дат в архиве нет. '
+              'Пожалуйста, поправьте годы поиска.').format(YEAR_MIN, YEAR_MAX)
+
+
 def written_year(date_written):
     """meta.date_written is either an int year or free text containing one;
     extract a sortable year, falling back to 0 for undatable texts."""
@@ -293,6 +301,14 @@ def get_list_of_texts():
     if edition not in EDITIONS:
         edition = ''
 
+    # years outside Shvarts's writing life: explain, ignore the filter
+    year_error = None
+    for year in (year_from, year_to):
+        if year is not None and not (YEAR_MIN <= year <= YEAR_MAX):
+            year_error = YEAR_ERROR
+            year_from = year_to = None
+            break
+
     poems = search_poems(q or None, year_from, year_to, edition or None)
     count = len(poems)
 
@@ -318,6 +334,8 @@ def get_list_of_texts():
                            groups=groups, count=count,
                            page=page, pages=pages, qs=qs,
                            q=q, year_from=year_from, year_to=year_to,
+                           year_min=YEAR_MIN, year_max=YEAR_MAX,
+                           year_error=year_error,
                            edition=edition, editions=EDITIONS,
                            filtered=bool(q or year_from or year_to or edition))
 

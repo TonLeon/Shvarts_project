@@ -6,16 +6,16 @@
 <div class="catalog">
   <h1 class="page-title">Произведения</h1>
 
-  <form class="catalog__filters" method="get" action="/list_of_texts/">
+  <form class="catalog__filters" method="get" action="/list_of_texts/" novalidate>
     <input class="field field--search" type="search" name="q" value="{{ q }}"
            placeholder="Поиск по текстам и названиям…" aria-label="Поиск по текстам и названиям">
 
     <fieldset class="catalog__years">
       <legend class="visually-hidden">Годы написания</legend>
       <label>с <input class="field field--year" type="number" name="year_from"
-             min="1962" max="2010" value="{{ year_from or '' }}" aria-label="Год написания, с"></label>
+             min="{{ year_min }}" max="{{ year_max }}" value="{{ year_from or '' }}" aria-label="Год написания, с"></label>
       <label>по <input class="field field--year" type="number" name="year_to"
-             min="1962" max="2010" value="{{ year_to or '' }}" aria-label="Год написания, по"></label>
+             min="{{ year_min }}" max="{{ year_max }}" value="{{ year_to or '' }}" aria-label="Год написания, по"></label>
     </fieldset>
 
     <select class="field{% if not edition %} field--placeholder{% endif %}" name="edition" aria-label="Издание">
@@ -36,6 +36,10 @@
     <a href="/list_of_texts/?year_from=1990&amp;year_to=1999">1990-е</a>
     <a href="/list_of_texts/?year_from=2000&amp;year_to=2010">2000-е</a>
   </nav>
+
+  {% if year_error %}
+  <p class="alert" role="alert">{{ year_error }}</p>
+  {% endif %}
 
   <p class="catalog__count">{% if filtered %}Найдено: {{ count }}{% else %}Всего произведений: {{ count }}{% endif %}</p>
 

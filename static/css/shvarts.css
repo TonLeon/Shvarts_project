@@ -771,7 +771,8 @@ mark {
 .anchor-nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.4rem 1.6rem;
+  justify-content: space-between;  /* items fill the underlined width evenly */
+  gap: 0.4rem 1rem;
   font-family: var(--font-mono);
   font-size: 0.78rem;
   padding-bottom: 1.2rem;
@@ -1039,13 +1040,13 @@ mark {
 }
 
 .diff--a {
-  background: #f0c2b4;        /* clearly visible rose */
+  background: #edc6bc;        /* muted red — the wine side of the palette */
   box-shadow: inset 3px 0 0 var(--accent);
 }
 
 .diff--b {
-  background: #e4d695;        /* clearly visible straw */
-  box-shadow: inset 3px 0 0 #8a7a26;
+  background: #d6dab9;        /* dusty green — the palette's old accent */
+  box-shadow: inset 3px 0 0 #5f6549;
 }
 
 /* ---------- Pending page (В разработке) ---------------------------- */
@@ -1066,6 +1067,55 @@ mark {
   font-style: italic;
   color: var(--ink-soft);
   margin: 1.4rem 0 0.8rem;
+}
+
+/* ---------- Alerts & popup ----------------------------------------- */
+
+.alert {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  color: var(--accent);
+  background: var(--highlight);
+  border: 1px solid var(--accent-soft);
+  border-radius: 2px;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1.6rem;
+}
+
+.popup {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(38, 33, 27, 0.45);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
+}
+
+.popup[hidden] {
+  display: none;
+}
+
+.popup__card {
+  background: var(--paper);
+  border: 1px solid var(--rule);
+  border-top: 3px solid var(--accent);
+  border-radius: 2px;
+  box-shadow: 0 14px 36px rgba(38, 33, 27, 0.22);
+  max-width: 24rem;
+  margin: 1rem;
+  padding: 1.6rem 1.8rem;
+  text-align: center;
+}
+
+.popup__text {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--ink);
+  margin: 0 0 1.3rem;
 }
 
 /* ---------- Font specimen (/trial/) ------------------------------ */

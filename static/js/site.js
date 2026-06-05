@@ -63,6 +63,54 @@
     });
   }
 
+  /* ---------- catalog: год написания validation ----------------- */
+
+  var filters = document.querySelector('.catalog__filters');
+  if (filters) {
+    var popup = null;
+
+    function showYearPopup(message) {
+      if (!popup) {
+        popup = document.createElement('div');
+        popup.className = 'popup';
+        popup.innerHTML =
+          '<div class="popup__card" role="alertdialog" aria-modal="true">' +
+          '<p class="popup__text"></p>' +
+          '<button type="button" class="button popup__ok">Хорошо</button>' +
+          '</div>';
+        document.body.appendChild(popup);
+        popup.querySelector('.popup__ok').addEventListener('click', function () {
+          popup.hidden = true;
+        });
+        popup.addEventListener('click', function (e) {
+          if (e.target === popup) popup.hidden = true;
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && popup) popup.hidden = true;
+        });
+      }
+      popup.querySelector('.popup__text').textContent = message;
+      popup.hidden = false;
+      popup.querySelector('.popup__ok').focus();
+    }
+
+    filters.addEventListener('submit', function (e) {
+      var bad = ['year_from', 'year_to'].some(function (name) {
+        var input = filters.elements[name];
+        if (!input || !input.value) return false;
+        var year = parseInt(input.value, 10);
+        return isNaN(year) || year < +input.min || year > +input.max;
+      });
+      if (bad) {
+        e.preventDefault();
+        var min = filters.elements.year_from.min;
+        var max = filters.elements.year_from.max;
+        showYearPopup('Елена Шварц писала с ' + min + ' по ' + max +
+                      ' год — таких дат в архиве нет. Пожалуйста, поправьте годы поиска.');
+      }
+    });
+  }
+
   /* ---------- gallery lightbox ---------------------------------- */
 
   var gallery = document.querySelector('.gallery');

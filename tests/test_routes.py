@@ -127,6 +127,17 @@ def test_search_covers_variants_with_edition_note(client):
     assert 'в варианте'.encode() in client.get('/list_of_texts/?q=томная').data
 
 
+def test_out_of_range_years_show_error_and_ignore_filter(client):
+    from app import search_poems
+    total = len(search_poems())
+    response = client.get('/list_of_texts/?year_from=1700')
+    assert response.status_code == 200
+    assert 'таких дат в архиве нет'.encode() in response.data
+    assert str(total).encode() in response.data   # filter ignored, full list
+    response = client.get('/list_of_texts/?year_to=2525')
+    assert 'таких дат в архиве нет'.encode() in response.data
+
+
 def test_pagination(client):
     page1 = client.get('/list_of_texts/?page=1')
     page2 = client.get('/list_of_texts/?page=2')
