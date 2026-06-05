@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=PT+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/shvarts.css') }}">
 
-    <title>Цифровое собрание сочинений Елены Шварц</title>
+    <title>{% block title %}Цифровое собрание сочинений Елены Шварц{% endblock %}</title>
   </head>
 
   <body>

@@ -64,30 +64,30 @@
       {% endif %}
     {% endif %}
 
-    <div class="meta">
-      <p><span class="text">Год написания: </span>{{ item.meta.date_written }}</p>
-      {% if item.children|length > 0 %}
-        <p><span class="text">Опубликовано в:</span></p>
-        <p style="margin-bottom: 0px;">{{ item.meta.edition }}</p>
-        {% for element in item.children %}
-          {% for poem in duplicates %}
-            {% if element == poem._id %}
-            <div>
-              <p style="margin-bottom: 0px;">{{ poem.meta.edition }}</p>
-            </div>
-            {% endif %}
+    <footer class="colophon">
+      <dl>
+        <dt>Год написания</dt>
+        <dd>{{ item.meta.date_written }}</dd>
+        <dt>Опубликовано в</dt>
+        <dd>
+          <p>{{ item.meta.edition }}</p>
+          {% for element in item.children %}
+            {% for poem in duplicates %}
+              {% if element == poem._id %}
+              <p>{{ poem.meta.edition }}</p>
+              {% endif %}
+            {% endfor %}
           {% endfor %}
-        {% endfor %}
-      {% else %}
-        <p><span class="text">Опубликовано в: </span>{{ item.meta.edition }}</p>
-      {% endif %}
-
-      <div class="download">
-        <a class="download_icon" href="{{ url_for('static', filename='data/' + item.file) }}" download>
-          <img src="{{ url_for('static', filename='img/download_icon.png') }}" width="60" height="60" alt=""> Скачать TEI
-        </a>
+        </dd>
+      </dl>
+      <div class="colophon__actions">
+        {% if item.children|length > 0 %}
+        <a href="/comparison_{{ item.ID }}/">Сравнить версии</a>
+        <span aria-hidden="true">&middot;</span>
+        {% endif %}
+        <a href="{{ url_for('static', filename='data/' + item.file) }}" download>Скачать TEI &darr;</a>
       </div>
-    </div>
+    </footer>
   </section>
 </main>
 {% endfor %}

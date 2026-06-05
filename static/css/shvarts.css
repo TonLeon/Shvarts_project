@@ -110,12 +110,12 @@ a:hover {
 
 .site-header__subtitle {
   font-family: var(--font-mono);
-  font-size: 0.72rem;
-  letter-spacing: 0.08em;
+  font-size: 1.02rem;
+  letter-spacing: 0.09em;
   text-transform: uppercase;
-  color: var(--ink-soft);
-  max-width: 14em;
-  line-height: 1.45;
+  color: var(--ink);
+  max-width: 16em;
+  line-height: 1.5;
 }
 
 .site-header__nav {
@@ -199,4 +199,157 @@ p.head {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   color: var(--ink-soft);
+}
+
+/* ---------- Poem page (book layout) ------------------------------ */
+
+.poem-page {
+  max-width: var(--measure);
+  margin: 2.5rem auto 0;
+  padding: 0 1.2rem;
+}
+
+.poem-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  margin-bottom: 3rem;
+}
+
+.poem-nav a {
+  text-decoration: none;
+  color: var(--ink-soft);
+}
+
+.poem-nav a:hover {
+  color: var(--accent);
+}
+
+.poem-title {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 2.2rem;
+}
+
+/* The poem block centers itself by its widest line while the
+   text inside stays left-aligned — like a poem on a book page. */
+.poem-body {
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.poem-body pre {
+  margin: 0 0 1.4rem;
+}
+
+/* ---------- Colophon (год написания, источник, действия) -------- */
+
+.colophon {
+  margin: 3.5rem auto 0;
+  padding-top: 1.6rem;
+  border-top: 1px solid var(--rule);
+}
+
+.colophon dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.55rem 1.4rem;
+  width: fit-content;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.colophon dt {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+  text-align: right;
+  padding-top: 0.18em;       /* optical alignment with serif dd */
+}
+
+.colophon dd {
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--ink-soft);
+  max-width: 26em;
+}
+
+.colophon dd p {
+  margin: 0 0 0.3rem;
+}
+
+.colophon__actions {
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  margin-top: 1.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+.colophon__actions a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--rule);
+  padding-bottom: 1px;
+}
+
+.colophon__actions a:hover {
+  border-bottom-color: var(--accent);
+}
+
+.colophon__actions span[aria-hidden] {
+  color: var(--rule);
+}
+
+/* ---------- Font specimen (/trial/) ------------------------------ */
+
+.specimen {
+  max-width: var(--measure);
+  margin: 2.5rem auto;
+  padding: 0 1.2rem;
+}
+
+.specimen__intro {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  margin-bottom: 2.5rem;
+}
+
+.specimen__block {
+  margin-bottom: 3.5rem;
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.specimen__label {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 1.4rem;
+}
+
+.specimen__block pre {
+  font-size: 1.12rem;
+  line-height: 1.72;
+  color: var(--ink);
+  white-space: pre-wrap;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.specimen__block .s-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.4rem;
+  margin-bottom: 1.6rem;
 }
