@@ -386,7 +386,14 @@ _register_legacy_redirects()
 
 @app.route('/contrib/')
 def photos():
-    return render_template('contrib.html', page_name='photos')
+    # photo archive pairs: NN.jpg is the thumbnail of 0NN.jpg
+    photo_dir = os.path.join(app.static_folder, 'photo')
+    pairs = []
+    for f in sorted(os.listdir(photo_dir)):
+        m = re.fullmatch(r'(\d{2})\.jpg', f)
+        if m and os.path.exists(os.path.join(photo_dir, '0' + f)):
+            pairs.append({'thumb': f, 'full': '0' + f})
+    return render_template('contrib.html', page_name='photos', photos=pairs)
 
 
 @app.route('/other/')
@@ -404,7 +411,25 @@ def compare_poems(ID):
     poem_texts, duplicates = get_poems_texts(ID)
     if not poem_texts:
         abort(404)
-    return render_template('comparison.html', poem_texts=poem_texts, duplicates=duplicates)
+    item = poem_texts[0]
+    dups_by_id = {d['_id']: d for d in duplicates}
+
+    def version(doc, label):
+        return {'label': label,
+                'head': doc.get('head') or doc.get('title') or '',
+                'text': doc.get('poem_text') or '',
+                'written': str(doc['meta'].get('date_written') or ''),
+                'edition': doc['meta'].get('edition') or '',
+                'published': str(doc['meta'].get('date_published') or '')}
+
+    versions = [version(item, '{} (Основной текст)'.format(item['title']))]
+    for child in item.get('children', []):
+        dup = dups_by_id.get(child)
+        if dup is not None:
+            versions.append(version(dup, '{} ({})'.format(
+                dup['title'], dup['meta'].get('edition', ''))))
+
+    return render_template('comparison.html', item=item, versions=versions)
 
 
 @app.route('/trial/')

@@ -5,10 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="shortcut icon" href="{{ url_for('static', filename= 'img/favicon2.png')}}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=PT+Mono&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=PT+Mono&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/shvarts.css') }}">
 
     <title>{% block title %}Цифровое собрание сочинений Елены Шварц{% endblock %}</title>
@@ -25,9 +23,13 @@
       </a>
       <nav class="site-header__nav" aria-label="Основная навигация">
         <a href="/" {% if page_name in ('shvarts', 'project') %}aria-current="page"{% endif %}>О проекте</a>
-        <a href="/list_of_texts/" id="works" {% if page_name == 'list_of_texts' %}aria-current="page"{% endif %}>Произведения</a>
+        <a href="/list_of_texts/" {% if page_name == 'list_of_texts' %}aria-current="page"{% endif %}>Произведения</a>
         <a href="/bibl/" {% if page_name == 'bibl' %}aria-current="page"{% endif %}>Библиотека</a>
         <a href="/contrib/" {% if page_name == 'photos' %}aria-current="page"{% endif %}>Материалы</a>
+        <form class="site-header__search" method="get" action="/list_of_texts/" role="search">
+          <input class="field" type="search" name="q" placeholder="Поиск"
+                 aria-label="Поиск по произведениям">
+        </form>
       </nav>
     </header>
 
@@ -40,8 +42,6 @@
       <p>ver. 0.9.1</p>
     </footer>
 
-    <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
-    <script src="{{ url_for('static', filename='js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/site.js') }}" defer></script>
   </body>
 </html>

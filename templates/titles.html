@@ -18,7 +18,7 @@
              min="1962" max="2010" value="{{ year_to or '' }}" aria-label="Год написания, по"></label>
     </fieldset>
 
-    <select class="field" name="edition" aria-label="Издание">
+    <select class="field{% if not edition %} field--placeholder{% endif %}" name="edition" aria-label="Издание">
       <option value="">Все издания</option>
       {% for slug, e in editions.items() %}
       <option value="{{ slug }}" {% if edition == slug %}selected{% endif %}>{{ e.title }}</option>

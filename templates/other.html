@@ -1,31 +1,11 @@
-<!DOCTYPE html>
 {% extends "base.html" %}
 
-{%block content%}
-<html>
-  <head><title>В разработке</title></head>
-  <body>
-	  <main class='main'>
-  	<div class=row>
-		
-		
-		<div class=col>
-			<img class="other" src="../static/img/other.png" alt="ES">
-		</div>
-		<div class=col>
-			<p class="other_text">Пока здесь пусто</p>
-			<div>
-				<button class="other_buttons" onclick="goBack()">Вернуться на предыдущую страницу</button>
-			</div>
-	
+{% block title %}В разработке — Елена Шварц{% endblock %}
 
-		</div>
- 	</div> 
-
-	  </main>
-  </body>
-</html>
-
-{%endblock%}
-
-
+{% block content %}
+<div class="pending">
+  <img class="pending__img" src="{{ url_for('static', filename='img/other.png') }}" alt="">
+  <p class="pending__text">Пока здесь пусто — раздел готовится.</p>
+  <p><a href="/">На главную</a> · <a href="/bibl/">В библиотеку</a></p>
+</div>
+{% endblock %}

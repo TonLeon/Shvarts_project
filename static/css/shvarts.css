@@ -155,6 +155,17 @@ a:hover {
   color: var(--accent);
 }
 
+.site-header__search .field {
+  height: 2rem !important;
+  width: 7.5rem;
+  font-size: 0.78rem;
+  transition: width 160ms ease;
+}
+
+.site-header__search .field:focus {
+  width: 12rem;
+}
+
 @media (max-width: 640px) {
   .site-header {
     flex-direction: column;
@@ -517,6 +528,21 @@ select.field {
   background-position: right 0.7rem center;
 }
 
+/* with no edition chosen, «Все издания» reads like the search
+   placeholder; the dropdown options themselves stay ink */
+select.field--placeholder {
+  color: var(--ink-soft);
+}
+
+select.field--placeholder option {
+  color: var(--ink);
+}
+
+.field::placeholder {
+  color: var(--ink-soft);
+  opacity: 1;
+}
+
 /* tame the native number-spinner so year fields match the rest */
 .field--year::-webkit-outer-spin-button,
 .field--year::-webkit-inner-spin-button {
@@ -726,6 +752,320 @@ mark {
     grid-template-columns: 1fr;
     gap: 0.3rem;
   }
+}
+
+/* ---------- About page (О проекте) -------------------------------- */
+
+.about {
+  /* one centered column, same width as the prose — headings and text
+     align instead of leaving a ragged gap to the right of paragraphs */
+  max-width: var(--measure);
+  margin: 2.5rem auto 0;
+  padding: 0 1.2rem;
+}
+
+.about .team {
+  justify-content: center;
+}
+
+.anchor-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.6rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding-bottom: 1.2rem;
+  border-bottom: 1px solid var(--rule);
+}
+
+.anchor-nav a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.anchor-nav a:hover {
+  color: var(--accent);
+}
+
+.citation {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  background: var(--paper-deep);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  padding: 0.7rem 0.9rem;
+  display: inline-block;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem 2.6rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.team__member {
+  text-align: center;
+  width: 8.5rem;
+}
+
+.team__photo {
+  width: 7.5rem;
+  height: 7.5rem;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid var(--rule);
+}
+
+.team__name {
+  font-size: 0.95rem;
+  margin: 0.7rem 0 0;
+}
+
+/* ---------- Library (Библиотека): edition covers ------------------- */
+
+.library {
+  max-width: 62rem;
+  margin: 2.5rem auto 0;
+  padding: 0 1.2rem;
+}
+
+.library__hint {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+  margin-bottom: 2.2rem;
+}
+
+.covers {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 2.4rem 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* every book sits in the same framed card, whatever the cover size */
+.covers__item a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 1rem;
+  text-decoration: none;
+  color: var(--ink);
+  background: var(--paper-deep);
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  transition: transform 140ms ease, box-shadow 140ms ease;
+}
+
+.covers__item a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 22px rgba(38, 33, 27, 0.14);
+}
+
+.covers__img {
+  width: 100%;
+  height: 13rem;
+  object-fit: contain;
+}
+
+.covers__bibl {
+  margin-top: auto;            /* bibliography pinned to the card bottom */
+  padding-top: 0.25rem;
+}
+
+.covers__title {
+  display: block;
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin-top: 0.7rem;
+  line-height: 1.35;
+}
+
+.covers__bibl {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--ink-soft);
+}
+
+.covers__item--pending .covers__img {
+  opacity: 0.65;
+}
+
+/* ---------- Materials (Материалы): photo gallery ------------------- */
+
+.materials {
+  max-width: 62rem;
+  margin: 2.5rem auto 0;
+  padding: 0 1.2rem;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 0.9rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery__thumb {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 2px;
+  filter: sepia(0.12);
+  transition: filter 140ms ease, transform 140ms ease;
+}
+
+.gallery__link:hover .gallery__thumb,
+.gallery__link:focus .gallery__thumb {
+  filter: none;
+  transform: scale(1.015);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  background: rgba(38, 33, 27, 0.88);
+}
+
+.lightbox[hidden] {
+  display: none;               /* class display:flex must not defeat [hidden] */
+}
+
+.lightbox__img {
+  max-width: min(82vw, 60rem);
+  max-height: 86vh;
+  border-radius: 2px;
+}
+
+.lightbox button {
+  font-family: var(--font-mono);
+  font-size: 1.3rem;
+  color: var(--paper);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.8rem;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: 0.6rem;
+  right: 1rem;
+  font-size: 1.8rem;
+}
+
+/* ---------- Comparison (Сравнение версий) -------------------------- */
+
+.compare {
+  max-width: 62rem;
+  margin: 2.5rem auto 0;
+  padding: 0 1.2rem;
+}
+
+.compare__title {
+  color: var(--ink-soft);
+}
+
+.compare__controls {
+  text-align: center;
+  margin-bottom: 2.2rem;
+}
+
+.compare__panes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: stretch;
+}
+
+/* panes flex vertically so both metadata blocks sit on one level,
+   however different the texts' lengths */
+.compare__pane {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 760px) {
+  .compare__panes {
+    grid-template-columns: 1fr;
+  }
+}
+
+.compare__select {
+  width: 100%;
+  margin-bottom: 1.6rem;
+}
+
+.compare__meta {
+  margin-top: auto;            /* pinned to the bottom of the taller pane row */
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--ink-soft);
+}
+
+.compare__meta dt {
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  margin-top: 0.6rem;
+}
+
+.compare__meta dd {
+  margin: 0.1rem 0 0;
+}
+
+.diff--a,
+.diff--b {
+  display: inline-block;
+  padding: 0 0.3em;
+  margin-left: -0.3em;
+  border-radius: 2px;
+}
+
+.diff--a {
+  background: #f0c2b4;        /* clearly visible rose */
+  box-shadow: inset 3px 0 0 var(--accent);
+}
+
+.diff--b {
+  background: #e4d695;        /* clearly visible straw */
+  box-shadow: inset 3px 0 0 #8a7a26;
+}
+
+/* ---------- Pending page (В разработке) ---------------------------- */
+
+.pending {
+  max-width: var(--measure);
+  margin: 4rem auto;
+  padding: 0 1.2rem;
+  text-align: center;
+}
+
+.pending__img {
+  max-width: 14rem;
+  mix-blend-mode: multiply;
+}
+
+.pending__text {
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 1.4rem 0 0.8rem;
 }
 
 /* ---------- Font specimen (/trial/) ------------------------------ */
