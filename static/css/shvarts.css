@@ -537,6 +537,13 @@ select.field {
   color: var(--ink-soft);
 }
 
+.catalog__snippet-more {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-style: normal;
+  color: var(--accent-soft);
+}
+
 mark {
   background: var(--highlight);
   color: inherit;

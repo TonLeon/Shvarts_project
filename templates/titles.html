@@ -46,10 +46,18 @@
       {% for poem in poems %}
       <li>
         <a href="/texts_{{ poem.ID }}/">{{ poem.title }}</a>
-        {% if poem.snippet %}<p class="catalog__snippet">{{ poem.snippet }}</p>{% endif %}
+        {% for line in poem.snippets %}
+        <p class="catalog__snippet">{{ line }}</p>
+        {% endfor %}
+        {% if poem.snippets_more %}
+        <p class="catalog__snippet catalog__snippet-more">…ещё в {{ poem.snippets_more }}
+          {% if poem.snippets_more == 1 %}строке{% else %}строках{% endif %}</p>
+        {% endif %}
         {% for variant in poem.variants %}
-        <p class="catalog__snippet">{{ variant.snippet }}
-          <span class="catalog__variant-note">— в варианте: {{ variant.edition }}</span></p>
+          {% for line in variant.snippets %}
+          <p class="catalog__snippet">{{ line }}
+            <span class="catalog__variant-note">— в варианте: {{ variant.edition }}</span></p>
+          {% endfor %}
         {% endfor %}
       </li>
       {% endfor %}

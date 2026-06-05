@@ -153,10 +153,12 @@ def query_lemmas(q):
     return lemmas
 
 
-def find_snippet(doc, lemmas):
-    """First line of the poem (or epigraph/dedication) containing a word
-    sharing a lemma with the query, with the hits marked up — the KWIC
-    line shown under a search result."""
+def find_snippets(doc, lemmas):
+    """Every line of the poem (or epigraph/dedication) containing a word
+    sharing a lemma with the query — the KWIC lines shown under a search
+    result. Returns (plain_line, marked_line) pairs; the plain form lets
+    callers compare lines across versions."""
+    snippets = []
     for source in (doc.get('poem_text'), doc.get('epigraph'), doc.get('dedication')):
         if not source:
             continue
@@ -172,8 +174,19 @@ def find_snippet(doc, lemmas):
                     parts.append(Markup('<mark>{}</mark>').format(m.group()))
                     last = m.end()
                 parts.append(escape(line[last:]))
-                return Markup('').join(parts)
-    return None
+                snippets.append((line, Markup('').join(parts)))
+    return snippets
+
+
+def text_lines(doc):
+    """All lines of a document's text parts, stripped — for checking
+    whether a variant's line is genuinely a different reading."""
+    lines = set()
+    for source in (doc.get('poem_text'), doc.get('epigraph'), doc.get('dedication')):
+        for line in (source or '').split('\n'):
+            if line.strip():
+                lines.add(line.strip())
+    return lines
 
 
 def search_poems(q=None, year_from=None, year_to=None, edition_slug=None):
@@ -232,16 +245,21 @@ def search_poems(q=None, year_from=None, year_to=None, edition_slug=None):
                 continue
         poem = {'ID': doc['ID'], 'title': doc['title'], 'year': year}
         if q:
-            snippet = find_snippet(doc, lemmas) if doc['_id'] in matched_ids else None
-            poem['snippet'] = snippet
-            # variant hits whose line differs from the canonical one get
-            # a comment naming the edition the reading comes from
+            MAX_LINES = 3
+            snippets = find_snippets(doc, lemmas) if doc['_id'] in matched_ids else []
+            poem['snippets'] = [marked for _, marked in snippets[:MAX_LINES]]
+            poem['snippets_more'] = max(0, len(snippets) - MAX_LINES)
+            # variant hits are shown only for lines that genuinely differ
+            # from the canonical text — true разночтения, labeled with
+            # the edition the reading comes from
+            canonical_lines = text_lines(doc)
             poem['variants'] = []
             for variant in variants_of.get(doc['_id'], []):
-                v_snippet = find_snippet(variant, lemmas)
-                if v_snippet and str(v_snippet) != str(snippet or ''):
+                different = [marked for plain, marked in find_snippets(variant, lemmas)
+                             if plain not in canonical_lines]
+                if different:
                     poem['variants'].append({
-                        'snippet': v_snippet,
+                        'snippets': different[:MAX_LINES],
                         'edition': variant['meta']['edition'],
                     })
         poems.append(poem)
