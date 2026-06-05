@@ -80,6 +80,16 @@ def test_search_treats_yo_and_ye_alike():
     assert result_ids(search_poems('слёзы')) == result_ids(search_poems('слезы'))
 
 
+def test_lemmas_not_stems():
+    from app import query_lemmas
+    # гора and горит share a stem but no lemma — must not cross-match
+    assert not query_lemmas('гора') & query_lemmas('горит')
+    # the homonym горе legitimately covers both горе and гора
+    assert {'горе', 'гора'} <= query_lemmas('горе')
+    # suppletive verb forms resolve to one lemma
+    assert query_lemmas('шёл') & query_lemmas('идти')
+
+
 def test_year_filter(client):
     from app import search_poems
     poems = search_poems(year_from=1970, year_to=1979)

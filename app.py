@@ -1,10 +1,11 @@
 from flask import Flask, render_template, request, jsonify, redirect, url_for, abort
 from markupsafe import Markup, escape
 from urllib.parse import urlencode
+import functools
 import os
 import pymongo
+import pymorphy2
 import re
-import snowballstemmer
 
 
 app = Flask(__name__)
@@ -130,26 +131,37 @@ def normalize_query(q):
     return q.replace('ё', 'е').replace('Ё', 'Е')
 
 
-# Same Snowball algorithm Mongo's $text uses for default_language: russian,
-# so the snippet finder agrees with the index about what "matched".
-_stemmer = snowballstemmer.stemmer('russian')
+# Lemmatizer shared by the index (scripts/build_search_index.py), the
+# query, and the snippet finder. Lemmas, not stems: гора matches горы
+# but not горит; the homonym горе matches both горе and гора.
+_morph = pymorphy2.MorphAnalyzer()
 
 _WORD = re.compile(r'[А-Яа-яЁёA-Za-z-]+')
 
 
-def _stem(word):
-    return _stemmer.stemWord(normalize_query(word).lower())
+@functools.lru_cache(maxsize=65536)
+def word_lemmas(word):
+    """All dictionary forms a word can belong to, ё→е-normalized."""
+    return frozenset(normalize_query(p.normal_form)
+                     for p in _morph.parse(word.lower()))
 
 
-def find_snippet(doc, query_stems):
+def query_lemmas(q):
+    lemmas = set()
+    for word in _WORD.findall(q):
+        lemmas |= word_lemmas(word)
+    return lemmas
+
+
+def find_snippet(doc, lemmas):
     """First line of the poem (or epigraph/dedication) containing a word
-    that stems to one of the query's stems, with the hits marked up —
-    the KWIC line shown under a search result."""
+    sharing a lemma with the query, with the hits marked up — the KWIC
+    line shown under a search result."""
     for source in (doc.get('poem_text'), doc.get('epigraph'), doc.get('dedication')):
         if not source:
             continue
         for line in source.split('\n'):
-            hits = {w for w in _WORD.findall(line) if _stem(w) in query_stems}
+            hits = {w for w in _WORD.findall(line) if word_lemmas(w) & lemmas}
             if hits:
                 pattern = re.compile('|'.join(
                     re.escape(w) for w in sorted(hits, key=len, reverse=True)))
@@ -172,12 +184,14 @@ def search_poems(q=None, year_from=None, year_to=None, edition_slug=None):
     where written_year() can handle string dates."""
     docs = []
     dup_editions = {}
+    lemmas = query_lemmas(q) if q else set()
 
     for name in shvarts_collections():
         collection = db[name]
         query = {"root": []}
         if q:
-            query["$text"] = {"$search": normalize_query(q)}
+            # the index stores lemmas; search with the query's lemmas
+            query["$text"] = {"$search": ' '.join(lemmas) or q}
         docs += list(collection.find(query))
         for dup in collection.find({"root": {'$ne': []}}, {"meta.edition": 1}):
             dup_editions[dup['_id']] = dup['meta']['edition']
@@ -197,7 +211,7 @@ def search_poems(q=None, year_from=None, year_to=None, edition_slug=None):
                 continue
         poem = {'ID': doc['ID'], 'title': doc['title'], 'year': year}
         if q:
-            poem['snippet'] = find_snippet(doc, {_stem(w) for w in _WORD.findall(q)})
+            poem['snippet'] = find_snippet(doc, lemmas)
         poems.append(poem)
 
     # chronological; undatable texts go last

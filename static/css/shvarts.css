@@ -12,10 +12,10 @@
   --paper-deep:   #f1ead9;   /* panels, drawers, hover fills      */
   --ink:          #26211b;   /* primary text                      */
   --ink-soft:     #6f675c;   /* secondary text, captions          */
-  --accent:       #8c2333;   /* burgundy — like the ink of her signature */
-  --accent-soft:  #b8707b;   /* decorative only                   */
+  --accent:       #7a3742;   /* muted wine — quieter than burgundy, warmer than green */
+  --accent-soft:  #a8848b;   /* decorative only                   */
   --rule:         #e0d7c4;   /* hairlines                         */
-  --highlight:    #f6dfd3;   /* search hits, variant-diff marking */
+  --highlight:    #f1e3da;   /* search hits, variant-diff marking */
 
   /* Type — exactly two voices:
      serif (EB Garamond) = the literature: poems, titles, prose
@@ -382,6 +382,24 @@ select.field {
 
 .field--year {
   -moz-appearance: textfield;
+}
+
+/* Safari refuses height styling on search inputs until every native
+   piece is switched off; force one uniform control height for all. */
+.field--search::-webkit-search-decoration,
+.field--search::-webkit-search-cancel-button,
+.field--search::-webkit-search-results-button {
+  -webkit-appearance: none;
+}
+
+.catalog__filters input,
+.catalog__filters select,
+.catalog__filters .button {
+  height: 2.4rem !important;
+  min-height: 2.4rem;
+  max-height: 2.4rem;
+  line-height: normal;
+  margin: 0;
 }
 
 .button {
