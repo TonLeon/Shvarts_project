@@ -102,6 +102,21 @@ def test_search_no_results_message(client):
     assert 'ничего не найдено'.encode() in response.data
 
 
+def test_search_shows_kwic_snippet(client):
+    response = client.get('/list_of_texts/?q=дерево')
+    assert b'<mark>' in response.data
+
+
+def test_pagination(client):
+    page1 = client.get('/list_of_texts/?page=1')
+    page2 = client.get('/list_of_texts/?page=2')
+    assert page1.status_code == page2.status_code == 200
+    assert page1.data != page2.data
+    assert 'aria-label="Страницы списка"'.encode() in page1.data
+    # out-of-range pages clamp instead of erroring
+    assert client.get('/list_of_texts/?page=999').status_code == 200
+
+
 @pytest.mark.parametrize('url', [
     '/texts_999999/',
     '/comparison_999999/',

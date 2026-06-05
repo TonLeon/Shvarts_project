@@ -2,6 +2,7 @@
 Flask>=2.0,<3.1
 pymongo>=3.11,<5
 MarkupSafe>=2.0
+snowballstemmer>=2          # KWIC snippet matching (same stemming as Mongo $text)
 
 # Production server (used via shvartsproject.ini on the server)
 uwsgi; sys_platform != "darwin"

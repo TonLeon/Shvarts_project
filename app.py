@@ -1,8 +1,10 @@
 from flask import Flask, render_template, request, jsonify, redirect, url_for, abort
-from markupsafe import Markup
+from markupsafe import Markup, escape
+from urllib.parse import urlencode
 import os
 import pymongo
 import re
+import snowballstemmer
 
 
 app = Flask(__name__)
@@ -128,6 +130,40 @@ def normalize_query(q):
     return q.replace('ё', 'е').replace('Ё', 'Е')
 
 
+# Same Snowball algorithm Mongo's $text uses for default_language: russian,
+# so the snippet finder agrees with the index about what "matched".
+_stemmer = snowballstemmer.stemmer('russian')
+
+_WORD = re.compile(r'[А-Яа-яЁёA-Za-z-]+')
+
+
+def _stem(word):
+    return _stemmer.stemWord(normalize_query(word).lower())
+
+
+def find_snippet(doc, query_stems):
+    """First line of the poem (or epigraph/dedication) containing a word
+    that stems to one of the query's stems, with the hits marked up —
+    the KWIC line shown under a search result."""
+    for source in (doc.get('poem_text'), doc.get('epigraph'), doc.get('dedication')):
+        if not source:
+            continue
+        for line in source.split('\n'):
+            hits = {w for w in _WORD.findall(line) if _stem(w) in query_stems}
+            if hits:
+                pattern = re.compile('|'.join(
+                    re.escape(w) for w in sorted(hits, key=len, reverse=True)))
+                parts, last = [], 0
+                line = line.strip()
+                for m in pattern.finditer(line):
+                    parts.append(escape(line[last:m.start()]))
+                    parts.append(Markup('<mark>{}</mark>').format(m.group()))
+                    last = m.end()
+                parts.append(escape(line[last:]))
+                return Markup('').join(parts)
+    return None
+
+
 def search_poems(q=None, year_from=None, year_to=None, edition_slug=None):
     """Canonical poems filtered by full-text query (titles + texts, Russian
     stemming, ё/е-insensitive), year-written range, and edition (matching
@@ -159,7 +195,10 @@ def search_poems(q=None, year_from=None, year_to=None, edition_slug=None):
             editions += [dup_editions.get(child, '') for child in doc.get('children', [])]
             if not any(match in e for e in editions):
                 continue
-        poems.append({'ID': doc['ID'], 'title': doc['title'], 'year': year})
+        poem = {'ID': doc['ID'], 'title': doc['title'], 'year': year}
+        if q:
+            poem['snippet'] = find_snippet(doc, {_stem(w) for w in _WORD.findall(q)})
+        poems.append(poem)
 
     # chronological; undatable texts go last
     poems.sort(key=lambda p: (p['year'] == 0, p['year'], p['ID']))
@@ -191,6 +230,17 @@ def get_list_of_texts():
         edition = ''
 
     poems = search_poems(q or None, year_from, year_to, edition or None)
+    count = len(poems)
+
+    # pagination (50 per page), preserving the active filters in links
+    per_page = 50
+    pages = max(1, -(-count // per_page))
+    page = min(max(int_arg('page') or 1, 1), pages)
+    poems = poems[(page - 1) * per_page: page * per_page]
+
+    params = {'q': q, 'year_from': year_from, 'year_to': year_to, 'edition': edition}
+    qs = urlencode({k: v for k, v in params.items() if v})
+    qs = qs + '&' if qs else ''
 
     # group consecutive poems by year for the timeline
     groups = []
@@ -201,7 +251,8 @@ def get_list_of_texts():
             groups.append((poem['year'], [poem]))
 
     return render_template('titles.html', page_name='list_of_texts',
-                           groups=groups, count=len(poems),
+                           groups=groups, count=count,
+                           page=page, pages=pages, qs=qs,
                            q=q, year_from=year_from, year_to=year_to,
                            edition=edition, editions=EDITIONS,
                            filtered=bool(q or year_from or year_to or edition))

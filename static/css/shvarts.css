@@ -12,10 +12,10 @@
   --paper-deep:   #f1ead9;   /* panels, drawers, hover fills      */
   --ink:          #26211b;   /* primary text                      */
   --ink-soft:     #6f675c;   /* secondary text, captions          */
-  --accent:       #5f6549;   /* dusty green, AA on paper — links  */
-  --accent-soft:  #8e917e;   /* decorative only (kept from old palette) */
+  --accent:       #8c2333;   /* burgundy — like the ink of her signature */
+  --accent-soft:  #b8707b;   /* decorative only                   */
   --rule:         #e0d7c4;   /* hairlines                         */
-  --highlight:    #f3e4c2;   /* variant-diff marking, selection   */
+  --highlight:    #f6dfd3;   /* search hits, variant-diff marking */
 
   /* Type — exactly two voices:
      serif (EB Garamond) = the literature: poems, titles, prose
@@ -353,12 +353,35 @@ p.head {
   background: var(--paper-deep);
   border: 1px solid var(--rule);
   border-radius: 2px;
-  padding: 0.5rem 0.7rem;
+  padding: 0 0.7rem;
+  height: 2.4rem;             /* every control the same height */
+  box-sizing: border-box;
+  appearance: none;           /* no native macOS chrome */
+  -webkit-appearance: none;
 }
 
 .field:focus {
   border-color: var(--accent);
   outline: none;
+}
+
+select.field {
+  /* custom chevron instead of the native macOS arrow */
+  padding-right: 2rem;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M1 1l4 4 4-4' fill='none' stroke='%236f675c' stroke-width='1.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem center;
+}
+
+/* tame the native number-spinner so year fields match the rest */
+.field--year::-webkit-outer-spin-button,
+.field--year::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.field--year {
+  -moz-appearance: textfield;
 }
 
 .button {
@@ -368,7 +391,9 @@ p.head {
   background: var(--accent);
   border: 1px solid var(--accent);
   border-radius: 2px;
-  padding: 0.5rem 1.2rem;
+  padding: 0 1.2rem;
+  height: 2.4rem;
+  box-sizing: border-box;
   cursor: pointer;
 }
 
@@ -478,6 +503,46 @@ p.head {
   font-style: italic;
   color: var(--ink-soft);
   padding: 2rem 0;
+}
+
+.catalog__snippet {
+  font-size: 0.92rem;
+  font-style: italic;
+  color: var(--ink-soft);
+  margin: 0.15rem 0 0.2rem;
+}
+
+mark {
+  background: var(--highlight);
+  color: inherit;
+  padding: 0 0.12em;
+  border-radius: 1px;
+}
+
+.catalog__pages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  justify-content: center;
+  margin: 2.4rem 0 0.5rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid var(--rule);
+  font-family: var(--font-mono);
+  font-size: 0.88rem;
+}
+
+.catalog__pages a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.catalog__pages a:hover {
+  color: var(--ink);
+}
+
+.catalog__pages span[aria-current] {
+  color: var(--ink);
+  border-bottom: 2px solid var(--accent);
 }
 
 @media (max-width: 560px) {
