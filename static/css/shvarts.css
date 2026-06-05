@@ -18,9 +18,9 @@
   --highlight:    #f3e4c2;   /* variant-diff marking, selection   */
 
   /* Type — exactly two voices:
-     serif (Lora)   = the literature: poems, titles, prose
-     mono (PT Mono) = the apparatus: nav, labels, metadata, UI */
-  --font-serif: 'Lora', 'PT Serif', Georgia, serif;
+     serif (EB Garamond) = the literature: poems, titles, prose
+     mono (PT Mono)      = the apparatus: nav, labels, metadata, UI */
+  --font-serif: 'EB Garamond', 'PT Serif', Georgia, serif;
   --font-mono:  'PT Mono', 'Courier New', monospace;
 
   --measure: 38rem;          /* comfortable reading column        */
@@ -118,7 +118,7 @@ a:hover {
 
 .site-header__name {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.65rem;
   font-weight: 600;
   line-height: 1.1;
   color: var(--ink);
@@ -186,8 +186,8 @@ pre.epigraph,
 pre.dedication,
 pre.cycle_text {
   font-family: var(--font-serif);
-  font-size: 1.12rem;
-  line-height: 1.72;
+  font-size: 1.24rem;   /* Garamond runs small; compensate */
+  line-height: 1.66;
   color: var(--ink);
   white-space: pre-wrap;       /* long lines wrap instead of scrolling */
   margin-left: 0;
@@ -290,9 +290,11 @@ p.head {
 
 .colophon dd {
   margin: 0;
-  font-size: 0.95rem;
+  font-family: var(--font-mono);   /* metadata is apparatus: mono throughout */
+  font-size: 0.82rem;
+  line-height: 1.55;
   color: var(--ink-soft);
-  max-width: 26em;
+  max-width: 30em;
 }
 
 .colophon dd p {
