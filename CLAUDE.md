@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-A digital scholarly archive of Elena Shvarts's poetry (Елена Шварц, 1948–2010): a Flask + MongoDB web app for browsing ~430 canonical poems (~1,285 documents counting variant printings) chronologically or by published collection, comparing textual variants of the same poem, and lemma-aware full-text search. UI text is Russian. Production lives at https://eshvarts.com/ (DigitalOcean droplet 142.93.242.162, nginx + uWSGI) — currently down at the DB level and awaiting redeploy (Phase 4 below).
+A digital scholarly archive of Elena Shvarts's poetry (Елена Шварц, 1948–2010): a Flask + MongoDB web app for browsing ~430 canonical poems (~1,285 documents counting variant printings) chronologically or by published collection, comparing textual variants of the same poem, and lemma-aware full-text search. UI text is Russian. Production is **live** at https://eshvarts.com/ (DigitalOcean droplet 142.93.242.162, nginx + uWSGI); redeployed 2026-06-10 (see Deployment below).
 
 ## Running locally
 
@@ -43,13 +43,20 @@ Backup/restore: `docker exec mongodb mongodump --db admin --archive > backup.arc
 
 ## Modernization status (2026)
 
-Phases 0–3 are **done**: slim deps, env-var DB config, consolidated routes/templates, 404s, test suite, full redesign (typography, search+filters, drawer, galleries, comparison), legacy frontend stack deleted.
+Phases 0–4 are **done**: slim deps, env-var DB config, consolidated routes/templates, 404s, test suite, full redesign (typography, search+filters, drawer, galleries, comparison), legacy frontend stack deleted, and (Phase 4) the production redeploy on 2026-06-10.
 
-**Phase 4 (pending): deploy.** Blocked on recovering SSH/DigitalOcean console access to the droplet; its mongod is down (production DB pages 500). Deploy steps when access returns: restore DB from backup (or re-dump local), run `scripts/build_search_index.py` there, install slim requirements, set `MONGO_URI`/`MONGO_DB` for uWSGI, deploy code, rotate the old leaked Mongo password (it's in git history).
+## Deployment (production droplet)
+
+Live since the 2026-06-10 redeploy. Droplet 142.93.242.162 (Ubuntu 20.04). The original outage was MongoDB crashing (WiredTiger panic after "too many open files") because it was bound to the public internet and getting hammered — fixed below.
+
+- **SSH:** connect as `root`. Password auth needs an interactive prompt, so open an SSH control-socket yourself (`ssh -M -S ~/.ssh/shvarts-master root@142.93.242.162`), then drive non-interactively over it (`ssh -S ~/.ssh/shvarts-master root@142.93.242.162 '<cmd>'`). `-f` backgrounding fails locally (no ssh-askpass on the Mac).
+- **App:** `/home/tonleon/Shvarts_project`, runs as user `tonleon` / group `www-data`. Venv at `.env/`. systemd unit `Shvarts_project.service` runs uWSGI via `shvartsproject.ini` (socket `shvartsproject.sock`); `MONGO_URI`/`MONGO_DB` are set as `Environment=` lines in the unit (no creds in code). nginx site `Shvarts_project`, Let's Encrypt cert. The unit `Wants`/`After` mongod so it survives reboot.
+- **MongoDB 4.4.12:** now bound to **127.0.0.1 only**; `LimitNOFILE=64000` via systemd drop-in + a 2 GB swapfile (both in fstab/persistent). The app connects over localhost with the rotated `admin` user.
+- **Redeploy recipe:** `rsync` working tree up (exclude `.git`, venvs, `*.sock`, `__pycache__`), rebuild `.env` venv from `requirements.txt`, then run `scripts/build_search_index.py` with `MONGO_URI`/`MONGO_DB` set, `systemctl restart Shvarts_project.service`, `systemctl reload nginx`.
 
 ## Gotchas
 
-- Old MongoDB credentials are burned into git history; rotate before ever re-exposing Mongo publicly.
+- The old `admin:solaerice` MongoDB credential is burned into git history. It was **rotated on 2026-06-10** and prod Mongo is now bound to localhost, so the leaked password is dead — but never bind Mongo to a public IP again, and rotate again if the current password ever leaks. The live password is in the user's password manager and the systemd unit, not in the repo.
 - Rerun `scripts/build_search_index.py` after any corpus change, or search silently misses new/edited texts.
 - Poem rendering relies on `<pre>`/preserved whitespace; line breaks are semantically significant (it's poetry). `pre-wrap` is set so long lines wrap.
 - The error message for out-of-range years exists in two places by design (app.py `YEAR_ERROR` for no-JS, site.js for the popup) — keep the wording in sync.
